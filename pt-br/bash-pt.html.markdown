@@ -15,8 +15,8 @@ lang: pt-br
 
 Tutorial de shell em português
 
-Bash é o nome do shell do Unix, que também é distribuído como shell do sistema 
-operacional GNU e como shell padrão para Linux e macOS. Praticamente todos 
+Bash é o nome do shell do Unix, que também é distribuído como shell do sistema
+operacional GNU e como shell padrão para Linux e macOS. Praticamente todos
 os exemplos abaixo podem fazer parte de um shell script e pode ser executados
 diretamente no shell.
 
@@ -26,7 +26,7 @@ diretamente no shell.
 #!/bin/bash
 # A primeira linha do script é o shebang, que conta para o sistema como executar
 # o script: http://en.wikipedia.org/wiki/Shebang_(Unix)
-# Como você já deve ter percebido, comentários começam com #. 
+# Como você já deve ter percebido, comentários começam com #.
 # Shebang também é um comentário.
 
 # Exemplo simples de hello world:
@@ -46,7 +46,7 @@ Variavel = "Alguma string"
 # Ou assim:
 Variavel= 'Alguma string'
 # Bash interpretará 'Alguma string' como um comando e tentará executar e lhe retornará
-# um erro porque o comando não pôde ser encontrado. (Nesse caso a a parte 'Variavel=' 
+# um erro porque o comando não pôde ser encontrado. (Nesse caso a a parte 'Variavel='
 # é vista com uma declaração de variável válida apenas para o escopo do comando 'Uma string').
 
 # Usando a variável:
@@ -103,7 +103,7 @@ then
 	echo "Isso vai rodar se $Nome é igual Estevao E $Idade é 15."
 fi
 
-fi [ $Nome == "Daniela" ] || [ $Nome = "Jose" ] 
+fi [ $Nome == "Daniela" ] || [ $Nome = "Jose" ]
 then
 	echo "Isso vai rodar se $Nome é Daniela ou Jose."
 fi
@@ -111,7 +111,7 @@ fi
 # Expressões são escritas com o seguinte formato
 echo $(( 10 + 5))
 
-# Diferentemente das outras linguagens de programação, bash é um shell, então ele 
+# Diferentemente das outras linguagens de programação, bash é um shell, então ele
 # funciona no diretório atual. Você pode listar os arquivos e diretórios no diretório
 # atual com o comando ls:
 ls
@@ -167,7 +167,7 @@ rm -v output.out error.err output-and-error.log
 # O comando a seguir mostra o número de arquivos e diretórios no diretório atual
 echo "Existem $(ls | wc -l) itens aqui."
 
-# O mesmo pode ser feito usando crase `` mas elas não podem ser aninhadas - dá se 
+# O mesmo pode ser feito usando crase `` mas elas não podem ser aninhadas - dá se
 # preferência ao uso do $( )
 echo "Existem `ls | wc -l` itens aqui."
 
@@ -257,7 +257,7 @@ fgrep "^foo.*bar$" arquivo.txt
 # Leia a documentação interna do shell Bash com o comando interno 'help':
 help
 help help
-help for 
+help for
 help return
 help source
 help .
@@ -270,12 +270,12 @@ man bash
 # Leia a documentação de informação com info (? para ajuda)
 apropos info | grep '^info.*('
 man info
-info info 
-info 5 info 
+info info
+info 5 info
 
 #Leia a documentação informativa do Bash:
 info bash
 info bash 'Bash Features'
 info bash 6
-info --apropos bash 
+info --apropos bash
 ```

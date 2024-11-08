@@ -44,10 +44,10 @@ La parte relativa alla GUI di **Qt** riguarda esclusivamente *widget* e le loro 
 /*
  * Creiamo un'etichetta e un pulsante.
  * Un'etichetta dovrebbe apparire quando si preme un pulsante.
- * 
+ *
  * Il codice Qt parla da solo.
  */
- 
+
 #include <QApplication>
 #include <QDialog>
 #include <QVBoxLayout>
@@ -59,10 +59,10 @@ int main(int argc, char *argv[]) {
 
     QDialog dialogWindow;
     dialogWindow.show();
-    
-    // add vertical layout 
+
+    // add vertical layout
     QVBoxLayout layout;
-    dialogWindow.setLayout(&layout);  
+    dialogWindow.setLayout(&layout);
 
     QLabel textLabel("Grazie per aver premuto quel pulsante");
     layout.addWidget(&textLabel);
@@ -70,7 +70,7 @@ int main(int argc, char *argv[]) {
 
     QPushButton button("Premimi");
     layout.addWidget(&button);
-    
+
     // mostra l'etichetta nascosta quando viene premuto il pulsante
     QObject::connect(&button, &QPushButton::pressed,
                      &textLabel, &QLabel::show);
@@ -100,7 +100,7 @@ Successivamente, impariamo che non possiamo solo usare i widget standard, ma est
 
 class CounterLabel : public QLabel {
     Q_OBJECT  // Macro definite da Qt che devono essere presenti in ogni widget personalizzato
-    
+
 public:
     CounterLabel() : counter(0) {
         setText("Il contatore non è stato ancora aumentato");  // metodo di QLabel

@@ -33,7 +33,7 @@ CAUSA DEI CONTINUI CAMBIAMENTI DI ETHEREUM È IMPROBABILE CHE QUESTO DOCUMENTO
 RESTI AGGIORNATO, QUINDI COSNIGLIAMO DI SEGUIRE LA CHAT ROOM DI SOLIDITY E IL
 BLOG DI ETHEREUM PER TENERSI AGGIORNATI. TUTTO IL CODICE QUI PRESENTE E' FORNITO
 COSÌ COM'È, CON ANNESSI RISCHI SOSTANZIALI DI ERRORI O PATTERN DI PROGRAMMAZIONE
-DEPRECATI. 
+DEPRECATI.
 
 A differenza di altri linguaggi, potresti aver bisogno di usare pattern di
 pausing, deprecation e throttling usage per ridurre il rischio. Questo documento
@@ -49,10 +49,10 @@ sperimentali o beta sono evidenziate e soggette a cambiamenti. Ogni Pull Request
 Uno dei modi più semplici di scrivere, distribuire e testare il codice Solidity
 è usare :
 
-1. [L'ambiente di sviluppo online Remix](https://remix.ethereum.org/) 
+1. [L'ambiente di sviluppo online Remix](https://remix.ethereum.org/)
 2. [Il wallet Metamask](https://metamask.io/).
 
-Per cominciare, [scarichiamo l'estesione per browser di Metamask](https://metamask.io/). 
+Per cominciare, [scarichiamo l'estesione per browser di Metamask](https://metamask.io/).
 
 Una volta installata, potremo iniziare ad usare Remix. Il codice seguente è
 pre-inizializzato, ma prima di addentrarci, diamo un'occhiata a qualche
@@ -190,7 +190,7 @@ contract SimpleBank { // CapWords
         require(withdrawAmount <= balances[msg.sender]);
 
         // Notiamo come per prima cosa scaliamo i soldi dal saldo, prima di
-        // invarli. Ogni .transfer/.send in questo contratto può chiamare una 
+        // invarli. Ogni .transfer/.send in questo contratto può chiamare una
         // funzione esterna. Questa cosa potrebbe permettere a chi invoca la
         // funzione di richiedere un importo maggiore del suo saldo usando
         // una chiamata ricorsiva. Miriamo ad aggiornare lo stato prima che sia
@@ -232,9 +232,9 @@ uint constant VERSION_ID = 0x123A1; // Una costante esadecimale
 // con 'constant', il compilatore rimpiazza ogni occorrenza con il valore
 
 // Tutte le variabili di stato (quelle fuori da una funzione)
-// sono 'interne' di default e accessibili SOLO dall'interno del contratto 
+// sono 'interne' di default e accessibili SOLO dall'interno del contratto
 // e da tutti contratti che le ereditano
-// Bisogna usare esplicitamente 'public' per consentire l'accesso dai contratti 
+// Bisogna usare esplicitamente 'public' per consentire l'accesso dai contratti
 // esterni
 int256 public a = 8;
 
@@ -247,7 +247,7 @@ uint248 e;
 // Attenzione a non andare in overflow e a proteggersi dagli attacchi che lo fanno
 // Ad esempio per quanto rigrada l'addizione, conviene fare:
 uint256 c = a + b;
-assert(c >= a); // 'assert' testa gli invarianti interni; require viene usato 
+assert(c >= a); // 'assert' testa gli invarianti interni; require viene usato
 // per gli input
 // Per altri esempi di problemi comuni con le operazioni aritmentiche, dai una
 // occhiata alla Zeppelin's SafeMath library
@@ -256,7 +256,7 @@ assert(c >= a); // 'assert' testa gli invarianti interni; require viene usato
 
 // Non ci sono funzioni random built-in, puoi ottenere un numero pseudo-casuale
 // hashando l'ultimo blockhash, o ottenere un numero realmente casuale usando
-// qualcosa come Chainlink VRF. 
+// qualcosa come Chainlink VRF.
 // https://docs.chain.link/docs/get-a-random-number
 
 // Conversione di tipo
@@ -350,7 +350,7 @@ uint[][5] x; // array con 5 array dinamici (ordine opposto rispetto ad
 // Dizionari (da un tipo qualsiasi a un tipo qualsiasi)
 mapping (string => uint) public balances;
 balances["charles"] = 1;
-// il risultato balances["ada"] è 0, tutte le chiavi non settate 
+// il risultato balances["ada"] è 0, tutte le chiavi non settate
 // restituiscono zero
 // 'public' permette che si possa fare questo da un altro contratto:
 contractName.balances("charles"); // restituisce 1
@@ -396,7 +396,7 @@ uint createdState = uint(State.Created); //  0
 // Data location: Memory vs. storage vs. calldata - tutti i tipi complessi
 // (array, struct) hanno una data location
 // 'memory' non è persistente, 'storage' sì
-// Il default è 'storage' per varibili locali e di stato; 
+// Il default è 'storage' per varibili locali e di stato;
 // 'memory' per i parametri delle funzioni
 // Lo stack può contenere poche varaibili locali
 
@@ -414,8 +414,8 @@ uint createdState = uint(State.Created); //  0
 // 4. Variabili globali degne di nota
 // ** this **
 this; // indirizzo del contratto
-// di solito si usa per trasferire altrove il saldo rimanente 
-// al termine della vita del contratto 
+// di solito si usa per trasferire altrove il saldo rimanente
+// al termine della vita del contratto
 this.balance;
 this.someFunction(); // invoca una funzione esterna tramite chiamata,
 // non attraverso un salto interno
@@ -520,7 +520,7 @@ function depositEther() public payable {
 // meglio ed evitare che si confondano con una chiamata a funzione
 
 // Dichiarazione
-event LogSent(address indexed from, address indexed to, uint amount); 
+event LogSent(address indexed from, address indexed to, uint amount);
 // Da notare le prime lettere maiuscole
 
 // Chiamata
@@ -691,7 +691,7 @@ function remove() {
 // 9. NOTE SUL DESIGN DEI CONTRATTI
 
 // A. Offruscamento
-// Tutte le variabili sono pubblicamente visibili sulla blockchain, quindi 
+// Tutte le variabili sono pubblicamente visibili sulla blockchain, quindi
 // qualsiasi informazione privata ha bisogno di essere offruscata (es. hash con una
 // chiave segreta)
 
@@ -703,7 +703,7 @@ keccak256("una_puntata_d_asta", "un segreto"); // impegno
 reveal(100, "ilMioSegreto");
 
 // B. Ottimizzazione della memoria (storage)
-// Scrivere dati sulla blockchain può essere costoso visto che vengono 
+// Scrivere dati sulla blockchain può essere costoso visto che vengono
 // conservati per sempre; siamo incoraggati ad usare la memoria in maniera
 // scaltra (un giorno la compilazione migliorerà, ma per ora è vantaggioso
 // pianificare le strutture dati da usare - e conservarne il minimo possibile
@@ -725,13 +725,13 @@ reveal(100, "ilMioSegreto");
 
 // D. Oracle e dati esterni
 // Gli oracle consentono di interagire con i tuoi smart contract
-// al di fuori della blockchain. 
+// al di fuori della blockchain.
 // Vengono usati per ricevere informazioni dal mondo reale, mandare
 // richieste post al mondo reale o vice versa.
 
 // Anche le implementazioni che sfruttano l'ora vengono fatte attraverso
 // gli oracle, visto che i contratti devono essere chiamati direttamente e
-// non possono fare una "subscribe" a un certo orario. 
+// non possono fare una "subscribe" a un certo orario.
 // Data la decentralizzazione degli smart contract, vorrai ricevere informazioni
 // in maniera decentralizzata, altrimenti rischi di ricreare l'accentramento
 // che la progettazione degli smart contract si prefigge di prevenire.
@@ -741,13 +741,13 @@ reveal(100, "ilMioSegreto");
 // https://docs.chain.link/docs/get-the-latest-price
 // Possiamo fare riferimento a certe informazioni della blockchain
 // che sono già state aggregate da più fonti e ridistribuite on-chain,
-// usandole come "banche dati" di fonti di informazione. 
+// usandole come "banche dati" di fonti di informazione.
 
 // Puoi vedere altri esempi che effettuano chiamate alle API qui:
 // https://docs.chain.link/docs/make-a-http-get-request
 
 // E ovviamente puoi costruire la tua rete di orace, ma assicurati di sapere
-// quant'è accentrata o decentralizzata la tua applicazione. 
+// quant'è accentrata o decentralizzata la tua applicazione.
 
 // Mettere su una rete di oracle per conto tuo
 
@@ -791,7 +791,7 @@ contract SomeOracle {
     }
 }
 
-// Il contratto client può aggiungersi agli iscritti (con addSubscriber) 
+// Il contratto client può aggiungersi agli iscritti (con addSubscriber)
 // del contratto SomeOracle, importando SomeOracleCallback
 
 // G. Automi a stati finiti
@@ -975,7 +975,7 @@ sha256("def");
 
 // 11.SICUREZZA
 
-// I bug possono essere disastrosi per i contratti Ethereum e anche 
+// I bug possono essere disastrosi per i contratti Ethereum e anche
 // i pattern comuni di Solidity potrebbero riverlarsi degli antipattern
 
 // Dai un'occhiata ai link sulla sicurezza alla fine di questo documento

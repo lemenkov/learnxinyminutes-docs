@@ -11,13 +11,13 @@ contributors:
     - ["Jason Stathopulos", "http://github.com/SpiritBreaker226"]
     - ["Milo Gilad", "http://github.com/Myl0g"]
     - ["Adem Budak", "https://github.com/p1v0t"]
-    
+
 filename: LearnGit-tr.txt
 ---
 
 Git dağınık versiyon kontrol ve kaynak kod yönetim sistemidir.
 
-Bunu projenin bir seri anlık durumunu kaydederek yapar ve bu anlık durumları 
+Bunu projenin bir seri anlık durumunu kaydederek yapar ve bu anlık durumları
 kullanarak versiyon ve kaynak kodu yönetmeni sağlar.
 
 ## Versiyonlama Konseptleri
@@ -28,9 +28,9 @@ Versiyon kontrol, zaman içerisinde dosya(lar)daki değişikliği kaydeden siste
 
 ### Merkezi Versiyonlama vs. Dağınık Versiyonlama
 
-* Merkezi versiyon kontrolü dosyaların eşitlenmesine, takibine ve yedeklenmesine odaklanır. 
+* Merkezi versiyon kontrolü dosyaların eşitlenmesine, takibine ve yedeklenmesine odaklanır.
 * Dağınık versiyon kontrolü değişimin paylaşılmasına odaklanır. Her değişiminin benzersiz bir adı vardır.
-* Dağınık sistemlerin belirlenmiş bir yapısı yoktur. Git ile kolayca SVN'deki gibi merkezi bir sistem elde edebilirsin. 
+* Dağınık sistemlerin belirlenmiş bir yapısı yoktur. Git ile kolayca SVN'deki gibi merkezi bir sistem elde edebilirsin.
 
 [Daha fazla bilgi](http://git-scm.com/book/en/Getting-Started-About-Version-Control)
 
@@ -48,10 +48,10 @@ Versiyon kontrol, zaman içerisinde dosya(lar)daki değişikliği kaydeden siste
 ### Repository
 
 Bir grup dosya, dizin, geriye dönük kayıt, commit, head. Bunları kaynak kodun veri
-yapısı gibi düşünebilirsin, herbir kaynak kod "elemanı" seni kendi revizyon geçmişine 
-eriştirir. 
+yapısı gibi düşünebilirsin, herbir kaynak kod "elemanı" seni kendi revizyon geçmişine
+eriştirir.
 
-Bir git repo'su .git dizini ve çalışma ağacından oluşur. 
+Bir git repo'su .git dizini ve çalışma ağacından oluşur.
 
 ### .git Dizini (repository bileşeni)
 
@@ -64,14 +64,14 @@ Temelde repo'daki dizinlerin ve dosyalarındır. Sıkça çalışma ağacın ola
 
 ### Index (.git dizininin birleşeni)
 
-Index git'in evreleme alanıdır (staging area). Temelde çalışma ağacını Git repo'sundan 
-ayıran bir katmandır. Bu geliştiricilere neyin Git repo'suna gönderileceği hakkında daha 
-fazla güç verir. 
+Index git'in evreleme alanıdır (staging area). Temelde çalışma ağacını Git repo'sundan
+ayıran bir katmandır. Bu geliştiricilere neyin Git repo'suna gönderileceği hakkında daha
+fazla güç verir.
 
 ### Commit
 
 Bir git commit'i Çalışma Ağacındaki bir takım değişiklerdir. Mesela 5 tane dosya
-eklemişsindir ve diğer 2 tanesini silmişindir, bu değişikler commit'te (anlık kayıtta) 
+eklemişsindir ve diğer 2 tanesini silmişindir, bu değişikler commit'te (anlık kayıtta)
 tutulacaktır. Bu commit daha sonra diğer repo'lara bastırılabilir (pushed) ve bastırılmaz!
 
 ### Branch
@@ -81,7 +81,7 @@ bu gösterici otomatik olarak son commit'e güncellenir.
 
 ### Tag
 
-Bir tag, tarihteki belirli bir noktanın işaretidir. İnsanlar bunu genelde 
+Bir tag, tarihteki belirli bir noktanın işaretidir. İnsanlar bunu genelde
 sürüm notları için kullanır (v1.0 vs.)
 
 ### HEAD ve head (.git dizininin birleşenleri)
@@ -93,9 +93,9 @@ head, commit'e bir göstericidir. Bir repository herhangi bir sayıda head'e sah
 ### Git'in Stage'leri
 * Modified - Dosyada değişikler yapıldı ama henüz Git Veritabanına commit yapılmadı.
 * Staged - Modified edilmiş bir dosyayı, sonraki commit'e gitmek üzere işaretler.
-* Committed - Dosyalar Git Veritabanına commit'lendi.  
+* Committed - Dosyalar Git Veritabanına commit'lendi.
 
-### Kavramsal Kaynaklar 
+### Kavramsal Kaynaklar
 
 * [Bilgisayar Bilimciler için Git](http://eagain.net/articles/git-for-computer-scientists/)
 * [Tasarımcılar için Git](http://hoth.entp.com/output/git_for_designers.html)
@@ -147,7 +147,7 @@ $ git commit --help
 $ git init --help
 ```
 
-### dosyaları ignore etme 
+### dosyaları ignore etme
 
 git'in bazı dosya(ları) ve klasör(leri) kasıtlı olarak takip etmemesi için. Genel
 olarak,repository'de ne de olsa paylaşılacak, private ve temp dosyaları için.
@@ -171,7 +171,7 @@ $ git help status
 
 ### add
 
-Dosyaları staging area'ya eklemek için. Eğer yeni dosyaları staging area'ya `git add` 
+Dosyaları staging area'ya eklemek için. Eğer yeni dosyaları staging area'ya `git add`
 yapmazsanız, commit'lere eklenmez!
 
 ```bash
@@ -257,7 +257,7 @@ $ git checkout -b newBranch
 
 ### clone
 
-Varolan bir repository'i yeni bir dizine clone'lar veya kopyalar. 
+Varolan bir repository'i yeni bir dizine clone'lar veya kopyalar.
 Ayrıca clone'lanmış repodaki her bir branch için, uzak branch'a bastırmana izin veren,
 uzak takip branch'ları ekler.
 
@@ -275,7 +275,7 @@ $ git clone -b master-cn https://github.com/adambard/learnxinyminutes-docs.git -
 ### commit
 
 index'in mevcut içeriğini yeni bir "commit"te saklar. Bu commit, kullanıcının oluşturduğu
-bir mesajı ve yapılan değişiklikleri saklar. 
+bir mesajı ve yapılan değişiklikleri saklar.
 
 ```bash
 # commit with a message
@@ -391,11 +391,11 @@ Bir repository'den çeker ve diğer branch'a merge eder.
 $ git pull origin master
 
 # By default, git pull will update your current branch
-# by merging in new changes from its remote-tracking branch 
+# by merging in new changes from its remote-tracking branch
 $ git pull
 
 # Merge in changes from remote branch and rebase
-# branch commits onto your local repo, like: "git fetch <remote> <branch>, git 
+# branch commits onto your local repo, like: "git fetch <remote> <branch>, git
 # rebase <remote>/<branch>"
 $ git pull origin master --rebase
 ```
@@ -411,7 +411,7 @@ Bir branch'taki değişikleri, uzak branch'a bastır ve birleştir.
 $ git push origin master
 
 # By default, git push will push and merge changes from
-# the current branch to its remote-tracking branch 
+# the current branch to its remote-tracking branch
 $ git push
 
 # To link up current local branch with a remote branch, add -u flag:
@@ -422,7 +422,7 @@ $ git push
 
 ### stash
 
-Stash'leme çalışma dizinindeki kirli durumu alır ve bitmemiş değişiklikler 
+Stash'leme çalışma dizinindeki kirli durumu alır ve bitmemiş değişiklikler
 yığınına kaydeder. Bu değişikleri istediğin zaman tekrar uygulayabilirsin.
 
 Mesela git repo'nda bazı işler yaptın ama remote'dan pull yapmak istiyorsun.
@@ -501,7 +501,7 @@ $ git rebase master experimentBranch
 ### reset (dikkat)
 
 Reset the current HEAD to the specified state. This allows you to undo merges,
-pulls, commits, adds, and more. It's a great command but also dangerous if you 
+pulls, commits, adds, and more. It's a great command but also dangerous if you
 don't know what you are doing.
 
 HEAD'i belirtilen duruma resetle. Bu merge'leri, pull'ları, commit'leri, add'leri
@@ -529,7 +529,7 @@ $ git reset --hard 31f2bb1
 
 Reflog, verilen zaman içinde,default olarak 90 gündür, yaptığın git komutlarını listeler.
 
-Bu sana beklemediğin şekilde yanlış giden komutları geriye çevirme şansı verir. 
+Bu sana beklemediğin şekilde yanlış giden komutları geriye çevirme şansı verir.
 (mesela, eğer bir rebase uygulamanı kırdıysa)
 
 Şu şekilde yapıbilirsin:
@@ -546,14 +546,14 @@ ed8ddf2 HEAD@{4}: rebase -i (pick): pythonstatcomp spanish translation (#1748)
 ```
 
 2. Nereye reset'leyeceğini seç, şu durumda `2e6c386` veya `HEAD@{5}`
-3. 'git reset --hard HEAD@{5}' bu repo'nu seçilen head'e eşitler 
+3. 'git reset --hard HEAD@{5}' bu repo'nu seçilen head'e eşitler
 4. Rebase'e yeniden başlayabilir veya onu yalnız bırakabilirsin.
 
 [Ek Okuma.](https://git-scm.com/docs/git-reflog)
 
 ### revert
 
-Revert commit'leri geri almada kullanılır. Projenin durumunu önceki bir noktaya 
+Revert commit'leri geri almada kullanılır. Projenin durumunu önceki bir noktaya
 alan reset ile karıştırılmamalıdır. Revert, belirtilen commit'in tersine yeni bir
 commit ekleyecektir.
 

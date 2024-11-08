@@ -95,7 +95,7 @@ un ou plusieurs espaces à la fin de votre paragraphe, et en commencer un
 nouveau.
 
 ```md
-J'ai deux espaces vides à la fin (sélectionnez moi pour les voir).  
+J'ai deux espaces vides à la fin (sélectionnez moi pour les voir).
 
 Bigre, il y a un <br /> au dessus de moi!
 ```

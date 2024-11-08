@@ -2,7 +2,7 @@
 language: Crystal
 contributors:
     - ["Vitalii Elenhaupt", "http://veelenga.com"]
-    - ["Arnaud Fernandés", "https://github.com/TechMagister/"] 
+    - ["Arnaud Fernandés", "https://github.com/TechMagister/"]
 translators:
     - ["caminsha", "https://github.com/caminsha"]
 filename: learncrystal-de.cr
@@ -185,7 +185,7 @@ hash["no_such_key"]?    # => nil
 hash.has_key? "color"   # => true
 
 # Spezielle Schreibweise für Symbol- und Stringkeys
-{key1: 'a', key2: 'b'}      # {:key1 => 'a', :key2 => 'b'} 
+{key1: 'a', key2: 'b'}      # {:key1 => 'a', :key2 => 'b'}
 {"key1": 'a', "key2": 'b'}  # {"key1" => 'a', "key2" => 'b'}
 
 # Die spezielle Syntax für Hash-Literale gibt es auch für andere Typen, sofern
@@ -214,7 +214,7 @@ Range.new(1,10).class   # => Range(Int32, Int32)
 # Überprüfe, ob ein Range einen Wert enthält oder nicht.
 (1..8).includes? 2  # => true
 
-# Tupel sind unveränderliche, Stack-zugewiese Folgen von Werten mit fester 
+# Tupel sind unveränderliche, Stack-zugewiese Folgen von Werten mit fester
 # Größe und möglicherweise unterschiedlichen Typen
 {1, "hello", 'x'}.class # => Tuple(Int32, String, Char)
 
@@ -359,7 +359,7 @@ end
 surround { puts "Hallo Welt" }
 
 # {
-# Hallo Welt 
+# Hallo Welt
 # }
 
 # Du kannst ein Block einer Funktion übergeben.
@@ -431,8 +431,8 @@ class Human
     # Getter/Setter-Methoden können auch individuell erstellt werden:
     getter :name
     setter :name
-    
-    # eine Klassenmethode verwendet `self` um sich von Instanzmethoden zu 
+
+    # eine Klassenmethode verwendet `self` um sich von Instanzmethoden zu
     # unterscheiden. Diese kann lediglich von einer Klasse aufgerufen werden,
     # nicht von einer Instanz.
     def self.say(msg)
@@ -517,7 +517,7 @@ end
 # Wenn eine Klasse mit einem Modul erweitert wird, so werden die Methoden an die
 # Klasse selbst gebunden.
 
-class Person 
+class Person
     include ModuleExample
 end
 

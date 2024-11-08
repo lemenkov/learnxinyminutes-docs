@@ -183,8 +183,8 @@ nil                    ; false; también, la lista vacia: ()
 ;;; Accediendo a una variable sin asignar tienen como resultado el error
 ;;; UNBOUND-VARIABLE, sin embargo este es el comportamiento definido. no lo hagas
 
-;;; puedes crear enlaces locales con LET. en el siguiente código, `me` es asignado 
-;;; con "dance with you" solo dentro de  (let ...). LET siempre retorna  el valor 
+;;; puedes crear enlaces locales con LET. en el siguiente código, `me` es asignado
+;;; con "dance with you" solo dentro de  (let ...). LET siempre retorna  el valor
 ;;; del último `form`.
 
 (let ((me "dance with you")) me) ; => "dance with you"
@@ -370,7 +370,7 @@ nil                    ; false; también, la lista vacia: ()
 ;;; 3. Funciones
 ;;;-----------------------------------------------------------------------------
 
-;;; Use LAMBDA para crear funciones anónimas. las funciones siempre retornan el valor 
+;;; Use LAMBDA para crear funciones anónimas. las funciones siempre retornan el valor
 ;;; de la última expresión. la representación imprimible de una función varia entre
 ;;; implementaciones.
 
@@ -387,7 +387,7 @@ nil                    ; false; también, la lista vacia: ()
 ((lambda () "Hello World"))           ; => "Hello World"
 ((lambda (val) val) "Hello World")    ; => "Hello World"
 
-;;; FUNCALL es usado cuando los argumentos son conocidos de antemano. 
+;;; FUNCALL es usado cuando los argumentos son conocidos de antemano.
 ;;; de lo contrario use APPLY
 
 (apply #'+ '(1 2 3))   ; => 6
@@ -548,7 +548,7 @@ nil                    ; false; también, la lista vacia: ()
 ;;; 3. slot list
 ;;; 4. Especificadores opcionales
 
-;;; cuando no hay lista de superclase, la lista vacia indica clase de 
+;;; cuando no hay lista de superclase, la lista vacia indica clase de
 ;;; objeto estándar, esto puede ser cambiado, pero no mientras no sepas
 ;;; lo que estas haciendo. revisar el arte del protocolo de meta-objetos
 ;;; para más información.
@@ -653,7 +653,7 @@ nil                    ; false; también, la lista vacia: ()
          (progn
             ,@body)))
 
-;;; Sin embargo, con un compilador moderno, esto no es necesario; El LOOP se 
+;;; Sin embargo, con un compilador moderno, esto no es necesario; El LOOP se
 ;;; compila igualmente bien y es más fácil de leer.
 
 ;;; Tenga en cuenta que se utiliza ```, así como `,` y `@`.  ``` es un operador

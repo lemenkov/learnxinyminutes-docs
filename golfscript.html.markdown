@@ -245,7 +245,7 @@ I drive a stick, BTW.
 [250]
 > ]; # this actually is a clever trick to get ascii values into an array.
 []
-> "aabc" [{""+~}*] # if you fold over addition and drop it into a string: 
+> "aabc" [{""+~}*] # if you fold over addition and drop it into a string:
 [[97 97 98 99]]
 > {[.]""^}%""+ # which can be returned to a string as such using a ""^ map.
 # and an empty string join.
@@ -253,7 +253,7 @@ I drive a stick, BTW.
 > {32-}% # note that most mapping operations work on the ascii values as
 # you would expect, for instance with the difference between A and a being
 # 32, you can just subtract that from the ascii value to get:
-["AABC"] 
+["AABC"]
 > ]; ###################################################################
 #       blocks
 ########################################################################

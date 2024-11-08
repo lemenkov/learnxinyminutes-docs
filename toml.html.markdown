@@ -236,7 +236,7 @@ color = "gray"
 The equivalent in JSON would be:
 
 ```json
-{ 
+{
   "products": [
     {
       "name": "array of table",

@@ -15,8 +15,8 @@ manuellen Speicherverwaltung bewusst sein.
 
 
 > **Über Compiler Optionen**
-> 
-> Standardmäßig sind `gcc` und `clang` ziemlich ruhig bezüglich Warnungen und 
+>
+> Standardmäßig sind `gcc` und `clang` ziemlich ruhig bezüglich Warnungen und
 > Fehlern, obwohl dies sehr nützliche Informationen sein können. Es wird
 > empfohlen, strengere Compiler Optionen zu verwenden. Hier sind einige empfohlene
 > Standards:
@@ -38,7 +38,7 @@ manuellen Speicherverwaltung bewusst sein.
 mehrzeilige Kommentare sehen so aus. Diese funktionieren auch in C89
 */
 
-/* 
+/*
 mehrzeilige Kommentare können nicht verschachtelt werden /* Sei Vorsichtig! */ // Kommentar endet auf dieser Linie ...
 */ // ... nicht bei dieser!
 
@@ -69,17 +69,17 @@ int function_2(void);
 // Es muss ein Funktionsprototyp deklariert werden vor der `main()` Funktion,
 // wenn die Funktion nach der `main()` Funktion gebraucht wird.
 int add_two_ints(int x1, int x2); // Funktionsprototyp
-// Auch wenn der Ausdruck `int add_two_ints(int, int)` auch valid wäre, 
+// Auch wenn der Ausdruck `int add_two_ints(int, int)` auch valid wäre,
 // ist es empfohlen, dass man die Namen der Argumente hinschreibt für eine
 // einfachere Analyse.
 
-// Der Einstiegspunkt deines Programms ist eine Funktion mit dem Namen main und 
+// Der Einstiegspunkt deines Programms ist eine Funktion mit dem Namen main und
 // einem Integer als Rückgabewert.
 int main(void) {
     // dein Programm
 }
 
-// Die Kommandozeilenargumente, welche gebraucht werden, damit dein Programm 
+// Die Kommandozeilenargumente, welche gebraucht werden, damit dein Programm
 // läuft, werden als Argumente der `main`-Funktion mitgegeben.
 // argc (argument counter) steht für die Anzahl von Argumenten.
 // Der Programmname ist das erste Argument.
@@ -96,7 +96,7 @@ int main (int argc, char** argv) {
     ////////////////////////////////////////////////
     // Operatoren
     ////////////////////////////////////////////////
-    
+
     // Kurzschreibweise für mehrere Deklarationen
     int i1 = 1, i2 = 2;
     flaot f1 = 1.0, f2 = 2.0;
@@ -174,7 +174,7 @@ int main (int argc, char** argv) {
     // - Linksshift einer negativen Zahl (int a = -1 << 2)
     // - Shift um einen Offset, welcher >= die Breite des linken Ausdrucks ist.
     // int a = 1 << 32; // undefiniertes Verhalten, wenn int 32-Bit ist.
-    
+
 
     ////////////////////////////////////////////////
     // Typen
@@ -197,7 +197,7 @@ int main (int argc, char** argv) {
     char x_char = 0;
     char y_char = 'y'; // Charakterliterale werden mit '' gekennzeichnet.
 
-    // longs sind oft 4 bis 8 Bytes groß. long long sind garantiert mindestens 
+    // longs sind oft 4 bis 8 Bytes groß. long long sind garantiert mindestens
     // 8 Bytes groß.
     long x_long = 0;
     long long x_long_long = 0;
@@ -226,11 +226,11 @@ int main (int argc, char** argv) {
 
     // Wenn das Argument des `sizeof`-Operator ein Ausdruck ist, dann wird das
     // Argument nicht ausgewertet (außer Arrays mit variabler Länge)
-    // Der Wert, der in diesem Fall zurückgegeben wird, ist eine Konstante zur 
+    // Der Wert, der in diesem Fall zurückgegeben wird, ist eine Konstante zur
     // Kompilierzeit.
 
     int a = 1;
-    //size_t ist ein vorzeichenloser Integer Typ mit mindestens 2 Byte um die 
+    //size_t ist ein vorzeichenloser Integer Typ mit mindestens 2 Byte um die
     // Größe eines Objekts zu repräsentieren.
     size_t size = sizeof(a++); // a++ wird nicht ausgewertet
     printf("sizeof(a++) = %zu, wobei a=%d ist\n", size, a);
@@ -244,7 +244,7 @@ int main (int argc, char** argv) {
     // Ein Array kann auf diese Weise mit 0 initialisiert werden.
     char my_array[20] = {0};
     // Hierbei ist der Teil "{0}" der "Array Initialisierer".
-    // Beachte, dass die Länge des Arrays nicht explizit definiert werden muss, 
+    // Beachte, dass die Länge des Arrays nicht explizit definiert werden muss,
     // wenn er auf derselben Linie initialisiert wird.
     // Folgende Deklaration ist gleichwertig:
     char my_array[] = {0};
@@ -259,7 +259,7 @@ int main (int argc, char** argv) {
     // Das Indexieren eines Arrays funktioniert wie in anderen Sprache - resp.
     // in anderen Sprachen funktioniert es gleich wie in C.
     my_array[0]; // => 0
-    
+
     // Arrays sind veränderbar; es ist nur Arbeitsspeicher!
     my_array[1] = 2;
     printf("%d\n", my_array[1]); // => 2
@@ -332,17 +332,17 @@ int main (int argc, char** argv) {
     printf("\n");
 
     // In C gibt es auch for-Schleifen
-    int jj; 
+    int jj;
     for (jj = 0; jj < 10; jj++) {
         printf("%d, ", jj);
     } // => gibt folgendes aus: "0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "
-    
+
     printf("\n");
 
     // **Merke**
     // Schleifen und Funktionen müssen einen Rumpf haben. Wenn kein Rumpf gebraucht
     // wird, kann folgendes gemacht werden:
-    int i; 
+    int i;
     for (i = 0; i <= 5; i++) {
         ; // Semikolon wird als Rumpf behandelt (Null-Anweisung)
     }
@@ -358,7 +358,7 @@ int main (int argc, char** argv) {
         case 1:
             printf("Huh, 'a' ist gleich 1!\n");
             break;
-            // Sei vorsichtig - wenn man das `break` vergisst, werden alle 
+            // Sei vorsichtig - wenn man das `break` vergisst, werden alle
             // Anweisungen ausgeführt bis das nächste `break` erscheint.
         case 3:
         case 4:
@@ -375,7 +375,7 @@ int main (int argc, char** argv) {
     // Typenumwandlung
     ////////////////////////////////////////////////
 
-    // Jeder Wert in C hat einen bestimmten Typen, aber es ist möglich, ein 
+    // Jeder Wert in C hat einen bestimmten Typen, aber es ist möglich, ein
     // Wert in einen anderen Typ umzuwandeln (mit einigen Einschränkungen).
 
     int x_hex = 0x01; // Es ist möglich, Variablen Hexadezimalwerten zuzuweisen.
@@ -389,14 +389,14 @@ int main (int argc, char** argv) {
     // Typen werden überlaufen (overflow) ohne jegliche Warnung
     printf("%d\n", (unsigned char) 257); // => 1 (Max char=255 wenn char 8 Bit ist)
 
-    // Um den maximalen Wert eines `char`, `signed char` oder `unsigned char` 
+    // Um den maximalen Wert eines `char`, `signed char` oder `unsigned char`
     // herauszufinden, können die Makros `CHAR_MAX`, `SCHAR_MAX` und `UCHAR_MAX`
     // aus der Header-Datei `<limits.h>` verwendet werden.
 
     // Integer-Typen können zu Gleitkommazahlen und umgekehrt umgewandelt werden.
     printf("%f\n", (double) 100); // %f formatiert immer zu einem `double`...
     printf("%f\n", (flaot) 100); // ... auch mit einem `float`
-    printf("%d\n", (char)100.0); 
+    printf("%d\n", (char)100.0);
 
     ////////////////////////////////////////////////
     // Zeiger (aka Pointer)
@@ -411,7 +411,7 @@ int main (int argc, char** argv) {
     // auf welche Art von Daten der Pointer zeigt. Man kann die Speicheradresse
     // von Variablen abrufen und dann mit diesen herumspielen.
 
-    int x = 0; 
+    int x = 0;
     printf("%p\n", (void *)&x); // verwende & um die Adresse der Variable
     // zu erhalten
     // %p  formatiert einen Objektpointer des Typen void*)
@@ -424,14 +424,14 @@ int main (int argc, char** argv) {
     printf("%zu, %zu\n", sizeof(px), sizeof(not_a_pointer));
     // Gibt auf einem typischen 64-Bit-System folgendes aus: "8, 4"
 
-    // Um den Wert einer Adresse, auf welche ein Pointer zeigt, herauszufinden, 
+    // Um den Wert einer Adresse, auf welche ein Pointer zeigt, herauszufinden,
     // muss man vor die Variable ein * setzen, um sie zu dereferenzieren.
     // Notiz: Ja, es kann verwirrend sein, dass '*' sowohl für das Deklarieren
     // als auch das Derefenzieren verwendet werden kann.
     printf("%d\n", *px); // => 0, der Wert von x
 
     // Man kann den Wert, auf welchen ein Pointer zeigt, auch verändern.
-    // Man muss die Dereferenzierung in Klammern setzen, weil ++ eine höhere 
+    // Man muss die Dereferenzierung in Klammern setzen, weil ++ eine höhere
     // Priorität als * hat.
     (*px)++; // Inkrementiere den Wert, auf welchen px zeigt, um 1
     printf("%d\n", *px); // => 1
@@ -473,8 +473,8 @@ int main (int argc, char** argv) {
     printf("%d\n", x_array[1]); // => 19
 
     // Man kann zusammenhängende Speicherblöcke auch mit der Funktion `malloc`
-    // aus der Standardbibliothek dynamisch allozieren. Der Funktion `malloc` 
-    // muss ein Argument des Typs `size_t` übergeben werden, welches bestimmt, 
+    // aus der Standardbibliothek dynamisch allozieren. Der Funktion `malloc`
+    // muss ein Argument des Typs `size_t` übergeben werden, welches bestimmt,
     // wie viele Bytes alloziert werden sollen. (Normalerweise geschieht dies
     // aus dem Heap - dies kann auf eingebetteten Systemen unterschiedlichen sein.
     // Der C Standard sagt nichts darüber.)
@@ -489,13 +489,13 @@ int main (int argc, char** argv) {
     int *my_other_ptr = calloc(20, sizeof(int));
 
     // Merke, dass es in C keinen Standard-Weg gibt, um die Länge eines dynamisch
-    // allozierten Arrays zu bestimmen. Auf Grund dessen sollte eine Variable 
+    // allozierten Arrays zu bestimmen. Auf Grund dessen sollte eine Variable
     // erstellt werden, welche sich die Anzahl der Elemente im Array merkt, wenn
     // die Arrays mehrmals im Programm gebraucht werden.
     // Weitere Informationen stehen im Abschnitt Funktionen.
     size_t size = 10;
     int *my_array = calloc(size, sizeof(int));
-    // Füge dem Array ein Element hinzu 
+    // Füge dem Array ein Element hinzu
     size++;
     my_array = realloc(my_array, sizeof(int) *size);
     if (my_array == NULL) {
@@ -504,12 +504,12 @@ int main (int argc, char** argv) {
     }
     my_array[10] = 5;
 
-    // Das Dereferenzieren von nicht alloziertem Speicher führt zu einem 
+    // Das Dereferenzieren von nicht alloziertem Speicher führt zu einem
     // Undefinierten Verhalten.
     printf("%d\n", *(my_ptr + 21)); // Gibt irgendwas aus.
     // Das Programm kann auch abstürzen
 
-    // Nachdem du fertig mit einem Block bist, welcher `malloc` verwendet hat, 
+    // Nachdem du fertig mit einem Block bist, welcher `malloc` verwendet hat,
     // muss der Speicher befreit werden. Ansonsten kann dieser Speicherbereich
     // niemand nutzen bis dein Programm beendet wird.
     // Dies wird auch als "Speicherleck" (engl: memory leak) bezeichnet.
@@ -543,10 +543,10 @@ int add_two_ints(int x1, int x2) {
     return x1 + x2; // verwendet return, um einen Wert zurückzugeben
 }
 
-/* 
-Funktionen werden auf Grund des Wertes aufgerufen (call-by-value). Wenn eine 
+/*
+Funktionen werden auf Grund des Wertes aufgerufen (call-by-value). Wenn eine
 Funktion aufgerufen wird, sind die Argumente Kopien der ursprünglichen Werte
-(ausgenommen Arrays). Alles, was man innerhalb einer Funktion mit den Werten 
+(ausgenommen Arrays). Alles, was man innerhalb einer Funktion mit den Werten
 macht, hat keinen Einfluss auf die Originalwerte als die Funktion aufgerufen
 wurde.
 
@@ -558,10 +558,10 @@ Beispiel:
 // Eine `void`-Funktion gibt keinen Wert zurück
 void str_reverse(char *str_in) {
     char tmp;
-    size_t ii = 0; 
+    size_t ii = 0;
     size_t size = strlen(str_in);
     // `strlen()` ist ein Teil der C Standard-Bibliothek.
-    // Merke: Die Länge, welche von `strlen` zurückgegeben wird, ist ohne den 
+    // Merke: Die Länge, welche von `strlen` zurückgegeben wird, ist ohne den
     // Null-Byte Terminator.
     for (ii = 0; i < size /2; ii++) { // in C99 kann man `ii` hier deklarieren.
         tmp = str_in[ii];
@@ -585,7 +585,7 @@ void swap_two_numbers(int *a, int *b) {
     *a = *b;
     *b = temp;
 }
-int first = 10; 
+int first = 10;
 int seconde = 20;
 printf("Erste Zahl: %d\n Zweite Zahl: %d\n", first, second);
 swap_two_numbers(&first, &second);
@@ -596,7 +596,7 @@ printf("Erste Zahl: %d\n Zweite Zahl: %d\n", first, second);
 Wenn man Arrays betrachtet, so werden diese immer als Pointer übergeben. Auch
 wenn die Arrays statisch alloziert werden (wie zum Beispiel `arr[10]`), werden
 diese als Pointer zum ersten Element des Arrays übergeben.
-Auch hier soll noch einmal erwähnt werden, dass es keinen Standard gibt, wie die 
+Auch hier soll noch einmal erwähnt werden, dass es keinen Standard gibt, wie die
 Größe eines dynamischen Arrays herausgefunden werden kann.
 */
 // Die Größe des Arrays muss unbedingt mitgegeben werden.
@@ -626,9 +626,9 @@ void test_function() {
 // (zur Kompiliereinheit gehörende) Variablen, Funktionen und Funktionslokale
 // Variablen angewendet werden.
 // Wenn man `static` bei lokalen Variablen verwendet, so ist diese Variable global
-// erreichbar und behält dessen Wert über Funktionsaufrufe hinweg, aber sie ist 
+// erreichbar und behält dessen Wert über Funktionsaufrufe hinweg, aber sie ist
 // nur innerhalb der deklarierten Funktion verfügbar. Außerdem werden statische
-// Variablen mit 0 initialisiert, wenn sie nicht mit einem anderen Startwert 
+// Variablen mit 0 initialisiert, wenn sie nicht mit einem anderen Startwert
 // initialisiert werden.
 // Es ist auch möglich, Funktionen als statisch zu deklarieren, damit diese
 // `private` sind. Privat heißt, dass sie nur in diesem Kontext sichtbar sind.
@@ -665,7 +665,7 @@ void function_1() {
     struct rectangle *my_rectangle_ptr = &my_rectangle;
 
     // Verwende Dereferenzierung, um Struct-Inhalte zu bearbeiten
-    (*my_rectangle_ptr).width = 30; 
+    (*my_rectangle_ptr).width = 30;
 
     //Noch besser: Verwende die Kurzschreibweise ->, um die Lesbarkeit zu
     // verbessern.
@@ -679,7 +679,7 @@ int area(rect r) {
     return r.width * r.height;
 }
 
-// Wenn du große Structs hast, kannst du diese mit dem Pointer kopieren, 
+// Wenn du große Structs hast, kannst du diese mit dem Pointer kopieren,
 // damit große Kopiervorgänge vermieden werden.
 int area_ptr(const rect *r) {
     return r->width * r->height;
@@ -689,14 +689,14 @@ int area_ptr(const rect *r) {
 // Funktionspointer
 ////////////////////////////////////////////////
 
-/* 
-Zur Laufzeit sind Funktionen in einer Speicheradresse gespeichert. 
-Funktionspointer sind wie normale Pointer (es wird einfach eine Speicheradresse 
+/*
+Zur Laufzeit sind Funktionen in einer Speicheradresse gespeichert.
+Funktionspointer sind wie normale Pointer (es wird einfach eine Speicheradresse
 gespeichert). Funktionspointer können verwendet werden, um Funktionen und
 Handler (oder Callback-Funktionen) direkt aufzurufen.
 Wie auch immer, die Syntax kann zu Beginn verwirrend wirken.
 
-Zum Beispiel: Verwende str_reverse von einem Pointer 
+Zum Beispiel: Verwende str_reverse von einem Pointer
 */
 void str_reverse_through_pointer(char *str_in) {
     // Definiere eine Funktionspointer-Variable, welche f genannt wird.
@@ -713,7 +713,7 @@ void str_reverse_through_pointer(char *str_in) {
 /*
 Solange die Signaturen der Funktionen übereinstimmen, kann man sämtliche Funktionen
 demselben Pointer zuweisen. Funktionspointer sind auf Grund der Einfachheit und
-Leserlichkeit normalerweise wie folgt `typedef`d 
+Leserlichkeit normalerweise wie folgt `typedef`d
 */
 typedef void (*my_fnp_type)(char *);
 // Danach werden diese genutzt, um die wirkliche Pointervariable zu deklarieren.
@@ -739,7 +739,7 @@ typedef void (*my_fnp_type)(char *);
 '\''; // einfaches Anführungszeichen (single quote)
 '\"'; // doppeltes Anführungszeichen (double quote)
 '\xhh'; // Hexadezimale Zahl (hexadecimal number.) Beispiel:
-        // '\xb' = Zeichen für vertikalen Tab 
+        // '\xb' = Zeichen für vertikalen Tab
 '\0oo'; // Oktalzahl (octal number). Beispiel \013 = Zeichen für vertikalen Tab
 
 //Ausgabeformatierung
@@ -787,7 +787,7 @@ typedef void (*my_fnp_type)(char *);
 ////////////////////////////////////////////////
 
 /*
-Header-Dateien sind ein wichtiger Teil von C, da sie eine Verbindung zwischen 
+Header-Dateien sind ein wichtiger Teil von C, da sie eine Verbindung zwischen
 unterschiedlichen C-Quelldateien herstellen. Außerdem vereinfachen Header-Dateien
 den Code und Definitionen, da diese in separaten Dateien geschrieben werden können.
 
@@ -817,8 +817,8 @@ befindet wie die C-Quelldatei.
 #define ADD(a, b) ((a) + (b))
 
 // Beachte die Klammern, welche um die Argumente geschrieben wurden - diese sind
-// wichtig, damit sichergestellt werden kann, dass a und b nicht unerwartet 
-// erweitert werden. Zum Beispiel: `MUL (x,y) (x * y)`; Bei der Verwendung von 
+// wichtig, damit sichergestellt werden kann, dass a und b nicht unerwartet
+// erweitert werden. Zum Beispiel: `MUL (x,y) (x * y)`; Bei der Verwendung von
 // `MUL(1 + 2, 3)` würde dies wie folgt erweitert werden: `(1 + 2 * 3)`, was zu
 // einem falschen Resultat führt.
 
@@ -838,7 +838,7 @@ enum traffic_light_state {GREEN, YELLOW, RED};
 Node create_linked_list(int *value, int length);
 
 // Außer den oben genannten Elementen, sollten weitere Definitionen in einer
-// C-Datei gemacht werden. Übermäßige Includes und Definitionen sollten auch 
+// C-Datei gemacht werden. Übermäßige Includes und Definitionen sollten auch
 // nicht einer Header-Datei gemacht werden. Stattdessen wird es empfohlen, diese
 // in eine separate Header-Datei oder in eine C-Quelldatei zu schreiben.
 

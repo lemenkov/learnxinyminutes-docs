@@ -130,7 +130,7 @@ array5 = [
 ###########
 
 # Le tabelle (o hash table o dizionari) sono collection di coppie key/value.
-# Iniziano con un nome tra parentesi quadre su una linea separata. 
+# Iniziano con un nome tra parentesi quadre su una linea separata.
 # Le tabelle vuote (senza alcun valore) sono valide.
 [tabella]
 

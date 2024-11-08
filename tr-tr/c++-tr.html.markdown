@@ -12,13 +12,13 @@ contributors:
     - ["Adem Budak", "https://github.com/p1v0t"]
 ---
 
-C++ 
+C++
 [yaratıcısı Bjarne Stroustrup'a göre](http://channel9.msdn.com/Events/Lang-NEXT/Lang-NEXT-2014/Keynote),
 
 - "daha iyi bir C" yapmak
-- veri soyutlamayı desteklemek 
+- veri soyutlamayı desteklemek
 - nesneye yönelik programlamayı deskteklemek
-- tipten bağımsız programlamayı desteklemek 
+- tipten bağımsız programlamayı desteklemek
 
 için tasarlanmış bir sistem programlama dilir.
 
@@ -35,7 +35,7 @@ Bu hız ve kullanışlılık C++'ı en çok kullanılan dillerden biri yapar.
 // C++ _neredeyse_ C'nin bir üstkümesidir, değişken tanımı, basit tipleri
 // ve fonksiyonları için temelde aynı sözdizimini paylaşır.
 
-// Aynı C gibi, programın başlangıç noktası bir integer döndüren 
+// Aynı C gibi, programın başlangıç noktası bir integer döndüren
 // main fonksiyonudur.
 // Bu değer programın bitiş statüsünü belli eder.
 // Daha fazla bilgi için bknz http://en.wikipedia.org/wiki/Exit_status .
@@ -46,7 +46,7 @@ int main(int argc, char** argv)
     // argc, argüman sayısını belli eder,
     // argv, argümanları belli eden, C-stili string'lerin (char*) dizisidir.
     // İlk argüman çağrılan programın adıdır.
-    // Eğer argümanları umursamıyorsan, argv ve argc kullanılmayabilir 
+    // Eğer argümanları umursamıyorsan, argv ve argc kullanılmayabilir
     // int main() gibi
 
     // 0 çıkış durumu başarıyı belirtir.
@@ -86,7 +86,7 @@ int main()
 //////////////////////////////////
 
 // C++ herbir fonksiyonun farklı parametereler
-// aldığı fonksiyon fazladan yüklenmesini desktekler 
+// aldığı fonksiyon fazladan yüklenmesini desktekler
 
 void print(char const* myString)
 {
@@ -134,8 +134,8 @@ void invalidDeclaration(int a = 1, int b) // Hata!
 // Namespace(İsim uzayı)
 /////////////////////////
 
-// Namespace'ler değişken, fonksiyon ve diğer bildirimlerin 
-// kapsama alanını ayırır. 
+// Namespace'ler değişken, fonksiyon ve diğer bildirimlerin
+// kapsama alanını ayırır.
 // Namespace'ler içiçe geçebilir.
 
 namespace First {
@@ -189,7 +189,7 @@ int main()
 
    // stdout (veya terminal/screen)'ta çıktı verir
    cout << "Enter your favorite number:\n";
-   // Girdiyi alır 
+   // Girdiyi alır
    cin >> myInt;
 
    // cout ayrıca formatlanabilir
@@ -211,7 +211,7 @@ using namespace std; // String'ler de std namespace'i içindedir. (standard küt
 string myString = "Hello";
 string myOtherString = " World";
 
-// + eklemek için kullanıldır 
+// + eklemek için kullanıldır
 cout << myString + myOtherString; // "Hello World"
 
 cout << myString + " You"; // "Hello You"
@@ -225,7 +225,7 @@ cout << myString; // "Hello Dog"
 // Reference (Referans)
 ///////////////////////
 
-// C'deki pointer'lara ek olarak 
+// C'deki pointer'lara ek olarak
 // C++ _reference_'lara sahiptir.
 // Bunlar bir kere atandınğında tekrardan atanamayan pointer'dır
 // ve null olamaz.
@@ -267,7 +267,7 @@ string retVal = tempObjectFun();
 //   - dönmüş olan nesne yok ediliyor
 // İşte bu dönen nesneye geçici nesne denir. Geçici nesneler fonksiyon nesne
 // döndürdüğünde oluşturulur ve ifade işini bitirdiğinde yok edilir (Aslında,
-// standard'ın söylediği şey bu ama derleyiciler bu davranışı değiştirmemize 
+// standard'ın söylediği şey bu ama derleyiciler bu davranışı değiştirmemize
 // izin veriyor. Daha fazla detay için "return value optimization" diye
 // aratabilirsin. Sonuç olarak aşağıdaki kodda:
 foo(bar(tempObjectFun()))
@@ -285,10 +285,10 @@ void constReferenceTempObjectFun() {
   ...
 }
 
-// C++11 ile gelen diğer bir reference geçici nesnelere özeldir. Bu türden birden 
+// C++11 ile gelen diğer bir reference geçici nesnelere özeldir. Bu türden birden
 // bir tip tanımlayamazsın ama aşırı yüklenme sırasında bu tipler öncelik alır:
 void someFun(string& s) { ... }  // Regular reference
-void someFun(string&& s) { ... }  // Geçici nesneye reference 
+void someFun(string&& s) { ... }  // Geçici nesneye reference
 
 string foo;
 someFun(foo);  // regular reference'ı çağırır
@@ -352,7 +352,7 @@ void WriteByteToFile(uint8_t InputValue)
 
 void WritePreferredCarTypeToFile(ECarTypes InputCarType)
 {
-	// ECarTypes, uint8_t tipinde olmasına rağmen, "enum class" olarak 
+	// ECarTypes, uint8_t tipinde olmasına rağmen, "enum class" olarak
 	// tanımlandığından derlenmeyecektir!
 	WriteByteToFile(InputCarType);
 }
@@ -388,7 +388,7 @@ public:
 
     // Nesnenin durumunu değiştirmeyen fonksiyonlar const ile işaretlenmelidir
 
-    // Türetilen sınıflarda fonksiyonu override edebilmek için başına 
+    // Türetilen sınıflarda fonksiyonu override edebilmek için başına
     // _virtual_ eklenmelidir.
     // Fonksiyonlar, performanslar ilgili nedenlerden ötürü default olarak virtual değildir
     virtual void print() const;
@@ -449,7 +449,7 @@ int main() {
 
 // Inheritance(Miras)
 
-// Bu sınıf, Dog sınıfında public ve protected olan herşeyi miras alır, 
+// Bu sınıf, Dog sınıfında public ve protected olan herşeyi miras alır,
 // private olanları da miras alır ama, public ve protected sınıflar aracılıyla
 // yapılmıyorsa, doğrudan erişemez.
 class OwnedDog : public Dog {
@@ -477,7 +477,7 @@ void OwnedDog::setOwner(const std::string& dogsOwner)
 
 void OwnedDog::print() const
 {
-    Dog::print(); // Ana dog sınıfındaki print fonksiyonunu çağırır 
+    Dog::print(); // Ana dog sınıfındaki print fonksiyonunu çağırır
     std::cout << "Dog is owned by " << owner << "\n";
     // 	      "Dog is <name> and weights <weight>"
     //        "Dog is owned by <owner>"
@@ -499,7 +499,7 @@ public:
     // Üye değişkenkenlere default değer atanabilir.
     double x = 0;
     double y = 0;
-    
+
     // Default constructor
     Point() { };
 
@@ -570,12 +570,12 @@ intBox.insert(123);
 Box<Box<int> > boxOfBox;
 boxOfBox.insert(intBox);
 
-// C++11'den önce iki '>' arasına boşluk koymak zorundaydık yoksa sağa kaydırma 
+// C++11'den önce iki '>' arasına boşluk koymak zorundaydık yoksa sağa kaydırma
 // operatörü olarak algılanabilirdi.
 
 // Bazen şunu da görebilirsin
 //   template<typename T>
-// 'class' ve 'typename' anahtar sözcükleri çoğunlukla 
+// 'class' ve 'typename' anahtar sözcükleri çoğunlukla
 // birbirlerinin yerine kullanılabilir. Tam açıklama için, bknz.
 //   http://en.wikipedia.org/wiki/Typename
 // (evet, bu anahtar sözcüğün kendi Wikipedia sayfası var).
@@ -603,7 +603,7 @@ void printMessage() {
   cout << "Learn C++ in " << Y << " minutes!" << endl;
 }
 
-// Ve template'i daha etkili kod için dışarıdan özelleştirebilirsin. 
+// Ve template'i daha etkili kod için dışarıdan özelleştirebilirsin.
 // Tabiki gerçek-dünya kullanımlarında özelleştirme bunun kadar kolay değildir.
 // Dikkat edersen, bütün parametreleri dıştan özelleştirmiş olsak bile
 // hala fonksiyonu (veya sınıfı( template olarak tanımlamamız gerekli.
@@ -622,12 +622,12 @@ printMessage<10>();  // "Learn C++ faster in only 10 minutes!" yazdırır
 
 // Standard kütüphane bazı istisnai tipler sağlar
 // (bknz http://en.cppreference.com/w/cpp/error/exception)
-// ama herhangi bir tip de istisnai durum fırlatabilir 
+// ama herhangi bir tip de istisnai durum fırlatabilir
 
 #include <exception>
 #include <stdexcept>
 
-// _try_ bloğu içinde fırlatılan bütün istisnai durumlar, takip eden, _catch_ ile 
+// _try_ bloğu içinde fırlatılan bütün istisnai durumlar, takip eden, _catch_ ile
 // yakalanabilir.
 try {
     // _new_ kullanarak heap'ten istisnai durumlar için yer ayırma
@@ -653,7 +653,7 @@ catch (...)
 
 // RAII, "Resource Acquisition Is Initialization" kelimelerinin kısaltmasıdır.
 // Bu Türkçe, "Kaynak alımı aynı zamanda ilk değer atamasıdır." olarak çevrilebilir.
-// Bunu basitçe constructor ile ayrılan hafızanın destructor ile iade edilmesi olarak 
+// Bunu basitçe constructor ile ayrılan hafızanın destructor ile iade edilmesi olarak
 // düşünebiliriz.
 
 // Bunun ne şekilde kullanışlı olduğunu görmek için
@@ -671,7 +671,7 @@ void doSomethingWithAFile(const char* filename)
 }
 
 // Malesef hatalarla başa çıkmaya çalışırken işler hızlıca karmaşıklaşır.
-// Mesela fopen'ın başarısız olduğunu varsayalım, ve doSoomethingWithTheFile ve 
+// Mesela fopen'ın başarısız olduğunu varsayalım, ve doSoomethingWithTheFile ve
 // doSomethingWithIt hata kodları gönderdi.
 //  (İstisnai durumlar yonetimi, hata koduna tercih ediler bir yöntemdir, ama bazı
 //   programcılar, özellikle C arkaplanı olanlar, aynı fikirde değildir.
@@ -711,7 +711,7 @@ bool doSomethingWithAFile(const char* filename)
     if (!doSomethingElseWithIt(fh))
         goto failure;
 
-    fclose(fh); // Dosyayı kapat 
+    fclose(fh); // Dosyayı kapat
     return true; // Başarı durumunu ifade eder
 
 failure:
@@ -723,7 +723,7 @@ failure:
 // işler daha temiz olur ama hala en iyi durumun altında kalır.
 void doSomethingWithAFile(const char* filename)
 {
-    FILE* fh = fopen(filename, "r"); 
+    FILE* fh = fopen(filename, "r");
     if (fh == nullptr)
         throw std::runtime_error("Could not open the file.");
 
@@ -742,7 +742,7 @@ void doSomethingWithAFile(const char* filename)
 
 // Şimdi aynı şeyi C++'ın dosya stream sınıfıyla (fstream) karşılaştıralım
 // fstream, dosyayı kapatmak için kendi destructor'ını kullanır.
-// Destructor'ın, nesne scope dışına çıktığında otomatik olarak çağrıldığını 
+// Destructor'ın, nesne scope dışına çıktığında otomatik olarak çağrıldığını
 // hatırlayın.
 void doSomethingWithAFile(const std::string& filename)
 {
@@ -781,7 +781,7 @@ void doSomethingWithAFile(const std::string& filename)
 // lambda'lar, tam olarak çağrıldığı yerde bir anonim fonksiyon tanımlamak
 // veya fonksiyona argüman geçmek için uygun bir yoldur.
 
-// Mesela, pair'lardan oluşan bir vector'u, pair'ın ikinci değerine 
+// Mesela, pair'lardan oluşan bir vector'u, pair'ın ikinci değerine
 // göre sıralamak isteyelim
 
 vector<pair<int, int> > tester;
@@ -796,7 +796,7 @@ sort(tester.begin(), tester.end(), [](const pair<int, int>& lhs, const pair<int,
         return lhs.second < rhs.second;
     });
 
-// Lambda ifadesinin söz dizimine dikkat edin, 
+// Lambda ifadesinin söz dizimine dikkat edin,
 // lambda'daki [], değişkenleri "tutmak" için kullanılır
 // "Tutma listesi", fonksiyon gövdesinde nelerin, ne şekilde erişilebilir olduğunu tanımlar
 // Şunlardan biri olabilir:
@@ -847,7 +847,7 @@ for(auto elem: arr) {
 ////////////////
 
 // C++ dilinin bakış açısı yeni başlayanlar için (hatta dili iyi bilenler için bile)
-// şaşırtıcı olabilir. 
+// şaşırtıcı olabilir.
 // Bu bölüm, ne yazık ki, büyük ölçüde tam değil; C++ kendi ayağına ateş edilebilecek kolay
 // dillerden biridir.
 
@@ -893,7 +893,7 @@ f1 = f2;
 
 #include<tuple>
 
-// Ana fikir olarak, Tuple, eski veri yapılarına (C'deki struct'lar) benzer ama isimli veri üyeleri yerine 
+// Ana fikir olarak, Tuple, eski veri yapılarına (C'deki struct'lar) benzer ama isimli veri üyeleri yerine
 // elemanlarına tuple içindeki sırasına göre erişilir.
 
 // Tuple'ı inşa ederek başlayalım
@@ -1035,12 +1035,12 @@ cout << it->second;
 // ifadenin değerine karar vermek için yeterli değilse çalıştırılır
 
 true && false // **mantıksal ve** işlemi yapılır ve yanlış sonucu üretilir
-true || false // **mantıksal veya** işlemi yapılır ve true  sonucu üretilir 
+true || false // **mantıksal veya** işlemi yapılır ve true  sonucu üretilir
 ! true        // **mantıksal değil** işlemi yapılır ve yalnış sonucu üretilir
 
 // Sembolleri kullanmak yerine onlara karşılık gelen anahtar kelimeler kullanılabilir
 true and false // **mantıksal ve** işlemi yapılır ve yanlış sonucu üretilir
-true or false  // **mantıksal veya** işlemi yapılır ve true  sonucu üretilir 
+true or false  // **mantıksal veya** işlemi yapılır ve true  sonucu üretilir
 not true       // **mantıksal değil** işlemi yapılır ve yalnış sonucu üretilir
 
 // Bit seviyesindeki operatörler

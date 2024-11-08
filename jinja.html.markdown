@@ -47,7 +47,7 @@ as follows:
 
 {{ foo }}
 
-{# 
+{#
   Additionally, you can use a dot (.) to access attributes of a variable or
   use Python syntax, using []
 #}

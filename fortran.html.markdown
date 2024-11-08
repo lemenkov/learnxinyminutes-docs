@@ -47,13 +47,13 @@ program example         ! declare a program called example.
     character(len=3) :: month                     ! string of 3 characters.
 
     ! declare an array of 6 reals.
-    real :: array(6)                                    
-    ! another way to declare an array. 
-    real, dimension(4) :: arrayb                 
+    real :: array(6)
+    ! another way to declare an array.
+    real, dimension(4) :: arrayb
     ! an array with a custom index -10 to 10 (inclusive)
-    integer :: arrayc(-10:10)                     
+    integer :: arrayc(-10:10)
     ! A multidimensional array.
-    real :: array2d(3, 2)                         
+    real :: array2d(3, 2)
 
     ! The '::' separators are not always necessary but are recommended.
 
@@ -81,8 +81,8 @@ program example         ! declare a program called example.
 
     ! Assignment & Arithmetic
     ! =======================
-    
-    Z = 1                           ! assign to variable z declared above 
+
+    Z = 1                           ! assign to variable z declared above
     j = 10 + 2 - 3
     a = 11.54/(2.3*3.1)
     b = 2**3                        ! exponentiation
@@ -109,7 +109,7 @@ program example         ! declare a program called example.
         inner: if (.TRUE.) then     ! can name if-construct.
             b = 1
         end if inner                ! then must name endif statement.
-    endif                           ! 'endif' is equivalent to 'end if'  
+    endif                           ! 'endif' is equivalent to 'end if'
 
     i = 20
     select case (i)
@@ -214,12 +214,12 @@ program example         ! declare a program called example.
 
     ! we can have multiple format specifications.
     print "(I5,F6.2,E6.2)", 120, 43.41, 43.41
-    
+
     ! 3 repeats of integers (field width = 5).
-    print "(3I5)", 10, 20, 30                       
+    print "(3I5)", 10, 20, 30
 
     ! repeated grouping of formats.
-    print "(2(I5,F6.2))", 120, 43.42, 340, 65.3     
+    print "(2(I5,F6.2))", 120, 43.42, 340, 65.3
 
     ! We can also read input from the terminal.
     read (*, *) v
@@ -234,7 +234,7 @@ program example         ! declare a program called example.
 
     ! To read a file.
     open (newunit=m, file="records.txt", status="old")
-    ! The file is referred to by a 'new unit number', 
+    ! The file is referred to by a 'new unit number',
     ! an integer that the compiler picks for you.
 
     read (unit=m, fmt="(3F10.2)") a, b, c
@@ -271,7 +271,7 @@ program example         ! declare a program called example.
     ! Function calls can also be evoked within expressions.
     print *, func2(3, 2, k)
 
-    ! A pure function is a function that doesn't modify its input 
+    ! A pure function is a function that doesn't modify its input
     ! parameters or cause any side-effects.
     m = func3(3, 2, k)
 
@@ -285,7 +285,7 @@ contains                    ! Start defining the program's internal procedures:
         ! the return variable defaults to the function name.
 
         if (a >= 2) then
-            func = a + b + c            
+            func = a + b + c
             return                      ! returns the current value at 'func'
         end if
         func = a + c
@@ -297,10 +297,10 @@ contains                    ! Start defining the program's internal procedures:
         integer, intent(in) :: a, b     ! can declare and enforce that variables
         !are not modified by the function.
         integer, intent(inout) :: c
-        integer :: f                    
+        integer :: f
         ! function return type declared inside the function.
-        integer :: cnt = 0               ! GOTCHA -         
-        ! assigning a value at initalization 
+        integer :: cnt = 0               ! GOTCHA -
+        ! assigning a value at initalization
         ! implies that the variable is
         ! saved between function calls.
 
@@ -317,8 +317,8 @@ contains                    ! Start defining the program's internal procedures:
         func3 = a*b*c
 
     end function func3
-    
-    ! a subroutine does not return anything, 
+
+    ! a subroutine does not return anything,
     ! but can change the value of arguments.
     subroutine routine(d, e, f)
         real, intent(inout) :: f
@@ -328,7 +328,7 @@ contains                    ! Start defining the program's internal procedures:
 
     end subroutine routine
 
-end program example                     
+end program example
 ! End of Program Definition -----------------------
 
 ! Functions and Subroutines declared externally to the program listing need
@@ -368,7 +368,7 @@ module fruity
     implicit none                   ! comes after module imports.
 
     ! By default all module data and functions will be public
-    private                         ! Instead set default to private 
+    private                         ! Instead set default to private
     ! Declare some variables/functions explicitly public.
     public :: apple, mycar, create_mycar
     ! Declare some variables/functions private to the module (redundant here).

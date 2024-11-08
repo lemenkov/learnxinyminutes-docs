@@ -266,8 +266,8 @@ for (var x in person){
     description += person[x] + " ";
 } // description = 'Paul Ken 18 '
 
-// The for/of statement allows iteration over iterable objects (including the built-in String, 
-// Array, e.g. the Array-like arguments or NodeList objects, TypedArray, Map and Set, 
+// The for/of statement allows iteration over iterable objects (including the built-in String,
+// Array, e.g. the Array-like arguments or NodeList objects, TypedArray, Map and Set,
 // and user-defined iterables).
 var myPets = "";
 var pets = ["cat", "dog", "hamster", "hedgehog"];
@@ -589,7 +589,7 @@ if (Object.create === undefined){ // don't overwrite it if it exists
 
 // ES6 Additions
 
-// The "let" keyword allows you to define variables in a lexical scope, 
+// The "let" keyword allows you to define variables in a lexical scope,
 // as opposed to a function scope like the var keyword does.
 let name = "Billy";
 
@@ -605,7 +605,7 @@ pi = 4.13; // You cannot do this.
 
 // There is a new syntax for functions in ES6 known as "lambda syntax".
 // This allows functions to be defined in a lexical scope like with variables
-// defined by const and let. 
+// defined by const and let.
 
 const isEven = (number) => {
     return number % 2 === 0;

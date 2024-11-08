@@ -94,14 +94,14 @@ func control_flow():
   x = 8
   y = 2 # y 最初被设为一个浮点数，
         # 但我们可以利用语言提供的动态类型能力将它的类型变为整型！
-  
+
   if x < y:
     print("x 小于 y")
   elif x > y:
     print("x 大于 y")
   else:
     print("x 等于 y")
-  
+
   var a = true
   var b = false
   var c = false
@@ -116,7 +116,7 @@ func control_flow():
 
   for i in ["two", 3, 1.0]: # 遍历数组
     print(i)
-  
+
   while x > y:
     printt(x, y)
     y += 1
@@ -144,7 +144,7 @@ func control_flow():
       continue
     _:
       print("下划线分支，在其他分支都不满足时，在这里书写默认的逻辑。")
-  
+
   # 三元运算符 (写在一行的 if-else 语句)
   prints("x 是", "正值" if x >= 0 else "负值")
 

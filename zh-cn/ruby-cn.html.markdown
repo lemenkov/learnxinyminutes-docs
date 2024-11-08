@@ -62,7 +62,7 @@ translators:
 # 算术符号只是语法糖而已
 # 实际上是调用对象的方法
 1.+(3) #=> 4
-10.* 5 #=> 50 
+10.* 5 #=> 50
 100.methods.include?(:/) #=> true
 
 # 特殊的值也是对象
@@ -343,7 +343,7 @@ when 'D'
   puts "Scraping through"
 when 'F'
   puts "You failed!"
-else 
+else
   puts "Alternative grading system, eh?"
 end
 #=> "Better luck next time"
@@ -455,7 +455,7 @@ def best(first, second, third, *others)
   puts "There were #{others.count} other participants."
 end
 
-best *ranked_competitors 
+best *ranked_competitors
 #=> Winners are John, Sally, and Dingus.
 #=> There were 2 other participants.
 
@@ -480,7 +480,7 @@ class Human
 
   # 一个类变量，它被这个类的所有实例变量共享
   @@species = "H. sapiens"
-  
+
   # 基本构造函数
   def initialize(name, age = 0)
     # 将参数值赋给实例变量 "name"
@@ -488,30 +488,30 @@ class Human
     # 如果没有给出 age,那么会采用参数列表中的默认值
     @age = age
   end
-  
+
   # 基本的 setter 方法
   def name=(name)
     @name = name
   end
-  
+
   # 基本地 getter 方法
   def name
     @name
   end
-  
+
   # 以上的功能也可以用下面的 attr_accessor 来封装
   attr_accessor :name
-  
+
   # Getter/setter 方法也可以像这样单独创建
   attr_reader :name
   attr_writer :name
-  
+
   # 类方法通过使用 self 与实例方法区别开来。
   # 它只能通过类来调用，不能通过实例调用。
   def self.say(msg)
     puts "#{msg}"
   end
-  
+
   def species
     @@species
   end

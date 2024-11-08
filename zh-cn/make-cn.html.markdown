@@ -11,7 +11,7 @@ lang: zh-cn
 ---
 
 Makefile 用于定义如何创建目标文件, 比如如何从源码到可执行文件. 创建这一工具的目标是
-减少不必要的编译或者任务.是传说中的 Stuart Feldman 在 1976 年花了一个周末写出来的, 
+减少不必要的编译或者任务.是传说中的 Stuart Feldman 在 1976 年花了一个周末写出来的,
 而今仍然使用广泛, 特别是在 Unix 和 Linux 系统上.
 
 虽然每个语言可能都有相应的或多或少提供 make 的功能, 比如 ruby 的 rake, node 的 gulp, broccoli

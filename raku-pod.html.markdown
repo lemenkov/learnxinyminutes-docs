@@ -246,8 +246,8 @@ examples of both good and bad tables, please visit
 
 ```
 =begin table
-Option      | Description     
-============|================  
+Option      | Description
+============|================
 data        | path to data files.
 engine      | engine to be used for processing templates.
 ext         | extension to be used for dest files.

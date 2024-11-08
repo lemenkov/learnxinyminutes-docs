@@ -166,7 +166,7 @@ my-pet ; => #<dog>
 (list 1 2 3) ; => '(1 2 3)
 ;; a quote can also be used for a literal list value
 '(1 2 3) ; => '(1 2 3)
-;; a quasiquote (represented by the backtick character) with commas 
+;; a quasiquote (represented by the backtick character) with commas
 ;; can be used to evaluate functions
 `(1 ,(+ 1 1) 3) ; => '(1 2 3)
 
@@ -447,12 +447,12 @@ m ; => '#hash((b . 2) (a . 1) (c . 3))  <-- no `d'
 ;;; More Complex Iterations
 
 ;; Parallel scan of multiple sequences (stops on shortest)
-(for ([i 10] [j '(x y z)]) 
+(for ([i 10] [j '(x y z)])
   (printf "~a:~a\n" i j))
 ; => 0:x 1:y 2:z
 
 ;; Nested loops
-(for* ([i 2] [j '(x y z)]) 
+(for* ([i 2] [j '(x y z)])
   (printf "~a:~a\n" i j))
 ; => 0:x, 0:y, 0:z, 1:x, 1:y, 1:z
 

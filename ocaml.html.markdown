@@ -332,7 +332,7 @@ let example_tree: int tree =
 
 (* A collection of values with named fields *)
 
-type animal = 
+type animal =
    {
       name: string;
       color: string;
@@ -340,10 +340,10 @@ type animal =
    }
 ;;
 
-let cow = 
+let cow =
    {  name: "cow";
       color: "black and white";
-      legs: 4; 
+      legs: 4;
    }
 ;;
 val cow : animal
@@ -398,15 +398,15 @@ say (Cat "Fluffy") ;; (* "Fluffy says meow". *)
 
 (* However, pattern matching must be exhaustive *)
 type color = Red | Blue | Green ;;
-let what_color x = 
-   match x with 
+let what_color x =
+   match x with
    | Red -> "color is red"
    | Blue -> "color is blue"
-   (* Won't compile! You have to add a _ case or a Green case 
+   (* Won't compile! You have to add a _ case or a Green case
       to ensure all possibilities are accounted for *)
 ;;
 (* Also, the match statement checks each case in order.
-   So, if a _ case appears first, none of the 
+   So, if a _ case appears first, none of the
    following cases will be reached! *)
 
 (** Traversing data structures with pattern matching **)
@@ -437,8 +437,8 @@ let t = Cons (1, Cons (2, Cons (3, Nil))) ;;
 sum_int_list t ;;
 
 (* Heres a function to tell if a list is sorted *)
-let rec is_sorted l = 
-   match l with 
+let rec is_sorted l =
+   match l with
    | x :: y :: tail -> x <= y && is_sorted (y :: tail)
    | _ -> true
 ;;
@@ -448,8 +448,8 @@ is_sorted [1; 2; 3] ;; (* True *)
    since the <= operator is used on elements of l *)
 
 (* And another to reverse a list *)
-let rec rev (l: 'a list) : 'a list = 
-  match l with 
+let rec rev (l: 'a list) : 'a list =
+  match l with
   | [] -> []
   | x::tl -> (rev tl) @ [x]
 ;;

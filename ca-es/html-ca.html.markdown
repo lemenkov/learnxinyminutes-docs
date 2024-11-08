@@ -85,7 +85,7 @@ article tracta principalment la sintaxi de l'HTML i alguns consells útils.
 
 <head>
 	<!--
-		L'etiqueta <title> indica al navegador el títol que s'ha de visualitzar 
+		L'etiqueta <title> indica al navegador el títol que s'ha de visualitzar
                 a la finestra del buscador, a la barra del títol, i al nom de la pestanya.
 	-->
 	<title>El meu lloc web</title>

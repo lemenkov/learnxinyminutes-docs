@@ -18,7 +18,7 @@ gelöst haben, dann speichern Sie das Ergebnis für die spätere Referenz, um zu
 vermeiden, das gleiche Problem noch einmal zu lösen.
 
 Denken Sie immer daran!
-"Diejenigen, die sich nicht an die Vergangenheit erinnern können, 
+"Diejenigen, die sich nicht an die Vergangenheit erinnern können,
 sind dazu verdammt, sie zu wiederholen."
 
 ## Wege zur Lösung solcher Probleme

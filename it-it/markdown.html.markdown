@@ -85,7 +85,7 @@ Qui siamo nel paragrafo 3!
 Se volete inserire l'elemento HTML `<br />`, potete terminare la linea con due o più spazi e poi iniziare un nuovo paragrafo.
 
 ```md
-Questa frase finisce con due spazi (evidenziatemi per vederli).  
+Questa frase finisce con due spazi (evidenziatemi per vederli).
 
 C'è un <br /> sopra di me!
 ```

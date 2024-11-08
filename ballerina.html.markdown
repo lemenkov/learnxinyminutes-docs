@@ -5,12 +5,12 @@ contributors:
 filename: learn_ballerina.bal
 ---
 
-[Ballerina](https://ballerina.io/) is a statically-typed programming language for making development for the cloud an enjoyable experience. 
+[Ballerina](https://ballerina.io/) is a statically-typed programming language for making development for the cloud an enjoyable experience.
 
 ```java
 // Single-line comment
 
-// Import modules into the current source file 
+// Import modules into the current source file
 import ballerina/io;
 import ballerina/time;
 import ballerina/http;
@@ -21,12 +21,12 @@ import ballerinax/awslambda;
 import ballerinax/azure.functions as af;
 
 http:Client clientEP = new ("https://freegeoip.app/");
-jdbc:Client accountsDB = new ({url: "jdbc:mysql://localhost:3306/AccountsDB", 
+jdbc:Client accountsDB = new ({url: "jdbc:mysql://localhost:3306/AccountsDB",
                                username: "test", password: "test"});
 
-// A service is a first-class concept in Ballerina, and is one of the 
-// entrypoints to a Ballerina program. 
-// The Ballerina platform also provides support for easy deployment to 
+// A service is a first-class concept in Ballerina, and is one of the
+// entrypoints to a Ballerina program.
+// The Ballerina platform also provides support for easy deployment to
 // environments such as Kubernetes (https://ballerina.io/learn/deployment/kubernetes/).
 service geoservice on new http:Listener(8080) {
 
@@ -42,7 +42,7 @@ service geoservice on new http:Listener(8080) {
 }
 
 // Serverless Function-as-a-Service support with AWS Lambda.
-// The Ballerina compiler automatically generates the final deployment 
+// The Ballerina compiler automatically generates the final deployment
 // artifact to be deployed.
 @awslambda:Function
 public function echo(awslambda:Context ctx, json input) returns json {
@@ -50,7 +50,7 @@ public function echo(awslambda:Context ctx, json input) returns json {
 }
 
 @awslambda:Function
-public function notifyS3(awslambda:Context ctx, 
+public function notifyS3(awslambda:Context ctx,
                          awslambda:S3Event event) returns json {
     return event.Records[0].s3.'object.key;
 }
@@ -58,7 +58,7 @@ public function notifyS3(awslambda:Context ctx,
 // Serverless Function-as-a-Service support with Azure Functions.
 // Similar to AWS Lambda, the compiler generates the deployment artifacts.
 @af:Function
-public function fromQueueToQueue(af:Context ctx, 
+public function fromQueueToQueue(af:Context ctx,
         @af:QueueTrigger { queueName: "queue1" } string inMsg,
         @af:QueueOutput { queueName: "queue2" } af:StringOutputBinding outMsg) {
     outMsg.value = inMsg;
@@ -67,17 +67,17 @@ public function fromQueueToQueue(af:Context ctx,
 // A custom record type
 public type Person record {
     string id;              // required field
-    string name;            
+    string name;
     int age?;               // optional field
     string country = "N/A"; // default value
 };
 
 @af:Function
 public function fromHttpTriggerCosmosDBInput(
-        @af:HTTPTrigger { route: "c1/{country}" } af:HTTPRequest httpReq, 
-        @af:CosmosDBInput { connectionStringSetting: "CosmosDBConnection", 
-        databaseName: "db1", collectionName: "c1", 
-        sqlQuery: "select * from c1 where c1.country = {country}" } 
+        @af:HTTPTrigger { route: "c1/{country}" } af:HTTPRequest httpReq,
+        @af:CosmosDBInput { connectionStringSetting: "CosmosDBConnection",
+        databaseName: "db1", collectionName: "c1",
+        sqlQuery: "select * from c1 where c1.country = {country}" }
         Person[] dbReq)
         returns @af:HTTPOutput string|error {
     return dbReq.toString();
@@ -91,14 +91,14 @@ public function main() returns @tainted error? {
     decimal e = 15.335;       // decimal floating point number
 
     var f = 20;               // type inference with 'var' - 'f' is an int
-    
+
     int[] intArray = [1, 2, 3, 4, 5, 6];
     int x = intArray.shift(); // similar to a dequeue operation
     x = intArray.pop();       // removes the last element
     intArray.push(10);        // add to the end
 
     // Tuples - similar to a fixed length array with a distinct type for each slot
-    [string, int] p1 = ["Jack", 1990]; 
+    [string, int] p1 = ["Jack", 1990];
     [string, int] p2 = ["Tom", 1986];
     io:println("Name: ", p1[0], " Birth Year: ", p1[1]);
 
@@ -145,7 +145,7 @@ public function main() returns @tainted error? {
     // XML namespace declaration
     xmlns "http://example.com/ns1" as ns1;
     xmlns "http://example.com/default";
-    
+
     // XML variable from a literal value
     xml x1 = xml `<ns1:entry><name>{{name1}}</name><birthYear>{{birthYear1}}</birthYear></ns1:entry>`;
     io:println(x1);
@@ -182,7 +182,7 @@ public function main() returns @tainted error? {
     // Union types - "input" is of type either string or byte[]
     string|byte[] uval = "XXX";
 
-    // A type test expression ("uval is string") can be used to check the 
+    // A type test expression ("uval is string") can be used to check the
     // runtime type of a variable.
     if uval is string {
         // In the current scope, "uval" is a string value
@@ -205,8 +205,8 @@ public function main() returns @tainted error? {
 
     // A check expression can be used to directly return the error from
     // the current function if its subexpression evaluated to an error
-    // value in the runtime. 
-    int number = check ints:fromString(input); 
+    // value in the runtime.
+    int number = check ints:fromString(input);
 
     // Concurrent execution using workers in a function
     doWorkers();
@@ -246,7 +246,7 @@ public function main() returns @tainted error? {
 
     // Due to the structural type system, "student1" can be assigned to "person2",
     // since the student1's structure is compatible with person2's,
-    // where we can say, a "Student" is a "Person" as well. 
+    // where we can say, a "Student" is a "Person" as well.
     Person person2 = student1;
 
     map<int> grades = {"Jack": 95, "Anne": 90, "John": 80, "Bill": 55};
@@ -263,12 +263,12 @@ public function main() returns @tainted error? {
     // Query expressions used to execute complex queries for list data
     Result[] results = from var person in persons
                        let int lgrade = (grades[person.name] ?: 0)
-                       where lgrade > 75 
+                       where lgrade > 75
                            let string targetCollege = "Stanford"
-                           select { 
-                               name: person.name, 
-                               college: targetCollege, 
-                               grade: lgrade 
+                           select {
+                               name: person.name,
+                               college: targetCollege,
+                               grade: lgrade
                            };
 
     // Compile-time taint checking for handling untrusted data
@@ -278,21 +278,21 @@ public function main() returns @tainted error? {
     // program such as command-line arguments and network input are by-default
     // marked as tainted data.
     string s2 = <@tainted> s1;
-    // "s2x" is now a tainted value, since its value is derived using a 
+    // "s2x" is now a tainted value, since its value is derived using a
     // tainted value (s1).
     string s2x = s2 + "abc";
     // The following line uncommented will result in a compilation error,
-    // since we are passing a tainted value (s2x) to a function which 
+    // since we are passing a tainted value (s2x) to a function which
     // exepects an untainted value.
     // mySecureFunction(s2x);
 
     // Instantiating objects
     Employee emp1 = new("E0001", "Jack Smith", "Sales", 2009);
-    io:println("The company service duration of ", emp1.name, 
+    io:println("The company service duration of ", emp1.name,
                " is ", emp1.serviceDuration());
 
     // Supported operations can be executed in a transaction by enclosing the actions
-    // in a "transaction" block. 
+    // in a "transaction" block.
     transaction {
         // Executes the below database operations in a single local transactions
         var r1 = accountsDB->update("UPDATE Employee SET balance = balance + ? WHERE id = ?", 5500.0, "ID001");
@@ -302,22 +302,22 @@ public function main() returns @tainted error? {
 
 // An object is a behavioural type, which encapsulates both data and functionality.
 type Employee object {
-    
+
     // Private fields are only visible within the object and its methods
     private string empId;
     // Public fields can be accessed by anyone
     public string name;
     public string department;
-    // The default qualifier is a "protected" field, 
+    // The default qualifier is a "protected" field,
     // which are accessible only within the module.
-    int yearJoined;           
-    
+    int yearJoined;
+
     // The object initialization function; automatically called when an object is instantiated.
     public function __init(string empId, string name, string department, int yearJoined) {
         self.empId = empId;
         self.name = name;
         self.department = department;
-        self.yearJoined = yearJoined;        
+        self.yearJoined = yearJoined;
     }
 
     // An object method
@@ -356,7 +356,7 @@ public function getOperation(string op) returns (function (int, int) returns int
             return a % b;
         };
     } else {
-        return (x, y) => 0; // single expression anonymous no-op function 
+        return (x, y) => 0; // single expression anonymous no-op function
     }
 }
 
@@ -373,7 +373,7 @@ public function multiply(int a, int b, boolean log = false) returns int {
     return a * b;
 }
 
-// 'numbers' is a rest parameter - it can have multiple values, 
+// 'numbers' is a rest parameter - it can have multiple values,
 // similar to an array.
 public function addAll(int... numbers) returns int {
     int result = 0;
@@ -397,7 +397,7 @@ function fib(int n) returns int {
     }
 }
 
-// The code in worker blocks "w1" and "w2" are executed concurrency 
+// The code in worker blocks "w1" and "w2" are executed concurrency
 // when this function is invoked. The "wait" expressions waits for
 // the given workers to finish to retrieve their results.
 public function doWorkers() {

@@ -88,7 +88,7 @@ sum(2,3); // 5
 // Shader's syntax is similar to the main function in C
 // The inputs and the outputs should be initialized to default types
 shader multiply(float a = 0.0,
-				float b = 0.0, 
+				float b = 0.0,
 				output float c = 0.0){
     c = a*b;
 }
@@ -125,9 +125,9 @@ surface plastic
 	int slidercenter = 2]] // origin value of the slider
 
 [[ float sensitivity = 0.5 ]] // step size for incrementing the parameter
-[[ string URL = www.example.com/ ]] // URL of shader's documentation 
+[[ string URL = www.example.com/ ]] // URL of shader's documentation
 
-	
+
 
 // There are different types of shaders
 
@@ -138,7 +138,7 @@ how it reacts to light */
 // Volume shaders adds a medium like air/smoke/dust into the scene.
 
 volume multiply(float a = 0.0, float b = 0.0, output float c = 0.0){
-    c = 2*a+b; 
+    c = 2*a+b;
 }
 
 ////////////////////////////////////////
@@ -231,8 +231,8 @@ volume multiply(float a = 0.0, float b = 0.0, output float c = 0.0){
 	float Blue = p[2]; // 2 (access the blue component)
 
 	// They can also be accessed like this
-	float Red = p.r; // 0 (access the red component)  
-	float Green = p.g; // 1 (access the green component) 
+	float Red = p.r; // 0 (access the red component)
+	float Green = p.g; // 1 (access the green component)
 	float Blue = p.b; // 2 (access the blue component)
 
 	// Math operators work like this with decreasing precedence
@@ -264,8 +264,8 @@ volume multiply(float a = 0.0, float b = 0.0, output float c = 0.0){
 	M = vector("common", 30, 100, 70); // relative to world space
 	// There's also ("shader", "world", "camera", "screen", "raster", "NDC")
 
-	float x = L[0]; // 0.5 (access the x-component)  
-	float y = L[1]; // 0.6 (access the y-component)  
+	float x = L[0]; // 0.5 (access the x-component)
+	float y = L[1]; // 0.6 (access the y-component)
 	float z = L[2]; // 0.7 (access the z-component)
 
 	// They can also be accessed like this
@@ -296,21 +296,21 @@ volume multiply(float a = 0.0, float b = 0.0, output float c = 0.0){
        0.0, 0.0, 0.0, 0.0,
        0.0, 0.0, 0.0, 0.0,
        0.0, 0.0, 0.0, 0.0 */
-	
+
 	matrix ident = 1; // makes a 4x4 identity matrix
 	/* 1.0, 0.0, 0.0, 0.0,
 	   0.0, 1.0, 0.0, 0.0,
 	   0.0, 0.0, 1.0, 0.0,
 	   0.0, 0.0, 0.0, 1.0 */
-		
+
 	matrix m = 7; // Maked a 4x4 scalar matrix with scaling factor of 7
 	/* 7.0, 0.0, 0.0, 0.0,
 	   0.0, 7.0, 0.0, 0.0,
 	   0.0, 0.0, 7.0, 0.0,
 	   0.0, 0.0, 0.0, 7.0 */
-	
+
 	float x = m[1][1]; // 7
-	
+
 	// matrices can be constructed using floats in row-major order
 	// matrices are usually 4x4 with 16 elements
 	matrix myMatrix = matrix(1.0, 0.0, 0.0, 0.0,    // Row 1
@@ -332,7 +332,7 @@ volume multiply(float a = 0.0, float b = 0.0, output float c = 0.0){
        0.0, 0.0, 3.0, 0.0,
        0.0, 0.0, 0.0, 4.0 */
 
-// 10. array 
+// 10. array
 	// Arrays in OSL are similar to C
 	float a[5]; // initialize array a with size 5
 	int b[3] = {90,80,70}; // declare array with size 3
@@ -347,7 +347,7 @@ volume multiply(float a = 0.0, float b = 0.0, output float c = 0.0){
 		float alpha;
 	};
 
-	
+
 	RGBA col; // Declaring a structure
 	RGBA b = { color(0.1, 0.2, 0.3), 1 }; // Can also be declared like this
 
@@ -437,7 +437,7 @@ if (5>2){
 	int l = x;
 }
 else{
-	int x = s + l; 
+	int x = s + l;
 }
 
 // 'while' loop
@@ -533,7 +533,7 @@ for (int i = 0; i < 5; i += 1) {
 	type noise (string noisetype, point p,...); // point instead of coordinates
 	/* some noises are ("perlin", "snoise", "uperlin", "noise", "cell", "hash"
 	"simplex", "usimplex", "gabor", etc) */
-	
+
 	// Noise Names
 
 	// 1. Perlin Noise (perlin, snoise):
@@ -550,7 +550,7 @@ for (int i = 0; i < 5; i += 1) {
 	// Similar to peril
 	// Range: [0, 1] (unsigned)
 	color new_texture = noise("uperlin", P);
-	
+
 	// 4. Cell Noise (cell):
 	// Creates a blocky, cellular and constant values within each unit block
 	// Range: [0, 1] (unsigned)
@@ -561,7 +561,7 @@ for (int i = 0; i < 5; i += 1) {
 	// Range: [0, 1] (unsigned)
 	color new_texture = noise("hash", P);
 
-	// Gabor Noise (gabor) 
+	// Gabor Noise (gabor)
 	// Gabor Noise is advanced version of Perin noies and gives more control
 	// Range: [-1, 1] (signed)
 	// Gabor Noise Parameters
@@ -628,7 +628,7 @@ for (int i = 0; i < 5; i += 1) {
 	// Color will graduate smoothly from black to white as P moves from 0 to 1
 	float fade = linearstep(0.85, 1, N.z);  // N.z is the z-component
 	// Object edges with normals close to vertical (N.z near 1) will fade out
-	
+
 	type smoothstep (type edge0, type edge1, type x); /* smoothstep Returns 0
 	if x ≤ edge0, and 1 if x ≥ edge1, with Hermite interpolation */
 	float soft_mask = smoothstep(0.2, 0.8, noise(P));  /* noise(P) is a noisy
@@ -670,9 +670,9 @@ for (int i = 0; i < 5; i += 1) {
 	u = 0.4;
 	spline curve4 = spline("linear", u, f0, f1, f2, f3);
 	// curve4 is a linear spline evaluated at u = 0.4
-	
+
 	// InverseSplines also exist
-	
+
 	// Inverse spline with control values
 	float y0 = 0, y1 = 1, y2 = 2, y3 = 3;
 	float v = 1.5;
@@ -711,9 +711,9 @@ for (int i = 0; i < 5; i += 1) {
 
 	color c = color(0.5, 0.2, 0.8);
 	color dc_dz = Dz(c); // partial derivative of c with respect to z
-	
 
-	float area (point p) // gives the surface area at the position p 
+
+	float area (point p) // gives the surface area at the position p
 
 	float filterwidth (float x) // gives the changes of x in adjacent samples
 
@@ -728,7 +728,7 @@ for (int i = 0; i < 5; i += 1) {
 	// parameters are ("blur","width","wrap","fill","alpha","interp", ...)
 	color col2 = texture("texture.png",1.0,0.75,"blur",0.1,"wrap", "periodic");
 	// Lookup color at (1.0, 0.75) with blur 0.1 and periodic wrap mode
-	
+
 // Light Functions
 
 	float surfacearea (); // Returns the surface area of area light covers

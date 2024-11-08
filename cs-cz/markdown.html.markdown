@@ -98,7 +98,7 @@ Pokud byste chtěli vložit HTML element `<br />`, můžete na konec odstavce na
 dvě nebo více mezer a potom začít nový odstavec.
 
 ```md
-Tento odstavec končí dvěma mezerami.  
+Tento odstavec končí dvěma mezerami.
 
 Nad tímto odstavcem je <br />!
 ```

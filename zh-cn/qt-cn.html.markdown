@@ -8,7 +8,7 @@ contributors:
 translators:
     - ["GengchenXU", "https://github.com/GengchenXU"]
 lang: zh-cn
-    
+
 ---
 
 **Qt** Qt是一个广为人知的框架，用于开发跨平台软件，该软件可以在各种软件和硬件平台上运行，代码几乎没有变化，同时具有本机应用程序的能力和速度。虽然**Qt**最初是用*C*++，但也有其他语言的端口: *[PyQt](https://learnxinyminutes.com/docs/pyqt/)*, *QtRuby*, *PHP-Qt*, 等等.
@@ -47,7 +47,7 @@ int main(int argc, char *argv[]) {
  * 按下按钮时应显示一个标签。
  * Qt代码本身就可以说明问题。
  */
- 
+
 #include <QApplication>
 #include <QDialog>
 #include <QVBoxLayout>
@@ -59,10 +59,10 @@ int main(int argc, char *argv[]) {
 
     QDialog dialogWindow;
     dialogWindow.show();
-    
+
     // 添加垂直布局
     QVBoxLayout layout;
-    dialogWindow.setLayout(&layout);  
+    dialogWindow.setLayout(&layout);
 
     QLabel textLabel("Thanks for pressing that button");
     layout.addWidget(&textLabel);
@@ -70,7 +70,7 @@ int main(int argc, char *argv[]) {
 
     QPushButton button("Press me");
     layout.addWidget(&button);
-    
+
     // 按下按钮时显示隐藏标签
     QObject::connect(&button, &QPushButton::pressed,
                      &textLabel, &QLabel::show);

@@ -391,7 +391,7 @@ f = fn -> 2 * 2 end #=> #Function<erl_eval.20.80484245>
 spawn(f) #=> #PID<0.40.0>
 
 # `spawn` întoarce identificatorul procesului pid, îl puteți folosi pentru
-# a trimite mesaje procesului. Mesajele se transmit folosind operatorul `send`.  
+# a trimite mesaje procesului. Mesajele se transmit folosind operatorul `send`.
 # Pentru primirea mesajelor se folosește mecanismul `receive`:
 
 # Blocul `receive do` este folosit pentru așteptarea mesajelor și prelucrarea lor
@@ -426,8 +426,8 @@ send pid, {:circle, 2}
 #=> Aria = 12.56000000000000049738
 #   {:circle,2}
 
-# Interpretatorul este de asemenea un proces, puteți folosi `self` 
-# pentru a primi identificatorul de proces: 
+# Interpretatorul este de asemenea un proces, puteți folosi `self`
+# pentru a primi identificatorul de proces:
 self() #=> #PID<0.27.0>
 
 ## ---------------------------
@@ -441,7 +441,7 @@ self() #=> #PID<0.27.0>
 {ok, my_agent} = Agent.start_link(fn -> ["roșu", "verde"] end)
 
 # `Agent.get` primește numele agentului și o `fn` care primește starea curentă
-# Orice va întoarce `fn` este ceea ce veți primi înapoi: 
+# Orice va întoarce `fn` este ceea ce veți primi înapoi:
 Agent.get(my_agent, fn colors -> colors end) #=> ["roșu", "verde"]
 
 # Actualizați starea agentului în acelaș mod:

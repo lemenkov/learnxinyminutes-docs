@@ -117,7 +117,7 @@ False or True #=> True
 # werden (ab Python 3.6+)
 name = "Sandra"
 f"Sie hat gesagt, ihr Name sei {name}." # => Sie hat gesagt, ihr Name sei Sandra."
-# Es ist möglich, andere Anweisungen innerhalb der geschweiften Klammern zu 
+# Es ist möglich, andere Anweisungen innerhalb der geschweiften Klammern zu
 # setzen, welche dann im Output des Strings angezeigt werden.
 f"{name} ist {len(name)} Zeichen lang" # => Sandra ist 6 Zeichen lang.
 

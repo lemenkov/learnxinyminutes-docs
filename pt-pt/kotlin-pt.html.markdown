@@ -71,11 +71,11 @@ fun helloWorld(val name : String) {
 	println(fooTemplateString) // => A minha String está aqui! tem 25 caracteres
 
 	/*
-	Para que uma variável possa ter o valor de null esta tem de ser 
+	Para que uma variável possa ter o valor de null esta tem de ser
 	especificada explicitamente como nullable.
 	Uma variável pode ser marcada como nullable adicionando um ? ao seu tipo.
 	A variable can be specified as nullable by appending a ? to its type.
-	Usando o operador ?. podemos facilmente aceder a propriedades de 
+	Usando o operador ?. podemos facilmente aceder a propriedades de
 	uma variável nullable, se esta for null o resultado da expressão será também ele null.
 	Podemos também usar o operador ?: para especificar um valor alternativo
 	no caso da variavél ser null.
@@ -133,7 +133,7 @@ fun helloWorld(val name : String) {
 	val notEven = not(::even)
 	/*
 	Expressões lambda podem ser usadas da seguinte forma.
-	Os lambdas quando passados a outras funções podem estar 
+	Os lambdas quando passados a outras funções podem estar
 	fora dos parênteses da chamada, caso sejam o último parâmetro.
 	*/
 	val notZero = not {n -> n == 0}
@@ -210,7 +210,7 @@ fun helloWorld(val name : String) {
 
 	/*
 	Podemos criar listas usando a função "listOf".
-	No Kotlin, por padrão, as listas são imútaveis - não podendo 
+	No Kotlin, por padrão, as listas são imútaveis - não podendo
 	assim adicionar ou remover elementos das mesmas.
 	*/
 	val fooList = listOf("a", "b", "c")
@@ -365,7 +365,7 @@ enum class EnumExample {
 fun printEnum() = println(EnumExample.A) // => A
 
 /*
-Como cada constante é uma instância da classe enum, 
+Como cada constante é uma instância da classe enum,
 estas podem ser inicializadas da seguinte forma:
 */
 enum class EnumExample(val value: Int) {
@@ -376,7 +376,7 @@ enum class EnumExample(val value: Int) {
 fun printProperty() = println(EnumExample.A.value) // => 1
 
 /*
-Cada constante de enumerações tem propriedades para 
+Cada constante de enumerações tem propriedades para
 obter o nome e o ordinal (posição) na respectiva classe.
 */
 fun printName() = println(EnumExample.A.name) // => A
@@ -407,14 +407,14 @@ fun useSingletonObject() {
 }
 
 
-/* 
-O operador !! serve para realizar um assert de not-null. Este converte qualquer 
+/*
+O operador !! serve para realizar um assert de not-null. Este converte qualquer
 valor nullable para non-null ou lança exceção se o mesmo for null.
 */
 var b: String? = "abc"
 val l = b!!.length	// lançaria exceção caso "b" fosse null
 
-// O modificador "operator" permite fazer overload dos operadores 
+// O modificador "operator" permite fazer overload dos operadores
 // [Ver lista de operadores](https://kotlinlang.org/docs/operator-overloading.html)
 data class Counter(var value: Int) {
 	// overload para Counter += Int

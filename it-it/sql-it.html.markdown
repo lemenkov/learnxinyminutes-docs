@@ -25,7 +25,7 @@ Il comando per eseguire questi script può variare in base all'implementazione i
 -- I commenti iniziano con due trattini. Ogni comando va terminato con il punto e virgola
 
 -- SQL è case-insensitive per quanto riguarda i comandi; in genere si
--- preferisce scriverli in maiuscolo per distinguerli dai nomi di 
+-- preferisce scriverli in maiuscolo per distinguerli dai nomi di
 -- database, tabelle e colonne
 
 -- Crea ed elimina un database. I nomi di database e tabelle sono case-sensitive
@@ -41,17 +41,17 @@ USE employees;
 -- Seleziona tutte le righe e le colonne dalla tabella departments
 SELECT * FROM departments;
 
--- Seleziona tutte le righe della tabella departments, 
--- ma solo le colonne dept_no e dept_name. 
+-- Seleziona tutte le righe della tabella departments,
+-- ma solo le colonne dept_no e dept_name.
 -- È possibile suddividere i comandi su più righe.
 SELECT dept_no,
        dept_name FROM departments;
 
--- Seleziona solo le prime 5 righe della tabella departments. 
+-- Seleziona solo le prime 5 righe della tabella departments.
 SELECT * FROM departments LIMIT 5;
 
 -- Ottiene la colonna dept_name della tabella departments
--- solo per le righe il cui valore di dept_name contiene 'en'. 
+-- solo per le righe il cui valore di dept_name contiene 'en'.
 SELECT dept_name FROM departments WHERE dept_name LIKE '%en%';
 
 -- Ottiene tutte le colonne della tabella departments
@@ -72,7 +72,7 @@ SELECT COUNT(*) FROM departments;
 -- il cui valore di dept_name contiene 'en'.
 SELECT COUNT(*) FROM departments WHERE dept_name LIKE '%en%';
 
--- Un JOIN tra più tabelle: la tabella titles contiene gli 
+-- Un JOIN tra più tabelle: la tabella titles contiene gli
 -- incarichi lavorativi associati ad un certo numero di impiegato.
 -- Con il JOIN utilizziamo il numero di impiegato per ottenere
 -- le informazioni ad esso associate nella tabella employees.
@@ -97,7 +97,7 @@ CREATE TABLE tablename1 (fname VARCHAR(20), lname VARCHAR(20));
 INSERT INTO tablename1 VALUES('Richard','Mutt');
 
 -- In tablename1, modifica il valore di fname a 'John'
--- in tutte le righe che hanno come lname 'Mutt'. 
+-- in tutte le righe che hanno come lname 'Mutt'.
 UPDATE tablename1 SET fname='John' WHERE lname='Mutt';
 
 -- Elimina tutte le righe di tablename1

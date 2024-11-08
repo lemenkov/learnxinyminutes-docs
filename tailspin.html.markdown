@@ -56,7 +56,7 @@ $names... -> \(
 
 // You can also define templates (functions)
 // A lone ! emits the value into the calling pipeline without returning control
-// The # sends the value to be matched by the matchers 
+// The # sends the value to be matched by the matchers
 // Note that templates always take one input value and emit 0 or more outputs
 templates collatz-sequence
   when <..0> do 'The start seed must be a positive integer' !

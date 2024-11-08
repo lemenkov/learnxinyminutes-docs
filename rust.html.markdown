@@ -92,7 +92,7 @@ fn main() {
     println!("{} {}", f, x); // 1.3 hello world
 
     // A `String` – a heap-allocated string
-    // Stored as a `Vec<u8>` and always holds a valid UTF-8 sequence, 
+    // Stored as a `Vec<u8>` and always holds a valid UTF-8 sequence,
     // which is not null terminated.
     let s: String = "hello world".to_string();
 
@@ -217,7 +217,7 @@ fn main() {
     let another_foo = Foo { bar: 1 };
     println!("{:?}", another_foo.frobnicate()); // Some(1)
 
-    // Function pointer types // 
+    // Function pointer types //
 
     fn fibonacci(n: u32) -> u32 {
         match n {

@@ -18,7 +18,7 @@ You can refer to the official site for [latest version](https://chapel-lang.org/
 ```chapel
 /*
    Learn Chapel in Y Minutes
-   
+
    This primer will go over basic syntax and concepts in Chapel.
    Last sync with official page: Sun, 08 Mar 2020 08:05:53 +0000
 */
@@ -122,7 +122,7 @@ References
 // be made to alias a variable other than the variable it is initialized with.
 // Here, ``refToActual`` refers to ``actual``.
 var actual = 10;
-ref refToActual = actual; 
+ref refToActual = actual;
 writeln(actual, " == ", refToActual); // prints the same value
 actual = -123; // modify actual (which refToActual refers to)
 writeln(actual, " == ", refToActual); // prints the same value
@@ -479,7 +479,7 @@ arrayFromLoop = [value in arrayFromLoop] value + 1;
 Procedures
 */
 
-// Chapel procedures have similar syntax functions in other languages. 
+// Chapel procedures have similar syntax functions in other languages.
 proc fibonacci(n : int) : int {
   if n <= 1 then return n;
   return fibonacci(n-1) + fibonacci(n-2);
@@ -656,7 +656,7 @@ writeln(1 * 2);   // Uses the default ``*`` operator.
 //  Note: You could break everything if you get careless with your overloads.
 //  This here will break everything. Don't do it.
 
-/* 
+/*
 
       proc +(left: int, right: int): int {
         return left - right;
@@ -727,7 +727,7 @@ writeln(toThisArray);
 
 // This is very important in understanding why this statement exhibits a runtime error.
 
-/* 
+/*
       var iterArray : [1..10] int = [i in 1..10] if (i % 2 == 1) then i;
 */
 

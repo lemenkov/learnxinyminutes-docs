@@ -25,7 +25,7 @@ c2: {
     that is indentation-agnostic
 }
 c3: {:
-    this is 
+    this is
         a verbatim
             multiline string
                 which will remain exactly
@@ -114,7 +114,7 @@ and? true false     ; => false
 or? true false      ; => true
 or? false false     ; => false
 
-and? [1=2][2<3]     ; => false 
+and? [1=2][2<3]     ; => false
                     ; (the second block will not be evaluated)
 
 ; simple if statements
@@ -175,21 +175,21 @@ loop `a`..`c` 'ch ->
 ; picking multiple items
 loop 1..10 [x y] ->
     print ["x =" x ", y =" y]
-; x = 1 , y = 2 
-; x = 3 , y = 4 
-; x = 5 , y = 6 
-; x = 7 , y = 8 
-; x = 9 , y = 10 
+; x = 1 , y = 2
+; x = 3 , y = 4
+; x = 5 , y = 6
+; x = 7 , y = 8
+; x = 9 , y = 10
 
 ; looping through a dictionary
 dict: #[name: "John", surname: "Doe", age: 34]
 loop dict [key value][
     print [key "->" value]
 ]
-; name -> John 
-; surname -> Doe 
-; age -> 34 
-                    
+; name -> John
+; surname -> Doe
+; age -> 34
+
 ; while loops
 i: new 0
 while [i<3][
@@ -199,7 +199,7 @@ while [i<3][
 ; i = 0
 ; i = 1
 ; i = 2
- 
+
 ;---------------------------------
 ; STRINGS
 ;---------------------------------
@@ -244,7 +244,7 @@ print render.template {
         Yes, x = 2
     <||][||>
         No, x is not 2
-    <||]||> 
+    <||]||>
 } ; Yes, x = 2
 
 ; matching
@@ -255,7 +255,7 @@ contains? "hello" "ll"      ; => true
 contains? "hello" "he"      ; => true
 contains? "hello" "x"       ; => false
 
-in? "ll" "hello"            ; => true 
+in? "ll" "hello"            ; => true
 in? "x" "hello"             ; => false
 
 ;---------------------------------
@@ -285,7 +285,7 @@ x: 2
 print get arr x             ; two
 print arr \ 2               ; two
                             ; (using the `\` infix alias for get -
-                            ;  notice space between the operands! 
+                            ;  notice space between the operands!
                             ;  otherwise, it'll be parsed as a path)
 
 ; setting an array element
@@ -331,7 +331,7 @@ select 1..10 [x][odd? x]    ; => [1 3 5 7 9]
 select 1..10 => odd?        ; same as above
 
 filter 1..10 => odd?        ; => [2 4 6 8 10]
-                            ; (now, we leave out all odd numbers - 
+                            ; (now, we leave out all odd numbers -
                             ;  while select keeps them)
 
 ; misc operations
@@ -350,7 +350,7 @@ repeat [1 2] 3              ; => [1 2 1 2 1 2]
 ; declaring a function
 f: function [x][ 2*x ]
 f: function [x]-> 2*x       ; same as above
-f: $[x]->2*x                ; same as above (only using the `$` alias 
+f: $[x]->2*x                ; same as above (only using the `$` alias
                             ;  for the `function`... function)
 
 ; calling a function
@@ -375,8 +375,8 @@ g: function [x][
 define :person [                            ; define a new custom type "Person"
     name                                    ; with fields: name, surname, age
     surname
-    age 
-][ 
+    age
+][
     ; with custom post-construction initializer
     init: [
         this\name: capitalize this\name
@@ -403,7 +403,7 @@ a: to :person ["John" "Doe" 34]                 ; let's create 2 "Person"s
 b: to :person ["jane" "Doe" 33]                 ; and another one
 
 ; call pseudo-inner method
-sayHello a                                      ; Hello John                       
+sayHello a                                      ; Hello John
 sayHello b                                      ; Hello Jane
 
 ; access object fields
@@ -411,7 +411,7 @@ print ["The first person's name is:" a\name]    ; The first person's name is: Jo
 print ["The second person's name is:" b\name]   ; The second person's name is: Jane
 
 ; changing object fields
-a\name: "Bob"                                   
+a\name: "Bob"
 sayHello a                                      ; Hello Bob
 
 ; verifying object type
@@ -423,7 +423,7 @@ print a                                         ; NAME: John, SURNAME: Doe, AGE:
 
 ; sorting user objects (using custom comparator)
 sort @[a b]                                     ; Jane..., John...
-sort.descending @[a b]                          ; John..., Jane...       
+sort.descending @[a b]                          ; John..., Jane...
 ```
 
 ## Additional resources

@@ -764,7 +764,7 @@ def get_fruits():
 print ', '.join(get_fruits())
 
 # Ebben a példában a beg dekorátorral látjuk el a say függvényt.
-# Beg meghívja say-t. Ha a say_please paraméter igaz, akkor 
+# Beg meghívja say-t. Ha a say_please paraméter igaz, akkor
 # megváltoztatja az eredmény mondatot.
 from functools import wraps
 

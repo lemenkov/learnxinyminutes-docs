@@ -5,16 +5,16 @@ contributors:
     - ["Maou Shimazu", "https://github.com/Maou-Shimazu"]
 ---
 
-V is a statically typed compiled programming language 
+V is a statically typed compiled programming language
 designed for building maintainable software.
 
-It's similar to Go and its design has also been influenced by 
+It's similar to Go and its design has also been influenced by
 Oberon, Rust, Swift, Kotlin, and Python.
 
-The language promotes writing 
+The language promotes writing
 simple and clear code with minimal abstraction.
 
-Despite being simple, V gives the developer a lot of power. 
+Despite being simple, V gives the developer a lot of power.
 Anything you can do in other languages, you can do in V.
 
 ```v
@@ -48,14 +48,14 @@ enum Token {
 // 1. functions
 // language does not use semi colons
 fn add(x int, y int) int {
-	return x + y 
+	return x + y
 }
 // can return multiple values
 fn foo() (int, int) {
 	return 2, 3
 }
 
-// function visibility 
+// function visibility
 pub fn public_function() { // pub can only be used from a named module.
 }
 
@@ -91,8 +91,8 @@ fn main() {
 	v := 13 + u    // v is of type `u16`
 	r := f32(45.6)
 	q := r + 3.14  // x is of type `f32`
-	s := 75        // a is of type `int` 
-	l := 14.7      // b is of type `f64` 
+	s := 75        // a is of type `int`
+	l := 14.7      // b is of type `f64`
 	e := u + s     // c is of type `int`
 	d := l + r     // d is of type `f64`
 
@@ -142,7 +142,7 @@ fn main() {
 	// }
 	mut users := User{21, 'Bob', 0}
 	println(users.age) // 21
-	
+
 	// enum Token {
 	// 	plus
 	// 	minus
@@ -154,7 +154,7 @@ fn main() {
 	// 	token Token
 	// }
 	parser := Parser{}
-	if parser.token == .plus || parser.token == .minus 
+	if parser.token == .plus || parser.token == .minus
 	|| parser.token == .div || parser.token == .mult {
 		// ...
 	}
@@ -192,7 +192,7 @@ fn main() {
 		'even' { println('even') }
 		'odd' { println('odd') }
 		else { println('unknown') }
-	} 
+	}
 
 	// 7. Loops
 	loops := [1, 2, 3, 4, 5]
@@ -205,7 +205,7 @@ fn main() {
 		// Output: 0) Sam
 		//         1) Peter
 	}
-	// You can also use break and continue followed by a 
+	// You can also use break and continue followed by a
 	// label name to refer to an outer for loop:
 	outer: for i := 4; true; i++ {
 		println(i)

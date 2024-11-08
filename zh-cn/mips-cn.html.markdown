@@ -144,7 +144,7 @@ MIPS（Microprocessor without Interlocked Pipeline Stages）汇编语言是为�
 
     L1:
       sub $s0, $s0, $s3 # f = f - i
-    
+
     # 下面是一个求3个数的最大值的例子
     # 从 Java 到 MIPS 逻辑的直接翻译：
     # if (a > b)
@@ -225,7 +225,7 @@ MIPS（Microprocessor without Interlocked Pipeline Stages）汇编语言是为�
 
       li $v0, 10
       syscall
-    
+
     # 这个函数返回1
     return_1:
       li $v0, 1                           # 将值取到返回寄存器 $v0 中
@@ -282,10 +282,10 @@ MIPS（Microprocessor without Interlocked Pipeline Stages）汇编语言是为�
       lw $a0, %num
       syscall
     .end_macro
-    
+
     li $t0, 1
     print_int($t0)
-    
+
     # 我们也可以给宏传递立即数
     .macro immediates(%a, %b)
       add $t0, %a, %b

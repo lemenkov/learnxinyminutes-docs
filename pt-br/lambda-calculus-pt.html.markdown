@@ -14,7 +14,7 @@ lang: pt-br
 Cálculo Lambda (cálculo-λ), originalmente criada por
 [Alonzo Church](https://en.wikipedia.org/wiki/Alonzo_Church),
 é a menor linguagem de programação do mundo.
-Composta apenas por funções, sem números, texto, booleans, ou qualquer outro tipo, 
+Composta apenas por funções, sem números, texto, booleans, ou qualquer outro tipo,
 apesar dessa limitação, cálculo lambda é capaz de representar qualquer Máquina de Turing!
 
 Cálculo lambda é composto por 3 elementos: **variáveis**, **funções** e **aplicações**.
@@ -31,7 +31,7 @@ O primeiro "x" é o argumento da função, e o segundo o corpo da função.
 
 ## Variáveis Livres e Ligadas:
 
-- Na função `λx.x`, "x" é uma variável ligada porque ela está 
+- Na função `λx.x`, "x" é uma variável ligada porque ela está
 no corpo e em um dos parâmetros da função.
 - Na função `λx.y`, "y" é uma variável livre porque ela não foi definida anteriormente.
 
@@ -50,8 +50,8 @@ Você ainda pode criar funções de ordem superior
 
 - `(λx.(λy.x))a` avalia para: `λy.a`
 
-Tradicionalmente funções no cálculo lambda possuem um único parâmetro, 
-porém usando a técnina de [currying](https://en.wikipedia.org/wiki/Currying) 
+Tradicionalmente funções no cálculo lambda possuem um único parâmetro,
+porém usando a técnina de [currying](https://en.wikipedia.org/wiki/Currying)
 podes criar funções com múltiplos argumentos.
 
 - `(λx.λy.λz.xyz)` equivale a `f(x, y, z) = ((x y) z)`
@@ -60,7 +60,7 @@ podes criar funções com múltiplos argumentos.
 
 ----
 
-É importante ressaltar que **cálculo lambda não tem números, carácteres, 
+É importante ressaltar que **cálculo lambda não tem números, carácteres,
 ou qualquer tipo que não seja uma função!**
 
 ## Lógica Booleana:
@@ -97,7 +97,7 @@ Para todo número n: <code>n = λf.f<sup>n</sup></code> assim:
 
 `3 = λf.λx.f(f(f x))`
 
-Para incrementar um numeral Church, 
+Para incrementar um numeral Church,
 usamos a função sucessora `S(n) = n + 1` definida como:
 
 `S = λn.λf.λx.f((n f) x)`
@@ -181,8 +181,8 @@ Expandindo isso, finalizamos com a mesma expressão para o numeral Church 2.
 
 ### Cálculo Combinador SK
 
-O cálculo combinador SKI pode ser reduzido ainda mais. 
-Ao notar que `I = SKK`, podemos remover o combinador I 
+O cálculo combinador SKI pode ser reduzido ainda mais.
+Ao notar que `I = SKK`, podemos remover o combinador I
 substituindo-o por `SKK`.
 
 ### Combinador Iota

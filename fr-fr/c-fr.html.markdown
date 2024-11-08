@@ -358,7 +358,7 @@ int main (int argc, char** argv)
     exit(-1);
     break;
   }
-  
+
   // Utilisation de "goto" en C
   typedef enum { false, true } bool;
   bool disaster = false;

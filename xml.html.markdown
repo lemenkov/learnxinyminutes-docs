@@ -157,7 +157,7 @@ The DTD could be declared inside the XML file itself:
 
 ## DTD Compatibility and XML Schema Definitions
 
-Support for DTDs is ubiquitous because they are so old. Unfortunately, modern XML features like namespaces are not supported by DTDs. XML Schema Definitions (XSDs) are meant to replace DTDs for defining XML document grammar. 
+Support for DTDs is ubiquitous because they are so old. Unfortunately, modern XML features like namespaces are not supported by DTDs. XML Schema Definitions (XSDs) are meant to replace DTDs for defining XML document grammar.
 
 ## Resources
 

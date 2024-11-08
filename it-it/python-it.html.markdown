@@ -12,7 +12,7 @@ translators:
     - ["Draio", "http://github.com/Draio/"]
     - ["Ale46", "http://github.com/Ale46/"]
     - ["Tommaso Pifferi", "http://github.com/neslinesli93/"]
-lang: it-it    
+lang: it-it
 ---
 
 Python è stato creato da Guido Van Rossum agli inizi degli anni 90. Oggi è uno dei più popolari linguaggi esistenti. Mi sono innamorato di Python per la sua chiarezza sintattica. E' sostanzialmente pseudocodice eseguibile.
@@ -100,7 +100,7 @@ False or True   # => True
 1 < 2 < 3  # => True
 2 < 3 < 2  # => False
 
-# ('is' vs. '==') 
+# ('is' vs. '==')
 # 'is' controlla se due variabili si riferiscono allo stesso oggetto
 # '==' controlla se gli oggetti puntati hanno lo stesso valore.
 a = [1, 2, 3, 4]  # a punta ad una nuova lista [1, 2, 3, 4]
@@ -117,7 +117,7 @@ b == a            # => True, gli oggetti di a e b sono uguali
 
 # Anche le stringhe possono essere sommate! Ma cerca di non farlo.
 "Hello " + "world!"  # => "Hello world!"
-# Le stringhe (ma non le variabili contenenti stringhe) possono essere 
+# Le stringhe (ma non le variabili contenenti stringhe) possono essere
 # sommate anche senza '+'
 "Hello " "world!"    # => "Hello world!"
 
@@ -164,24 +164,24 @@ bool(())  # => False
 # Python ha una funzione per scrivere (sul tuo schermo)
 print("Sono Python. Piacere di conoscerti!")  # => Sono Python. Piacere di conoscerti!
 
-# Di default la funzione print() scrive e va a capo aggiungendo un carattere 
+# Di default la funzione print() scrive e va a capo aggiungendo un carattere
 # newline alla fine della stringa. È possibile utilizzare l'argomento opzionale
 # end per cambiare quest'ultimo carattere aggiunto.
 print("Hello, World", end="!")  # => Hello, World!
 
 # Un modo semplice per ricevere dati in input dalla riga di comando
 variabile_stringa_input  = input("Inserisci del testo: ") # Restituisce i dati letti come stringa
-# Nota: Nelle precedenti vesioni di Python, il metodo input() 
+# Nota: Nelle precedenti vesioni di Python, il metodo input()
 # era chiamato raw_input()
 
 # Non c'è bisogno di dichiarare una variabile per assegnarle un valore
-# Come convenzione, per i nomi delle variabili, si utilizzano i caratteri 
+# Come convenzione, per i nomi delle variabili, si utilizzano i caratteri
 # minuscoli separati, se necessario, da underscore
 some_var = 5
 some_var          # => 5
 
 # Accedendo ad una variabile non precedentemente assegnata genera un'eccezione.
-# Dai un'occhiata al Control Flow per imparare di più su come gestire 
+# Dai un'occhiata al Control Flow per imparare di più su come gestire
 # le eccezioni.
 some_unknown_var  # Genera un errore di nome
 
@@ -288,7 +288,7 @@ empty_dict= {}
 filled_dict = {"uno": 1, "due": 2, "tre": 3}
 
 # Nota: le chiavi  dei dizionari devono essere di tipo immutabile. Questo per
-# assicurare che le chiavi possano essere convertite in calori hash costanti 
+# assicurare che le chiavi possano essere convertite in calori hash costanti
 # per un risposta più veloce.
 invalid_dict = {[1,2,3]: "123"}  # => Emette un TypeError: unhashable type: 'list'
 valid_dict = {(1,2,3):[1,2,3]}   # I valori, invece, possono essere di qualunque tipo
@@ -296,16 +296,16 @@ valid_dict = {(1,2,3):[1,2,3]}   # I valori, invece, possono essere di qualunque
 # Accedi ai valori indicando la chiave tra []
 filled_dict["uno"]   # => 1
 
-# Puoi ottenere tutte le chiavi di un dizionario con "keys()" 
-# (come oggetto iterabile). Per averle in formato lista è necessario 
+# Puoi ottenere tutte le chiavi di un dizionario con "keys()"
+# (come oggetto iterabile). Per averle in formato lista è necessario
 # utilizzare list().
 # Nota - Nei dizionari l'ordine delle chiavi non è garantito.
 # Il tuo risultato potrebbe non essere uguale a questo.
 list(filled_dict.keys())  # => ["tre", "due", "uno"]
 
 
-# Puoi ottenere tutti i valori di un dizionario con "values()" 
-# (come oggetto iterabile). 
+# Puoi ottenere tutti i valori di un dizionario con "values()"
+# (come oggetto iterabile).
 # Anche in questo caso, er averle in formato lista, è necessario utilizzare list()
 # Anche in questo caso, come per le chiavi, l'ordine non è garantito
 list(filled_dict.values())  # => [3, 2, 1]
@@ -325,7 +325,7 @@ filled_dict.get("uno", 4)   # => 1
 filled_dict.get("quattro", 4)   # => 4
 
 
-# "setdefault()" inserisce un valore per una chiave in un dizionario 
+# "setdefault()" inserisce un valore per una chiave in un dizionario
 # solo se la chiave data non è già presente
 filled_dict.setdefault("cinque", 5)  # filled_dict["cinque"] viene impostato a 5
 filled_dict.setdefault("cinque", 6)  # filled_dict["cinque"] rimane 5
@@ -346,7 +346,7 @@ empty_set = set()
 # Inizializza un "set()" con un dei valori. Sì, sembra un dizionario.
 some_set = {1, 1, 2, 2, 3, 4}  # set_nuovo è {1, 2, 3, 4}
 
-# Come le chiavi di un dizionario, gli elementi di un set devono essere 
+# Come le chiavi di un dizionario, gli elementi di un set devono essere
 # di tipo immutabile
 invalid_set = {[1], 1}  # => Genera un "TypeError: unhashable type: 'list'""
 valid_set = {(1,), 1}
@@ -397,7 +397,7 @@ else:                  # Anche else è opzionale
     print("some_var è  10.")
 
 """
-I cicli for iterano sulle liste, cioè ripetono un codice per ogni elemento 
+I cicli for iterano sulle liste, cioè ripetono un codice per ogni elemento
 di una lista.
 Il seguente codice scriverà:
     cane è un mammifero
@@ -432,7 +432,7 @@ for i in range(4, 8):
     print(i)
 
 """
-"range(lower, upper, step)" rrestituisce una lista di numeri dal più piccolo 
+"range(lower, upper, step)" rrestituisce una lista di numeri dal più piccolo
 (lower) al più grande (upper), incrementando del valore step.
 Se step non è indicato, avrà come valore di default 1.
 Il seguente codice scriverà:
@@ -473,13 +473,13 @@ with open("myfile.txt") as f:
     for line in f:
         print(line)
 
-# In Python qualunque oggetto in grado di essere trattato come una 
+# In Python qualunque oggetto in grado di essere trattato come una
 # sequenza è definito un oggetto Iterable (itarabile).
 # L'oggetto restituito da una funzione range è un iterabile.
 
 filled_dict = {"uno": 1, "due": 2, "tre": 3}
 our_iterable = filled_dict.keys()
-print(our_iterable)  # => dict_keys(['uno', 'due', 'tre']). 
+print(our_iterable)  # => dict_keys(['uno', 'due', 'tre']).
 # Questo è un oggetto che implementa la nostra interfaccia Iterable.
 
 # È possibile utilizzarlo con i loop:
@@ -500,8 +500,8 @@ next(our_iterator)  # => "uno"
 next(our_iterator)  # => "due"
 next(our_iterator)  # => "tre"
 
-# Dopo che un iteratore ha restituito tutti i suoi dati, genera 
-# un'eccezione StopIteration 
+# Dopo che un iteratore ha restituito tutti i suoi dati, genera
+# un'eccezione StopIteration
 next(our_iterator)  # Raises StopIteration
 
 # Puoi prendere tutti gli elementi di un iteratore utilizzando list().
@@ -550,7 +550,7 @@ all_the_args(1, 2, a=3, b=4) stampa:
 """
 
 # Quando chiami funzioni, puoi fare l'opposto di args/kwargs!
-# Usa * per sviluppare gli argomenti posizionale ed usa ** per 
+# Usa * per sviluppare gli argomenti posizionale ed usa ** per
 # espandere gli argomenti parola chiave
 args = (1, 2, 3, 4)
 kwargs = {"a": 3, "b": 4}
@@ -607,7 +607,7 @@ list(map(max, [1, 2, 3], [4, 2, 1]))  # => [4, 2, 3]
 list(filter(lambda x: x > 5, [3, 4, 5, 6, 7]))  # => [6, 7]
 
 # Possiamo usare le "list comprehensions" per mappe e filtri
-# Le "list comprehensions" memorizzano l'output come una lista che può essere 
+# Le "list comprehensions" memorizzano l'output come una lista che può essere
 # di per sé una lista annidata
 [add_10(i) for i in [1, 2, 3]]         # => [11, 12, 13]
 [x for x in [3, 4, 5, 6, 7] if x > 5]  # => [6, 7]
@@ -653,7 +653,7 @@ dir(math)
 # Questo succede perchè la cartella corrente ha priorità
 # sulle librerie standard di Python
 
-# Se hai uno script Python chiamato math.py nella stessa 
+# Se hai uno script Python chiamato math.py nella stessa
 # cartella del tua script, Python caricherà quello al posto del
 # comune modulo math.
 # Questo accade perché la cartella locale ha la priorità
@@ -671,7 +671,7 @@ class Human:
     species = "H. sapiens"
 
     # Si noti che i doppi underscore iniziali e finali denotano gli oggetti o
-    # attributi utilizzati da Python ma che vivono nel namespace controllato 
+    # attributi utilizzati da Python ma che vivono nel namespace controllato
     # dall'utente
     # Metodi, oggetti o attributi come: __init__, __str__, __repr__, etc. sono
     # chiamati metodi speciali (o talvolta chiamati "dunder methods").
@@ -704,8 +704,8 @@ class Human:
         return "*grunt*"
 
     # Una property è come un metodo getter.
-    # Trasforma il metodo age() in un attributo in sola lettura, che ha 
-    # lo stesso nome 
+    # Trasforma il metodo age() in un attributo in sola lettura, che ha
+    # lo stesso nome
     # In Python non c'è bisogno di scrivere futili getter e setter.
     @property
     def age(self):
@@ -722,7 +722,7 @@ class Human:
         del self._age
 
 # Quando l'interprete Python legge un sorgente esegue tutto il suo codice.
-# Questo controllo su __name__ assicura che questo blocco di codice venga 
+# Questo controllo su __name__ assicura che questo blocco di codice venga
 # eseguito solo quando questo modulo è il programma principale.
 
 if __name__ == '__main__':
@@ -740,14 +740,14 @@ if __name__ == '__main__':
     i.say(i.get_species())          # => "Ian: H. neanderthalensis"
     j.say(j.get_species())          # => "Joel: H. neanderthalensis"
 
-    # Chiama un metodo statico 
+    # Chiama un metodo statico
     print(Human.grunt())            # => "*grunt*"
-    
+
     # Non è possibile chiamare il metodo statico con l'istanza dell'oggetto
-    # poiché i.grunt() metterà automaticamente "self" (l'oggetto i) 
-    # come argomento 
+    # poiché i.grunt() metterà automaticamente "self" (l'oggetto i)
+    # come argomento
     print(i.grunt())                # => TypeError: grunt() takes 0 positional arguments but 1 was given
-                                    
+
     # Aggiorna la property (age) di questa istanza
     i.age = 42
     # Leggi la property
@@ -770,7 +770,7 @@ if __name__ == '__main__':
 # come "species", "name" e "age", così come i metodi, come "sing" e "grunt",
 # dalla classe Human, ma potrà anche avere le sue proprietà uniche.
 
-# Per importare le funzioni da altri file usa il seguente formato 
+# Per importare le funzioni da altri file usa il seguente formato
 # from "nomefile-senza-estensione" import "funzione-o-classe"
 
 from human import Human
@@ -778,18 +778,18 @@ from human import Human
 # Specificare le classi genitore come parametri della definizione della classe
 class Superhero(Human):
 
-    # Se la classe figlio deve ereditare tutte le definizioni del genitore  
+    # Se la classe figlio deve ereditare tutte le definizioni del genitore
     # senza alcuna modifica, puoi semplicemente usare la parola chiave "pass"
     # (e nient'altro)
 
     #Le classi figlio possono sovrascrivere gli attributi dei loro genitori
     species = 'Superhuman'
 
-    # Le classi figlie ereditano automaticamente il costruttore della classe 
-    # genitore, inclusi i suoi argomenti, ma possono anche definire ulteriori 
-    # argomenti o definizioni e sovrascrivere i suoi metodi (compreso  il 
+    # Le classi figlie ereditano automaticamente il costruttore della classe
+    # genitore, inclusi i suoi argomenti, ma possono anche definire ulteriori
+    # argomenti o definizioni e sovrascrivere i suoi metodi (compreso  il
     # costruttore della classe).
-    # Questo costruttore eredita l'argomento "nome" dalla classe "Human" e 
+    # Questo costruttore eredita l'argomento "nome" dalla classe "Human" e
     # aggiunge gli argomenti "superpowers" e "movie":
 
     def __init__(self, name, movie=False,
@@ -800,8 +800,8 @@ class Superhero(Human):
         self.movie = movie
         self.superpowers = superpowers
 
-        # La funzione "super" ti consente di accedere ai metodi della classe 
-        # genitore che sono stati sovrascritti dalla classe figlia,  
+        # La funzione "super" ti consente di accedere ai metodi della classe
+        # genitore che sono stati sovrascritti dalla classe figlia,
         # in questo caso il metodo __init__.
         # Il seguente codice esegue il costruttore della classe genitore:
         super().__init__(name)
@@ -825,7 +825,7 @@ if __name__ == '__main__':
     if type(sup) is Superhero:
         print('I am a superhero')
 
-    # Ottieni il "Method Resolution search Order" usato sia da getattr () 
+    # Ottieni il "Method Resolution search Order" usato sia da getattr ()
     # che da super (). Questo attributo è dinamico e può essere aggiornato
     print(Superhero.__mro__)    # => (<class '__main__.Superhero'>,
                                 # => <class 'human.Human'>, <class 'object'>)
@@ -888,13 +888,13 @@ class Batman(Superhero, Bat):
     def __init__(self, *args, **kwargs):
         # In genere per ereditare gli attributi devi chiamare super:
         # super(Batman, self).__init__(*args, **kwargs)
-        # Ma qui abbiamo a che fare con l'ereditarietà multipla, e super() 
+        # Ma qui abbiamo a che fare con l'ereditarietà multipla, e super()
         # funziona solo con la successiva classe nell'elenco MRO.
         # Quindi, invece, chiamiamo esplicitamente __init__ per tutti gli
-        # antenati. L'uso di *args e **kwargs consente di passare in modo 
-        # pulito gli argomenti, con ciascun genitore che "sbuccia un 
-        # livello della cipolla".    
-        Superhero.__init__(self, 'anonymous', movie=True, 
+        # antenati. L'uso di *args e **kwargs consente di passare in modo
+        # pulito gli argomenti, con ciascun genitore che "sbuccia un
+        # livello della cipolla".
+        Superhero.__init__(self, 'anonymous', movie=True,
                            superpowers=['Wealthy'], *args, **kwargs)
         Bat.__init__(self, *args, can_fly=False, **kwargs)
         # sovrascrivere il valore per l'attributo name
@@ -909,9 +909,9 @@ if __name__ == '__main__':
 
     # Ottieni il "Method Resolution search Order" utilizzato da getattr() e super().
     # Questo attributo è dinamico e può essere aggiornato
-    print(Batman.__mro__)       # => (<class '__main__.Batman'>, 
-                                # => <class 'superhero.Superhero'>, 
-                                # => <class 'human.Human'>, 
+    print(Batman.__mro__)       # => (<class '__main__.Batman'>,
+                                # => <class 'superhero.Superhero'>,
+                                # => <class 'human.Human'>,
                                 # => <class 'bat.Bat'>, <class 'object'>)
 
     # Esegui il metodo del genitore ma utilizza il proprio attributo di classe
@@ -920,7 +920,7 @@ if __name__ == '__main__':
     # Esegui un metodo che è stato sovrascritto
     print(sup.sing())           # => nan nan nan nan nan batman!
 
-    # Esegui un metodo da Human, perché l'ordine di ereditarietà è importante 
+    # Esegui un metodo da Human, perché l'ordine di ereditarietà è importante
     sup.say('I agree')          # => Sad Affleck: I agree
 
     # Esegui un metodo che esiste solo nel 2o antenato
@@ -947,7 +947,7 @@ def double_numbers(iterable):
         yield i + i
 
 # I generatori sono efficienti in termini di memoria perché caricano
-# solo i dati necessari per elaborare il valore successivo nell'iterabile. 
+# solo i dati necessari per elaborare il valore successivo nell'iterabile.
 # Ciò consente loro di eseguire operazioni su intervalli di valori
 # altrimenti proibitivi.
 # NOTA: `range` sostituisce` xrange` in Python 3.
@@ -956,13 +956,13 @@ for i in double_numbers(range(1, 900000000)):  # `range` is a generator.
     if i >= 30:
         break
 
-# Proprio come è possibile creare una "list comprehension", è possibile 
+# Proprio come è possibile creare una "list comprehension", è possibile
 # creare anche delle "generator comprehensions".
 values = (-x for x in [1,2,3,4,5])
 for x in values:
     print(x)  # prints -1 -2 -3 -4 -5 to console/terminal
 
-# Puoi anche trasmettere una "generator comprehensions" direttamente 
+# Puoi anche trasmettere una "generator comprehensions" direttamente
 # ad un elenco.
 values = (-x for x in [1,2,3,4,5])
 gen_to_list = list(values)
@@ -970,7 +970,7 @@ print(gen_to_list)  # => [-1, -2, -3, -4, -5]
 
 
 # Decoratori
-# In questo esempio "beg" avvolge/wrappa  "say". 
+# In questo esempio "beg" avvolge/wrappa  "say".
 # Se say_please è True, cambierà il messaggio restituito.
 from functools import wraps
 

@@ -88,7 +88,7 @@ Clojure, Lisp dialekti, barınan bir dildir. [JVM][JVM] üzerinde barınıyor. C
 ;;;;;;;;;;;;;;;;;;;
 
 ; Listeler bağlı-liste veri yapısı,
-; Vektörler dizi altyapısı kullanır. 
+; Vektörler dizi altyapısı kullanır.
 (class '(1 2 3)); => clojure.lang.PersistentList
 (class [1 2 3]); => clojure.lang.PersistentVector
 
@@ -293,7 +293,7 @@ anahtar-eşlemesi ; => {:a 1, :b 2, :c 3}
   (> a b)) ; => false
 
 ; İfade ve çağırımları `do` ile gruplayabilirsiniz.
-; Çağırımların sonuncusu `do` ifadesinin değeri olarak 
+; Çağırımların sonuncusu `do` ifadesinin değeri olarak
 ; döndürülecektir.
 (do
   (print "Selamlar!")
@@ -316,10 +316,10 @@ anahtar-eşlemesi ; => {:a 1, :b 2, :c 3}
 ;
 ; `->` makrosu, ifadeyi çağırımların ilk argümanı olacak şekilde yerleştirir.
 (->
-   {:a 1 :b 2} 
+   {:a 1 :b 2}
    (assoc :c 3) ;=> (assoc {:a 1 :b 2} :c 3)
    (dissoc :b))
-   
+
 ; Bu ifade aşağıdaki şekilde yazılabilir:
 ; (dissoc (assoc {:a 1 :b 2} :c 3) :b)
 ; ve `{:a 1 :c 3}` olarak değer bulur.
@@ -342,7 +342,7 @@ anahtar-eşlemesi ; => {:a 1, :b 2, :c 3}
 
 (as-> [1 2 3] girdi
   (map inc girdi);=> ifadeyi isterseniz çağırımın son argümanı olarak,
-  (nth girdi 2) ;=>  veya çağırımın ilk argümanı olarak, 
+  (nth girdi 2) ;=>  veya çağırımın ilk argümanı olarak,
   (conj [4 5 6] girdi [8 9 10])) ;=> ya da istediğiniz sırada kullanabilirsiniz.
 ;=> [4 5 6 4 [8 9 10]]
 
@@ -361,7 +361,7 @@ anahtar-eşlemesi ; => {:a 1, :b 2, :c 3}
 ; Ayrıca eklenecek fonksiyonları seçebilirsiniz de:
 (use '[clojure.set :only [intersection]])
 
-; Bir modülü eklemek için `require` kullanılır. 
+; Bir modülü eklemek için `require` kullanılır.
 (require 'clojure.string)
 
 ; İsim-uzayı kapsamlı çağırımlar aşağıdaki şekildedir:
@@ -401,7 +401,7 @@ anahtar-eşlemesi ; => {:a 1, :b 2, :c 3}
 (ns test
   (:import java.util.Date
            java.util.Calendar))
-           
+
 ; Bir Java nesnesinden oluşturmak için `new` çağırımını kullanabilirsiniz.
 (new Date)
 
@@ -447,7 +447,7 @@ anahtar-eşlemesi ; => {:a 1, :b 2, :c 3}
 (swap! benim-atomum assoc :b 2)
 ; benim-atomum'un değerini (assoc {:a 1} :b 2) ifadesinin sonucu ile değiştirir.
 
-; `deref` ile, atomun değerini çözümleyebilirsiniz. 
+; `deref` ile, atomun değerini çözümleyebilirsiniz.
 benim-atomum  ;=> Atom<#...> (Atom ifadesi döndürür)
 @benim-atomum ; => {:a 1 :b 2}
 

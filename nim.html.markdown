@@ -124,7 +124,7 @@ type
     windows: int    # objects inside objects
     doors: int = 1  # Change the default value of a field (since Nim 2.0)
   House = object
-    address: string  
+    address: string
     rooms: seq[Room]
 
 var

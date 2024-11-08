@@ -41,8 +41,8 @@ fun main(args: Array<String>) {
     Podemos declarar explícitamente el tipo de una variable así:
     */
     val foo: Int = 7
-    
-    /* 
+
+    /*
     A diferencia de JavaScript, aunque el tipo se infiera, es tipado, por lo que no se puede cambiar el tipo a posteriori
     */
     var fooInt = 14 // Se infiere tipo Int
@@ -128,11 +128,11 @@ fun main(args: Array<String>) {
     fun even(x: Int) = x % 2 == 0
     println(even(6)) // => true
     println(even(7)) // => false
-    
-    /* 
+
+    /*
     Kotlin permite el uso de lambdas, o funciones anónimas
     */
-    
+
     // Sin lambda:
     interface MyListener {
         fun onClick(foo: Foo)
@@ -141,29 +141,29 @@ fun main(args: Array<String>) {
     fun listenSomething(listener: MyListener) {
         listener.onClick(Foo())
     }
-    
+
     listenSomething(object: MyListener {
         override fun onClick(foo: Foo) {
             //...
         }
     })
-    
+
     // Con lambda:
     fun listenSomethingLambda(listener: (Foo) -> Unit) {
         listener(Foo())
     }
-    
+
     listenSomethingLambda {
         //Se recibe foo
     }
-    
+
     // el operador typealias permite, entre otras cosas, simplificar las expresiones con lambdas
     typealias MyLambdaListener = (Foo) -> Unit
     fun listenSomethingLambda(listener: MyLambdaListener) {
         listener(Foo())
     }
 
-    // Las funciones pueden tomar funciones como argumentos y 
+    // Las funciones pueden tomar funciones como argumentos y
     // retornar funciones.
     fun not(f: (Int) -> Boolean) : (Int) -> Boolean {
         return {n -> !f.invoke(n)}
@@ -259,7 +259,7 @@ fun main(args: Array<String>) {
     val fooMap = mapOf("a" to 8, "b" to 7, "c" to 9)
     // Se puede acceder a los valores del mapa por su llave.
     println(fooMap["a"]) // => 8
-    
+
     // Tanto Map como cualquier colección iterable, tienen la función de extensión forEach
     fooMap.forEach {
         println("${it.key} ${it.value}")

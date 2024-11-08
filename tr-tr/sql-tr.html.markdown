@@ -32,7 +32,7 @@ CREATE TABLE tablo1(id INTEGER PRIMARY KEY NOT NULL UNIQUE, ad TEXT, soyad TEXT,
 -- Satır ekle
 INSERT INTO tablo1 ( ad, soyad) VALUES ("Deger1","Deger2");
 
--- Veritabanında tablo üzerindeki verileri görüntüle 
+-- Veritabanında tablo üzerindeki verileri görüntüle
 -- Sadece 'ad' gibi sınırlı bir veri için
 SELECT ad FROM tablo1;
 -- Bütün veriler için

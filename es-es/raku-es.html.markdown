@@ -647,7 +647,7 @@ my @arraymas3 = map({ $_ + 3 }, @array); # $_ es el argumento implícito
 ## Una subrutina (`sub {}`) tiene semánticas diferentes a un
 ## bloque (`{}` or `-> {}`): Un bloque no tiene "contexto funcional"
 ## (aunque puede tener argumentos), lo que significa que si quieres devolver
-## algo desde un bloque, vas a returnar desde la función parental. Compara:  
+## algo desde un bloque, vas a returnar desde la función parental. Compara:
 sub is-in(@array, $elem) {
   # esto `devolverá` desde la subrutina `is-in`
   # Una vez que la condición evalúa a True, el bucle terminará

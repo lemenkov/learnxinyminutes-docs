@@ -6,19 +6,19 @@ contributors:
 filename: CMake
 ---
 
-CMake is a cross-platform, open-source build system. This tool allows you to test, 
+CMake is a cross-platform, open-source build system. This tool allows you to test,
 compile, and create packages of your source code.
 
-The problem that CMake tries to solve is the problem of Makefiles and 
-Autoconfigure on cross-platforms (different make interpreters have different 
+The problem that CMake tries to solve is the problem of Makefiles and
+Autoconfigure on cross-platforms (different make interpreters have different
 commands) and the ease-of-use on linking 3rd party libraries.
 
-CMake is an extensible, open-source system that manages the build process in 
-an operating system and compiler-agnostic manner. Unlike many 
-cross-platform systems, CMake is designed to be used in conjunction with the 
-native build environment. Simple configuration files placed in each source 
-directory (called CMakeLists.txt files) are used to generate standard build 
-files (e.g., makefiles on Unix and projects/workspaces in Windows MSVC) which 
+CMake is an extensible, open-source system that manages the build process in
+an operating system and compiler-agnostic manner. Unlike many
+cross-platform systems, CMake is designed to be used in conjunction with the
+native build environment. Simple configuration files placed in each source
+directory (called CMakeLists.txt files) are used to generate standard build
+files (e.g., makefiles on Unix and projects/workspaces in Windows MSVC) which
 are used in the usual way.
 
 ```cmake
@@ -28,7 +28,7 @@ are used in the usual way.
 #  - mkdir build && cd build
 #  - cmake ..
 #  - make
-# 
+#
 # With those steps, we will follow the best practice to compile into a subdir
 # and the second line will request to CMake to generate a new OS-dependent
 # Makefile. Finally, run the native Make command.
@@ -133,13 +133,13 @@ endif()
 # `set(<variable> <value>... [PARENT_SCOPE])`
 
 # How to reference variables inside quoted and unquoted arguments?
-# A variable reference is replaced by either the variable value or by the 
+# A variable reference is replaced by either the variable value or by the
 # empty string if the variable is not set.
 ${variable_name}
 
 # Lists
 # Setup the list of source files
-set( LEARN_CMAKE_SOURCES 
+set( LEARN_CMAKE_SOURCES
   src/main.c
   src/imagem.c
   src/pather.c
@@ -147,7 +147,7 @@ set( LEARN_CMAKE_SOURCES
 
 # Calls the compiler
 #
-# ${PROJECT_NAME} refers to Learn_CMake 
+# ${PROJECT_NAME} refers to Learn_CMake
 add_executable( ${PROJECT_NAME} ${LEARN_CMAKE_SOURCES} )
 
 # Link the libraries

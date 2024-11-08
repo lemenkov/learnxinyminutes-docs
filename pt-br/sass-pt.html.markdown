@@ -137,7 +137,7 @@ div {
 
 /* Funções pode ser chamado usando seu nome e passando o
     argumentos necessários */
-    
+
 body {
   width: round(10.25px);
 }
@@ -156,11 +156,11 @@ body {
   background-color: rgba(0, 0, 0, 0.75);
 }
 
-/* Você também pode definir suas próprias funções. As funções são muito semelhantes 
+/* Você também pode definir suas próprias funções. As funções são muito semelhantes
    aos mixins. Ao tentar escolher entre uma função ou um mixin, lembre
    que mixins são os melhores para gerar CSS enquanto as funções são melhores para
-   lógica que pode ser usado em todo o seu código Sass. Os exemplos na 
-   seção "Operações Math" são candidatos ideais para se tornar um função 
+   lógica que pode ser usado em todo o seu código Sass. Os exemplos na
+   seção "Operações Math" são candidatos ideais para se tornar um função
    reutilizável. */
 
 /* Esta função terá um tamanho de destino e o tamanho do pai (parent), calcular
@@ -337,7 +337,7 @@ body {
 
 
 /* Placeholder Selectors
-==============================*/  
+==============================*/
 
 
 /* Os Placeholders são úteis na criação de uma declaração CSS para ampliar. Se você

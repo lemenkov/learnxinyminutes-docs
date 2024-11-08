@@ -63,7 +63,7 @@ namespace Learning
     public class LearnCSharp
     {
         // 基本语法 - 如果你以前用过 Java 或 C++ 的话，可以直接跳到后文「有趣的特性」
-        public static void Syntax() 
+        public static void Syntax()
         {
             // 使用 Console.WriteLine 打印信息
             Console.WriteLine("Hello World");
@@ -399,7 +399,7 @@ on a new line! ""Wow!"", the masses cried";
         //
         // 有趣的特性
         //
-        
+
         // 默认方法签名
 
         public // 可见性
@@ -411,7 +411,7 @@ on a new line! ""Wow!"", the masses cried";
             int another = 3,
             params string[] otherParams // 捕获其他参数
         )
-        { 
+        {
             return -1;
         }
 
@@ -566,7 +566,7 @@ on a new line! ""Wow!"", the masses cried";
                 writer.WriteLine("这里没有什么可疑的东西");
                 // 在作用域的结尾，资源会被回收
                 // （即使有异常抛出，也一样会回收）
-            } 
+            }
 
             // 并行框架
             // https://learn.microsoft.com/zh-cn/dotnet/standard/parallel-programming/data-parallelism-task-parallel-library
@@ -635,9 +635,9 @@ on a new line! ""Wow!"", the masses cried";
                 .Select(b => b.Name); // 仍然不运行查询
 
             // 现在运行查询，运行查询的时候会打开一个读取器，所以你迭代的是一个副本
-            foreach (string bike in query) 
+            foreach (string bike in query)
                 Console.WriteLine(result);
-            
+
 
 
         }
@@ -784,14 +784,14 @@ on a new line! ""Wow!"", the masses cried";
         // 你无需通过对象就可以访问他们
         // Console.WriteLine("Bicycles created: " + Bicycle.bicyclesCreated);
         static public int BicyclesCreated = 0;
-        
+
         // 只读值在运行时确定
         // 它们只能在声明或构造器内被赋值
         readonly bool _hasCardsInSpokes = false; // read-only private
 
         // 构造器是创建类的一种方式
         // 下面是一个默认的构造器
-        public Bicycle() 
+        public Bicycle()
         {
             this.Gear = 1; // 你可以使用关键词 this 访问对象的成员
             Cadence = 50;  // 不过你并不总是需要它
@@ -803,13 +803,13 @@ on a new line! ""Wow!"", the masses cried";
 
         // 另一个构造器的例子（包含参数）
         public Bicycle(int startCadence, int startSpeed, int startGear,
-                       string name, bool hasCardsInSpokes, BikeBrand brand) 
+                       string name, bool hasCardsInSpokes, BikeBrand brand)
             : base() // 显式调用基类的无参构造方法
         {
-            Gear = startGear; 
+            Gear = startGear;
             Cadence = startCadence;
             _speed = startSpeed;
-            Name = name; 
+            Name = name;
             _hasCardsInSpokes = hasCardsInSpokes;
             Brand = brand;
         }
@@ -847,7 +847,7 @@ on a new line! ""Wow!"", the masses cried";
             get { return _hasTassles; }
             set { _hasTassles = value; }
         }
-        
+
         // 你可以在一行之内定义自动属性
         // 这个语法会自动创建后备字段
         // 你可以给 getter 或 setter 设置访问修饰符

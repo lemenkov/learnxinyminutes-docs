@@ -10,7 +10,7 @@ contributors:
     - ["Rahil Momin", "https://github.com/iamrahil"]
     - ["Gregrory Kielian", "https://github.com/gskielian"]
     - ["Etan Reisner", "https://github.com/deryni"]
-    - ["Jonathan Wang", "https://github.com/Jonathansw"]   
+    - ["Jonathan Wang", "https://github.com/Jonathansw"]
     - ["Leo Rudberg", "https://github.com/LOZORD"]
     - ["Betsy Lorton", "https://github.com/schbetsy"]
     - ["John Detter", "https://github.com/jdetter"]
@@ -82,7 +82,7 @@ echo ${Variable/Просто/Это} # => Это строка
 
 # Взять подстроку из переменной
 LENGTH=7
-echo ${VARIABLE:0:LENGTH} # => Просто 
+echo ${VARIABLE:0:LENGTH} # => Просто
 # Это выражение вернёт только первые 7 символов переменной VARIABLE
 echo ${Variable: -5} # => трока
 # Вернёт последние 5 символов (обратите внимание на пробел перед «-5»)
@@ -329,7 +329,7 @@ echo "Здесь $(ls | wc -l) элементов."
 echo "Здесь `ls | wc -l` элементов."
 
 # В Bash есть структура case, которая похожа на switch в Java и C++:
-case "$VARIABLE" in 
+case "$VARIABLE" in
     # Перечислите шаблоны для условий, которые хотите выполнить
     0) echo "Тут ноль.";;
     1) echo "Тут один.";;
@@ -441,9 +441,9 @@ grep -rI "^foo.*bar$" someDir/ # рекурсивный `grep` с игнорир
 # Выполнить тот же изначальный поиск, но удалив строки, содержащие «baz»
 grep "^foo.*bar$" file.txt | grep -v "baz"
 
-# чтобы искать непосредственно по строке, а не в соответствии 
+# чтобы искать непосредственно по строке, а не в соответствии
 # с регулярным выражением, используйте fgrep (или grep -F):
-fgrep "^foo.*bar$" file.txt 
+fgrep "^foo.*bar$" file.txt
 
 # Команда `trap` позволяет выполнить некую команду, когда ваш скрипт
 # принимает определённый Posix-сигнал. В следующем примере `trap` выполнит `rm`,

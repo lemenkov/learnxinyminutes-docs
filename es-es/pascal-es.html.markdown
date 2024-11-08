@@ -15,7 +15,7 @@ lang: es-es
 Para compilar y ejecutar un programa pascal puede usar un compilador pascal gratuito. [Descargar aquí](https://www.freepascal.org/)
 
 ```pascal
-//Anatomía de un programa en Pascal 
+//Anatomía de un programa en Pascal
 //Esto es un comentario
 {
     Esto es un
@@ -43,7 +43,7 @@ begin
     {
         área para declarar su instrucción
     }
-end. // El final de un área principal del programa debe requerir un símbolo "." 
+end. // El final de un área principal del programa debe requerir un símbolo "."
 ```
 
 ```pascal
@@ -52,7 +52,7 @@ end. // El final de un área principal del programa debe requerir un símbolo ".
 var a:integer;
 var b:integer;
 //o esto
-var 
+var
     a : integer;
     b : integer;
 //o esto
@@ -181,10 +181,10 @@ Begin
 End; // termine una función usando un punto y coma después de la instrucción End.
 
 procedure obtener_entero(var i : integer; dummy : integer);
-{ obten la entrada del usuario y almacenarla en el parámetro entero i. 
-  los parámetros que preceden a 'var' son variables, lo que significa que su valor 
-  puede cambiar fuera del parámetro. Los parámetros de valor (sin 'var') como 'dummy' 
-  son estáticos y los cambios realizados dentro del alcance de la función/procedimiento 
+{ obten la entrada del usuario y almacenarla en el parámetro entero i.
+  los parámetros que preceden a 'var' son variables, lo que significa que su valor
+  puede cambiar fuera del parámetro. Los parámetros de valor (sin 'var') como 'dummy'
+  son estáticos y los cambios realizados dentro del alcance de la función/procedimiento
   no afectan la variable que se pasa como parámetro }
 
 Begin

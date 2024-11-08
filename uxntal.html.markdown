@@ -7,11 +7,11 @@ filename: learnuxn.tal
 
 Uxntal is a stack-machine assembly language targeting the [Uxn virtual machine](https://wiki.xxiivv.com/site/uxn.html).
 
-Stack machine programming might look at bit odd, as it uses a postfix notation, 
-which means that operators are always found at the end of an operation. For 
-instance, one would write 3 4 + instead of 3 + 4. 
+Stack machine programming might look at bit odd, as it uses a postfix notation,
+which means that operators are always found at the end of an operation. For
+instance, one would write 3 4 + instead of 3 + 4.
 
-The expression written (5 + 10) * 3 in conventional notation would be 
+The expression written (5 + 10) * 3 in conventional notation would be
 written 10 5 + 3 * in reverse Polish notation.
 
 ```forth
@@ -74,8 +74,8 @@ POP2 ( pop a short )
 
 ( Logic opcodes will put a flag with a value of either 00 or 01 )
 
-#12 #34 LTH 
-#78 #56 GTH 
+#12 #34 LTH
+#78 #56 GTH
 	#0101 EQU2 ( 01 )
 
 ( The logic opcodes are:
@@ -83,8 +83,8 @@ POP2 ( pop a short )
 
 ( ---------------------------------------------------------------------------- )
 
-( Uxn's accessible memory is as follows: 
-	256 bytes of working stack 
+( Uxn's accessible memory is as follows:
+	256 bytes of working stack
 	256 bytes of return stack
 	65536 bytes of memory
 	256 bytes of IO memory )
@@ -163,7 +163,7 @@ JMP2r
 
 @word "cerulean
 
-( The jump opcodes are: 
+( The jump opcodes are:
 	JMP JCN JSR )
 ```
 

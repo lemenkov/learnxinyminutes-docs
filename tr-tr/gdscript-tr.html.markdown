@@ -9,9 +9,9 @@ translators:
 lang: tr-tr
 ---
 
-GDScript, özgür ve açık kaynaklı oyun motoru olan Godot için dinamik ve statik olarak 
-yazılmış bir kodlama dilidir. Yazılış şekli Python'a biraz benzerdir. 
-Başlıca avantajları kullanım kolaylığı ve motorla olan uyumudur. 
+GDScript, özgür ve açık kaynaklı oyun motoru olan Godot için dinamik ve statik olarak
+yazılmış bir kodlama dilidir. Yazılış şekli Python'a biraz benzerdir.
+Başlıca avantajları kullanım kolaylığı ve motorla olan uyumudur.
 Oyun geliştirme için mükemmel bir uyum sağlar.
 
 ## Temeller
@@ -19,7 +19,7 @@ Oyun geliştirme için mükemmel bir uyum sağlar.
 ```gdscript
 # Tek satırlık yorumlar, '#' simgesi kullanılarak yazılır.
 """
-  Çok 
+  Çok
   satırlı
   yorumlar
   üç
@@ -45,7 +45,7 @@ var y = 1.2 # float
 var b = true # bool
 var s = "Merhaba Dünya!" # String
 var a = [1, false, "turuncu kedi"] # Array - Python'daki listeye benzer,
-                                # aynı anda farklı tipte 
+                                # aynı anda farklı tipte
                                 # değişkenleri tutabilir.
 var d = {
   "key" : "value",
@@ -73,7 +73,7 @@ enum NamedEnum { ONE = 1, TWO, THREE }
 
 # Dışa aktarılan değişkenler 'inspector' de görünür.
 #
-# Editörün hangi seçenekleri vereceğini bilmesi için bir tür ipucu (daha sonra açıklanacaktır) 
+# Editörün hangi seçenekleri vereceğini bilmesi için bir tür ipucu (daha sonra açıklanacaktır)
 # veya varsayılan bir değere ihtiyaç vardır.
 @export var age: int
 @export var height: float
@@ -84,7 +84,7 @@ enum NamedEnum { ONE = 1, TWO, THREE }
 
 # Fonksiyonlar
 func foo():
-  pass # pass anahtar sözcüğü gelecekteki yazılacak olan kod için bir yer tutucudur. 
+  pass # pass anahtar sözcüğü gelecekteki yazılacak olan kod için bir yer tutucudur.
        # Editörde hata olarak göstermesini engellemek için de kullanılır.
 
 func add(first, second):
@@ -128,7 +128,7 @@ func doing_math():
 func control_flow():
   x = 8
   y = 2 # y orjinalde float'dı,
-        # ancak "dynamic typing" gücünü kullanarak 
+        # ancak "dynamic typing" gücünü kullanarak
         # tipini int'e değiştirebiliriz!
 
   if x < y:
@@ -220,11 +220,11 @@ func _physics_process(delta):
   self.global_position += direction * speed * delta
   # self geçerli sınıf örneğini belirtir.
 
-# Geçersiz kılma sırasında, buradaki gibi nokta operatörünü kullanarak 
+# Geçersiz kılma sırasında, buradaki gibi nokta operatörünü kullanarak
 # parent işlevini çağırabilirsiniz:
 func get_children():
   # Bazı ek şeyler ekleyebilirsiniz.
-  var r = super() # Parent implementasyonunu çağırma 
+  var r = super() # Parent implementasyonunu çağırma
   return r
 
 # Dahili sınıflar (Inner class)
@@ -275,7 +275,7 @@ func _process(delta):
   # Artık referansı başka yerlerde tekrar kullanabiliriz.
   prints("Sprite has global_position of", sprite.global_position)
 
-# _ready çalıştırılmadan hemen önce 
+# _ready çalıştırılmadan hemen önce
 # bir değişkene değer atamak için @onready kullanın.
 @onready var other_sprite = $Sprite as Sprite
 
@@ -289,7 +289,7 @@ func _process(delta):
 
 ## Sinyaller (Signals)
 
-Sinyal sistemi Godot'nun gözlemci programlama modelinin uygulamasıdır. 
+Sinyal sistemi Godot'nun gözlemci programlama modelinin uygulamasıdır.
 İşte bir örnek:
 
 ```gdscript
@@ -311,9 +311,9 @@ func apply_damage(dmg):
     died.emit()
 
 func _ready():
-  # "died" sinyali kendi içinde tanımlanan "_on_death" fonksiyonuna bağlama 
+  # "died" sinyali kendi içinde tanımlanan "_on_death" fonksiyonuna bağlama
   died.connect(_on_death)
-  # Hedef nesne kendisi değilse 
+  # Hedef nesne kendisi değilse
   # alternatif bir yol gerekir.
   # died.connect(Callable(self, &"_on_death"))
 

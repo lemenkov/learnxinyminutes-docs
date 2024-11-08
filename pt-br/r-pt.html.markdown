@@ -6,7 +6,7 @@ contributors:
     - ["kalinn", "http://github.com/kalinn"]
 translators:
     - ["Marcel Ribeiro-Dantas", "http://github.com/mribeirodantas"]
-lang: pt-br    
+lang: pt-br
 filename: learnr-pt.r
 ---
 
@@ -210,7 +210,7 @@ c(1,2,3) + c(1,2,3) # 2 4 6
 # comprimentos diferentes. Embora possa ser feito,
 c(1,2,3,1,2,3) * c(1,2) # 1 4 3 2 2 6
 # ter comprimentos iguais é uma prática melhor e mais fácil de ler
-c(1,2,3,1,2,3) * c(1,2,1,2,1,2) 
+c(1,2,3,1,2,3) * c(1,2,1,2,1,2)
 
 # CHARACTERS
 # Não há diferença entre strings e caracteres em R
@@ -673,76 +673,76 @@ modeloLinear <- lm(preco  ~ tempo, data = lista1)
 modeloLinear # imprime na tela o resultado da regressão
 # Call:
 # lm(formula = preco ~ tempo, data = lista1)
-# 
+#
 # Coefficients:
-# (Intercept)        tempo  
-#      0.1453       0.4943  
+# (Intercept)        tempo
+#      0.1453       0.4943
 summary(modeloLinear) # saída mais detalhada da regressão
 # Call:
 # lm(formula = preco ~ tempo, data = lista1)
 #
 # Residuals:
-#     Min      1Q  Median      3Q     Max 
-# -8.3134 -3.0131 -0.3606  2.8016 10.3992 
+#     Min      1Q  Median      3Q     Max
+# -8.3134 -3.0131 -0.3606  2.8016 10.3992
 #
 # Coefficients:
-#             Estimate Std. Error t value Pr(>|t|)    
-# (Intercept)  0.14527    1.50084   0.097    0.923    
+#             Estimate Std. Error t value Pr(>|t|)
+# (Intercept)  0.14527    1.50084   0.097    0.923
 # tempo        0.49435    0.06379   7.749 2.44e-09 ***
 # ---
 # Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 #
 # Residual standard error: 4.657 on 38 degrees of freedom
-# Multiple R-squared:  0.6124,	Adjusted R-squared:  0.6022 
+# Multiple R-squared:  0.6124,	Adjusted R-squared:  0.6022
 # F-statistic: 60.05 on 1 and 38 DF,  p-value: 2.44e-09
 coef(modeloLinear) # extrai os parâmetros estimados
-# (Intercept)       tempo 
-#   0.1452662   0.4943490 
+# (Intercept)       tempo
+#   0.1452662   0.4943490
 summary(modeloLinear)$coefficients # um outro meio de extrair os resultados
 #              Estimate Std. Error    t value     Pr(>|t|)
 # (Intercept) 0.1452662 1.50084246 0.09678975 9.234021e-01
 # tempo       0.4943490 0.06379348 7.74920901 2.440008e-09
-summary(modeloLinear)$coefficients[,4] # the p-values 
+summary(modeloLinear)$coefficients[,4] # the p-values
 #  (Intercept)        tempo
-# 9.234021e-01 2.440008e-09 
+# 9.234021e-01 2.440008e-09
 
 # MODELOS LINEARES GERAIS
 # Regressão logística
 set.seed(1)
 lista1$sucesso = rbinom(length(lista1$tempo), 1, .5) # binário aleatório
-modeloLg <- glm(sucesso  ~ tempo, data = lista1, 
+modeloLg <- glm(sucesso  ~ tempo, data = lista1,
 	family=binomial(link="logit"))
 modeloLg # imprime na tela o resultado da regressão logística
-# Call:  glm(formula = sucesso ~ tempo, 
+# Call:  glm(formula = sucesso ~ tempo,
 #	family = binomial(link = "logit"), data = lista1)
 #
 # Coefficients:
-# (Intercept)        tempo  
-#     0.17018     -0.01321  
-# 
+# (Intercept)        tempo
+#     0.17018     -0.01321
+#
 # Degrees of Freedom: 39 Total (i.e. Null);  38 Residual
-# Null Deviance:	    55.35 
+# Null Deviance:	    55.35
 # Residual Deviance: 55.12 	 AIC: 59.12
 summary(modeloLg) # saída mais detalhada da regressão
 # Call:
-# glm(formula = sucesso ~ tempo, 
+# glm(formula = sucesso ~ tempo,
 #	family = binomial(link = "logit"), data = lista1)
 
-# Deviance Residuals: 
-#    Min      1Q  Median      3Q     Max  
-# -1.245  -1.118  -1.035   1.202   1.327  
-# 
+# Deviance Residuals:
+#    Min      1Q  Median      3Q     Max
+# -1.245  -1.118  -1.035   1.202   1.327
+#
 # Coefficients:
 #             Estimate Std. Error z value Pr(>|z|)
 # (Intercept)  0.17018    0.64621   0.263    0.792
 # tempo       -0.01321    0.02757  -0.479    0.632
-# 
+#
 # (Dispersion parameter for binomial family taken to be 1)
 #
 #     Null deviance: 55.352  on 39  degrees of freedom
 # Residual deviance: 55.121  on 38  degrees of freedom
 # AIC: 59.121
-# 
+#
 # Number of Fisher Scoring iterations: 3
 
 

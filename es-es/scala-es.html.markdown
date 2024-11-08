@@ -27,8 +27,8 @@ Scala - El lenguaje escalable
 /*
   Prueba REPL
 
-  Scala tiene una herramienta llamada REPL (Read-Eval-Print Loop, en español: Bucle de lectura-evaluación-impresión) que es analogo a interpretes de la linea de comandos en muchos otros lenguajes. 
-  Puedes escribir cualquier expresión en Scala y el resultado será evaluado e impreso.  
+  Scala tiene una herramienta llamada REPL (Read-Eval-Print Loop, en español: Bucle de lectura-evaluación-impresión) que es analogo a interpretes de la linea de comandos en muchos otros lenguajes.
+  Puedes escribir cualquier expresión en Scala y el resultado será evaluado e impreso.
 
   REPL es una herramienta muy práctica para testear y verificar código.
   Puedes usarla mientras lees este tutorial para explorar conceptos por tu cuenta.
@@ -91,7 +91,7 @@ print(10)
 // Hola mundo10
 
 // Para declarar valores usamos var o val.
-// Valores decalrados con val son inmutables, mientras que los declarados con var son mutables. 
+// Valores decalrados con val son inmutables, mientras que los declarados con var son mutables.
 // La inmutabilidad es algo bueno.
 val x = 10 // x es 10
 x = 20     // error: reassignment to val
@@ -99,7 +99,7 @@ var y = 10
 y = 20     // y es 20
 
 /*
-  Scala es un lenguaje tipado estáticamente, aunque se puede ver en las expresiones anteriores que no hemos especificado un tipo. 
+  Scala es un lenguaje tipado estáticamente, aunque se puede ver en las expresiones anteriores que no hemos especificado un tipo.
   Esto es debido a una funcionalidad del lenguaje llamada inferencia. En la mayoría de los casos, el compilador de Scala puede adivinar cual es el tipo de una variable, así que no hace falta escribirlo siempre.
   Podemos declarar explicitamente el tipo de una variable de la siguiente manera:
 */
@@ -235,7 +235,7 @@ sq(10)   // => 100
 
 // Si cada argumento en tu función anónima es usado solo una vez,
 // Scala te da una manera incluso más corta de definirlos.
-// Estas funciones anónimas son extremadamente comunes, 
+// Estas funciones anónimas son extremadamente comunes,
 // como será obvio en la sección de estructuras de datos.
 val sumarUno: Int => Int = _ + 1
 val sumaRara: (Int, Int) => Int = (_ * 2 + _ * 3)
@@ -381,9 +381,9 @@ mod     // Int = 1
 
 /*
   Nota: Todo lo que hemos hecho hasta ahora en este tutorial han sido
-  simples expresiones (valores, funciones, etc). Estas expresiones son validas 
-  para hacer pruebas rapidas en el interprete de la linea de comandos, 
-  pero no pueden existir por si solas en un archivo de Scala. Por ejemplo, 
+  simples expresiones (valores, funciones, etc). Estas expresiones son validas
+  para hacer pruebas rapidas en el interprete de la linea de comandos,
+  pero no pueden existir por si solas en un archivo de Scala. Por ejemplo,
   no puedes tener simplemente "val x = 5" en un archivo Scala. En lugar de eso,
   las únicas construcciones de alto nivel en Scala son:
 
@@ -395,7 +395,7 @@ mod     // Int = 1
   Y ahora explicaremos lo que son estas.
 */
 
-// Las clases son similares a las clases de otros lenguajes. Los argumentos del constructor 
+// Las clases son similares a las clases de otros lenguajes. Los argumentos del constructor
 // son declarados despues del nombre de la clase, y la inicialización se hace en el cuerpo de la clase.
 class Perro(r: String) {
   // Código del constructor aquí
@@ -404,12 +404,12 @@ class Perro(r: String) {
   // Define un método llamado ladrar, que devuelva un String
   def ladrar = "Woof, woof!"
 
-  // Los valores y métodos son asumidos como públicos. 
+  // Los valores y métodos son asumidos como públicos.
   // Las palabras "protected" y "private" también son válidas.
   private def dormir(horas: Int) =
     println(s"Estoy durmiendo $horas horas")
 
-  // Los métodos abstractos son simplemente métodos sin cuerpo. 
+  // Los métodos abstractos son simplemente métodos sin cuerpo.
   // Si descomentamos la linea de debajo, la clase Perro necesitaría ser abstracta:
   //   abstract class Perro(...) { ... }
   // def perseguir(algo: String): String
@@ -421,10 +421,10 @@ println(mydog.ladrar)  // => "Woof, woof!"
 
 
 // La palabra "object" crea un tipo y una instancia singleton de ese tipo.
-// Es común que las clases en Scala tengan un "companion object", de manera que 
-// el comportamiento por instancia es controlado por las clases y el comportamiento 
+// Es común que las clases en Scala tengan un "companion object", de manera que
+// el comportamiento por instancia es controlado por las clases y el comportamiento
 // relacionado a todas las instancias de esa clase es controlado por el objeto
-// La relación es similar a los métodos de las clases con los métodos estáticos 
+// La relación es similar a los métodos de las clases con los métodos estáticos
 // en otros lenguajes. Observa que los objetos y clases pueden tener el mismo nombre.
 object Perro {
   def todasLasRazasConocidas = List("pitbull", "shepherd", "retriever")
@@ -433,10 +433,10 @@ object Perro {
 
 
 // Case clases son clases que tienen funcionalidad extra añadida. Una pregunta
-// común para los principiantes en Scala es cuando usar case clases y cuando usar 
+// común para los principiantes en Scala es cuando usar case clases y cuando usar
 // clases. La linea no está bien definida, pero en general, las clases tienden a
 // enfocarse en la encapsulación, polimorfismo y comportamiento. Los valores en
-// estas clases tienden a ser privados, y solo se exponen los métodos. 
+// estas clases tienden a ser privados, y solo se exponen los métodos.
 // El propósito principal de las case clases es tener datos inmutables.
 // A menudo tienen pocos métodos, y los métodos raramente tienen efectos secundarios.
 case class Persona(nombre: String, telefono: String)
@@ -473,19 +473,19 @@ class SanBernardo extends Perro {
 	val raza = "San Bernardo"
 	val color = "marrón"
 	def muerde = false
-}  
+}
 
-scala> b  
-res0: SanBernardo = SanBernardo@3e57cd70  
-scala> b.raza  
-res1: String = San Bernardo  
+scala> b
+res0: SanBernardo = SanBernardo@3e57cd70
+scala> b.raza
+res1: String = San Bernardo
 scala> b.ladra
-res2: Boolean = true  
+res2: Boolean = true
 scala> b.muerde
-res3: Boolean = false  
+res3: Boolean = false
 
-// Un trait tambien puede ser usado mezclado con otros traits. 
-// La clase extiende el primer trait, pero la palabra "with" 
+// Un trait tambien puede ser usado mezclado con otros traits.
+// La clase extiende el primer trait, pero la palabra "with"
 // puede añadir traits adicionales.
 
 trait Ladra {
@@ -511,7 +511,7 @@ res0: String = Guau
 /////////////////////////////////////////////////
 
 // La comparación de patrones es una poderosa función de Scala.
-// Ahora veremos como comparar patrones en una case clase. 
+// Ahora veremos como comparar patrones en una case clase.
 // Nota: A diferencia de otros lenguajes, Scala "cases" no necesitan
 // "break", porque no ejecuta los "case" posteriores.
 
@@ -557,7 +557,7 @@ def comparaTodo(obj: Any): String = obj match {
   case _ => "Tengo un objeto desconocido"
 }
 
-// De hecho puedes comparar un patrón con cualquier objeto con el método "unapply". 
+// De hecho puedes comparar un patrón con cualquier objeto con el método "unapply".
 // Esta función es tan poderosa que Scala te deja definir funciones enteras como patrones:
 val funcPatron: Person => String = {
   case Persona("George", telefono) => s"Teléfono de George: $telefono"
@@ -569,7 +569,7 @@ val funcPatron: Person => String = {
 // 7. Programación funcional
 /////////////////////////////////////////////////
 
-// Scala permite a los métodos y funciones devolver o 
+// Scala permite a los métodos y funciones devolver o
 // recibir como parámetros otras funciones o métodos
 
 val suma10: Int => Int = _ + 10 // Una función que recibe y devuelve un Int
@@ -579,10 +579,10 @@ List(1, 2, 3) map suma10 // List(11, 12, 13) - suma10 es aplicado a cada element
 List(1, 2, 3) map (x => x + 10)
 
 // Y la barra baja puede ser usada si solo hay un argumento en la función anónima.
-// Se usa como la variable. 
+// Se usa como la variable.
 List(1, 2, 3) map (_ + 10)
 
-// Si el bloque anónimo Y la función que estás usando usan los dos un argumento, 
+// Si el bloque anónimo Y la función que estás usando usan los dos un argumento,
 // puedes incluso omitir la barra baja.
 List("Dom", "Bob", "Natalia") foreach println
 
@@ -637,7 +637,7 @@ for { n <- s; nSquared = n * n if nSquared < 10} yield nSquared
  * de usarlos hasta que entiendas no solo como funcionan, sino también las mejores prácticas
  * con ellos. Nosotros solo incluiremos esta sección en el tutorial porque son tan comunes
  * en las librerias de Scala que es imposible hacer algo significativo sin usar una librería
- * que tenga implicitos. Esto es para que entiendas como funcionan los implicitos, no para 
+ * que tenga implicitos. Esto es para que entiendas como funcionan los implicitos, no para
  * que definas los tuyos propios.
  */
 
@@ -663,7 +663,7 @@ enviaSaludos("John")(1000)  // => "Hola John, 1000 saludos a ti y a los tuyos!"
 // en este caso, "miEnteroImplicito":
 enviaSaludos("Jane")  // => "Hello Jane, 100 blessings to you and yours!"
 
-// Los parámetros de función implicit nos permiten simular clases tipo en otros lenguajes funcionales. 
+// Los parámetros de función implicit nos permiten simular clases tipo en otros lenguajes funcionales.
 // Es usado tan a menudo que tiene su propio atajo. Las dos siguientes lineas significan lo mismo:
 // def foo[T](implicit c: C[T]) = ...
 // def foo[T : C] = ...
@@ -671,16 +671,16 @@ enviaSaludos("Jane")  // => "Hello Jane, 100 blessings to you and yours!"
 
 // Otra situación en la que el compilador busca un implicit es si tienes
 //   obj.método(...)
-// pero "obj" no tiene "método" como un método. En este caso, si hay una conversión 
+// pero "obj" no tiene "método" como un método. En este caso, si hay una conversión
 // implicita de tipo A => B, donde A es el tipo de obj y B tiene un método llamado
 // "método", esa conversión es aplicada. Así que teniendo miFunciónImplicita, podemos decir:
 "Retriever".raza // => "Golden Retriever"
 "Sheperd".ladra    // => "Woof, woof!"
 
-// Aquí la cadena es convertida primero a Perro usando nuestra función miFunciónImplicita, 
+// Aquí la cadena es convertida primero a Perro usando nuestra función miFunciónImplicita,
 // y entonces el método apropiado es llamado. Esta es una herramienta extremadamente poderosa
-// pero de nuevo, no puede usarse con ligereza. De hecho, cuando definiste la función implicita, 
-// tu compilador debería haber mostrado una advertencia, diciendo que no deberías hacer esto 
+// pero de nuevo, no puede usarse con ligereza. De hecho, cuando definiste la función implicita,
+// tu compilador debería haber mostrado una advertencia, diciendo que no deberías hacer esto
 // a no ser que realmente sepas lo que estás haciendo.
 
 /////////////////////////////////////////////////
@@ -705,7 +705,7 @@ import scala.collection.immutable.{Map => _, Set => _, _}
 // Las clases de Java pueden ser importadas también con sintaxis de Scala:
 import java.swing.{JFrame, JWindow}
 
-// El punto de entrada de tus programas está definido en un fichero scala usando un object, 
+// El punto de entrada de tus programas está definido en un fichero scala usando un object,
 // con un solo método, main:
 object Application {
   def main(args: Array[String]): Unit = {

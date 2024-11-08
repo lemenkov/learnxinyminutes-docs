@@ -96,7 +96,7 @@ Se você quiser inserir uma tag HTML `<br />`, você pode acabar com um parágra
 com dois ou mais espaços e, em seguida, começar um novo parágrafo.
 
 ```md
-Termino com dois espaços (selecione essa linha para vê-los).  
+Termino com dois espaços (selecione essa linha para vê-los).
 
 Há um <br /> acima de mim!
 ```

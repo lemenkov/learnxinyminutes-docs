@@ -18,7 +18,7 @@ comienzo fuera totalmente confuso.
 ```factor
 ! Esto es un comentario
 
-! Como Forth, toda la programación se realiza mediante la manipulación de la 
+! Como Forth, toda la programación se realiza mediante la manipulación de la
 ! pila.
 ! La intruducción de un valor literal lo coloca en la pila
 5 2 3 56 76 23 65   ! No hay salida pero la pila se imprime en modo interactivo
@@ -65,7 +65,7 @@ la palabra`;`.
 ! \ suprime la evaluación de una palabra y coloca su identificador en la pila.
 \ square see    ! : square ( n -- n ) dup * ;
 
-! Después del nombre de la palabra para crear, la declaración entre paréntesis 
+! Después del nombre de la palabra para crear, la declaración entre paréntesis
 da efecto a la pila.
 ! Podemos usar los nombres que queramos dentro de la declaración:
 : weirdsquare ( camel -- llama ) dup * ;
@@ -102,7 +102,7 @@ f [ "F is false" . ] unless                     ! F es falso
 2 [ "Two is true" . ] [ "Two is false" . ] if   ! Two es verdadero
 
 ! Por defecto, los condicionales consumen el valor bajo prueba, pero las
-! variantes con un 
+! variantes con un
 ! asterisco se dejan solo si es verdad:
 
 5 [ . ] when*      ! 5
@@ -136,9 +136,9 @@ f [ . ] when*      ! Sin salida, pila vacía, se consume porque f es falso
                                         ! Para eso están los bucles variantes
 
 ! Variables
-! Normalmente, se espera que los programas de Factor mantengan todos los datos 
+! Normalmente, se espera que los programas de Factor mantengan todos los datos
 ! en la pila.
-! El uso de variables con nombre hace que la refactorización sea más difícil 
+! El uso de variables con nombre hace que la refactorización sea más difícil
 ! (y se llama Factor por una razón)
 ! Variables globales, si las necesitas:
 
@@ -146,7 +146,7 @@ SYMBOL: name            ! Crea un nombre como palabra de identificación
 "Bob" name set-global   ! Sin salída
 name get-global .       ! "Bob"
 
-! Las variables locales nombradas se consideran una extensión, pero están 
+! Las variables locales nombradas se consideran una extensión, pero están
 ! disponibles
 ! En una cita ..
 [| m n                  ! La cita captura los dos valores principales de la pila en m y n
@@ -163,7 +163,7 @@ name get-global .       ! "Bob"
 ! se capturan los valores de pila
 :: double ( a -- result ) a 2 * ;
 
-! Las variables se declaran mutables al terminar su nombre con su signo de 
+! Las variables se declaran mutables al terminar su nombre con su signo de
 ! exclamación
 :: mword2 ( a! -- x y )   ! Capture la parte superior de la pila en la variable mutable a
    a                      ! Empujar a

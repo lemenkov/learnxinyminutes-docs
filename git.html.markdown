@@ -592,9 +592,9 @@ Examine specific parts of the code's history and find out who was the last autho
 $ git blame google_python_style.vim
 b88c6a1b (Google Python team  2019-12-30 13:45:23 -0800 12) " See the License for the specific language governing permissions and
 b88c6a1b (Google Python team  2019-12-30 13:45:23 -0800 13) " limitations under the License.
-b88c6a1b (Google Python team  2019-12-30 13:45:23 -0800 14) 
+b88c6a1b (Google Python team  2019-12-30 13:45:23 -0800 14)
 222e6da8 (mshields@google.com 2010-11-29 20:32:06 +0000 15) " Indent Python in the Google way.
-222e6da8 (mshields@google.com 2010-11-29 20:32:06 +0000 16) 
+222e6da8 (mshields@google.com 2010-11-29 20:32:06 +0000 16)
 222e6da8 (mshields@google.com 2010-11-29 20:32:06 +0000 17) setlocal indentexpr=GetGooglePythonIndent(v:lnum)
 ```
 

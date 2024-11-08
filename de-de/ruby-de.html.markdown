@@ -31,10 +31,10 @@ lang: de-de
 =begin
 Das ist ein mehrzeiliger Kommentar.
 Die Anfangszeile muss mit "=begin" beginnen
-und die Endzeile muss mit "=end" beginnen. 
+und die Endzeile muss mit "=end" beginnen.
 
-Alternativ kannst du jede Zeile in einem 
-mehrzeiligen Kommentar mit dem # Zeichen beginnen. 
+Alternativ kannst du jede Zeile in einem
+mehrzeiligen Kommentar mit dem # Zeichen beginnen.
 =end
 
 # In Ruby ist (fast) alles ein Objekt.
@@ -83,7 +83,7 @@ false.class #=> FalseClass
 1 != 1 #=> false
 2 != 1 #=> true
 
-# Neben false selbst, ist nil der einzige andere 
+# Neben false selbst, ist nil der einzige andere
 # zu Falsch evaluierende Wert
 
 !!nil   #=> false
@@ -97,7 +97,7 @@ false.class #=> FalseClass
 2 <= 2 #=> true
 2 >= 2 #=> true
 
-# Kombinierter Vergleichsoperator (gibt `1` zurück wenn das erste Argument 
+# Kombinierter Vergleichsoperator (gibt `1` zurück wenn das erste Argument
 # größer ist, und `-1`, wenn das zweite Argument größer ist, sonst `0`)
 1 <=> 10 #=> -1 (1 < 10)
 10 <=> 1 #=> 1 (10 > 1)
@@ -211,12 +211,12 @@ array[1..3] #=> [2, 3, 4]
 # Gib ein neues Array mit umgekehrten Werten zurück
 [1,2,3].reverse #=> [3,2,1]
 
-# Kehre ein Array an Ort und Stelle um, um die Variable mit den 
+# Kehre ein Array an Ort und Stelle um, um die Variable mit den
 # umgekehrten Werten zu aktualisieren.
 a = [1,2,3]
 a.reverse! #=> a==[3,2,1] wegen des Aufrufs von reverse mit Ausrufezeichens ('!')
 
-# Wie bei der Arithmetik, ist Zugriff mit [index] nur 
+# Wie bei der Arithmetik, ist Zugriff mit [index] nur
 # syntaktischer Zucker für den Aufruf der `[]` Methode auf dem Objekt.
 array.[] 0 #=> 1
 array.[] 12 #=> nil
@@ -239,7 +239,7 @@ hash.keys #=> ['farbe', 'nummer']
 hash['Farbe'] #=> "grün"
 hash['Nummer'] #=> 5
 
-# Abfragen eines nicht vorhandenen Schlüssels, gibt nil zurück. 
+# Abfragen eines nicht vorhandenen Schlüssels, gibt nil zurück.
 hash['nicht vorhanden'] #=> nil
 
 # Wenn du Symbole als Schlüssel in einem Hash verwendest, kannst du
@@ -268,7 +268,7 @@ else
   'sonst, auch optional'
 end
 
-# Wenn eine Kontrollstruktur keinen Code-Block, sondern einen einzigen 
+# Wenn eine Kontrollstruktur keinen Code-Block, sondern einen einzigen
 # Ausdruck ausführt, dann kannst du die nachgestellte if-Notation verwenden
 warnings = ['Nachname fehlt', 'Adresse zu kurz']
 puts("Vorhandene Warnungen:\n" + warnings.join("\n"))  if !warnings.empty?
@@ -289,14 +289,14 @@ for counter in 1..5
   puts "Iteration #{counter}"
 end
 
-# Das `do |variable| ... end` Konstrukt wird `block` genannt. 
-# Blocks sind vergleichbar mit Lambdas, anonymen Funktionen 
+# Das `do |variable| ... end` Konstrukt wird `block` genannt.
+# Blocks sind vergleichbar mit Lambdas, anonymen Funktionen
 # oder Closures in anderen Programmiersprachen.
-# Sie können als Objekte übergeben, aufgerufen oder als Methoden 
+# Sie können als Objekte übergeben, aufgerufen oder als Methoden
 # zugewiesen werden.
 
-# Die `each` Methode eines Ranges führt den Block einmal für jedes 
-# Element des Ranges aus. 
+# Die `each` Methode eines Ranges führt den Block einmal für jedes
+# Element des Ranges aus.
 # Dem Block wird eine counter Variable als Parameter übergeben.
 
 # Du kannst einen Block auch mit geschweiften Klammern schreiben.
@@ -312,7 +312,7 @@ hash.each do |key, value|
 end
 
 # Um auf den Laufindex zuzugreifen kannst du `each_with_index` verwenden
-# und eine index Variable definieren. 
+# und eine index Variable definieren.
 array.each_with_index do |element, index|
   puts "#{element} ist Nummer #{index} im Array"
 end
@@ -329,9 +329,9 @@ end
 #=> Iteration 5
 
 # Es gibt einige andere hilfreiche Schleifenfunktionen in Ruby.
-# Wie etwa 'map', 'reduce', 'inject' und viele andere mehr. 
-# Map zum Beispiel iteriert über das Array, führt für jedes Element 
-# die Anweisungen aus, 
+# Wie etwa 'map', 'reduce', 'inject' und viele andere mehr.
+# Map zum Beispiel iteriert über das Array, führt für jedes Element
+# die Anweisungen aus,
 # die im Block definiert sind und gibt ein völlig neues Array zurück.
 array = [1,2,3,4,5]
 doubled = array.map do |element|
@@ -425,27 +425,27 @@ surround { puts 'hallo Welt' }
 #=> hallo Welt
 #=> }
 
-# Blocks können in ein 'Proc' Objekt umgewandelt werden. 
-# Dieses ist eine Art Container um den Block und erlaubt ihn an eine 
-# andere Methode zu übergeben, ihn in einen anderen Gültigkeitsbereich 
+# Blocks können in ein 'Proc' Objekt umgewandelt werden.
+# Dieses ist eine Art Container um den Block und erlaubt ihn an eine
+# andere Methode zu übergeben, ihn in einen anderen Gültigkeitsbereich
 # einzubinden oder ihn andersweitig zu verändern.
-# Am häufigsten findet man dies bei Parameterlisten von Methoden, in Form 
-# eines letzten '&block' Parameters, der den Block – wenn es einen gibt – 
-# entgegen nimmt und ihn in ein 'Proc' umwandelt. Die Benennung '&block' ist 
-# hier nur eine Konvention; es würde genauso mit '&pineapple' funktionieren. 
+# Am häufigsten findet man dies bei Parameterlisten von Methoden, in Form
+# eines letzten '&block' Parameters, der den Block – wenn es einen gibt –
+# entgegen nimmt und ihn in ein 'Proc' umwandelt. Die Benennung '&block' ist
+# hier nur eine Konvention; es würde genauso mit '&pineapple' funktionieren.
 def guests(&block)
   block.class #=> Proc
   block.call(4)
 end
 
-# Die 'call' Methode eines Proc ist ganz ähnlich zum Aufruf von 'yield', wenn 
-# ein Block vorhanden ist. Die Argumente, die 'call' übergeben werden, werden 
+# Die 'call' Methode eines Proc ist ganz ähnlich zum Aufruf von 'yield', wenn
+# ein Block vorhanden ist. Die Argumente, die 'call' übergeben werden, werden
 # als Argumente and den Block weitergereicht.
 
 guests { |n| "Du hast #{n} Gäste." }
 # => "Du hast 4 Gäste."
 
-# Du kannst eine Liste von Argumenten übergeben, die dann in ein Array 
+# Du kannst eine Liste von Argumenten übergeben, die dann in ein Array
 # umgewandelt werden. Dafür gibt es den splat-Operator (`*`).
 def guests(*array)
   array.each { |guest| puts guest }
@@ -475,7 +475,7 @@ def best(first, second, third, *others)
   puts "Es gab #{others.count} andere Teilnehmer."
 end
 
-best *ranked_competitors 
+best *ranked_competitors
 #=> Gewinner sind John, Sally und Dingus.
 #=> Es gab 2 andere Teilnehmer.
 
@@ -484,10 +484,10 @@ best *ranked_competitors
 5.even? #=> false
 5.odd? #=> true
 
-# Wenn ein Methodenname mit einem Ausrufezeichen endet, dann tut diese Methode 
-# per Konvention etwas Destruktives, wie z.B. das aufrufende Objekt zu 
+# Wenn ein Methodenname mit einem Ausrufezeichen endet, dann tut diese Methode
+# per Konvention etwas Destruktives, wie z.B. das aufrufende Objekt zu
 # verändern.
-# Viele Methoden haben eine !-Version um eine direkte Änderung zu machen und 
+# Viele Methoden haben eine !-Version um eine direkte Änderung zu machen und
 # eine Nicht-!-Version, die ein neues Objekt mit den Veränderungen zurück gibt.
 company_name = "Dunder Mifflin"
 company_name.upcase #=> "DUNDER MIFFLIN"
@@ -529,10 +529,10 @@ class Human
   attr_reader :name
   attr_writer :name
 
-  # Eine Klassenmethode unterscheidet sich durch ein 'self' von einer 
+  # Eine Klassenmethode unterscheidet sich durch ein 'self' von einer
   # Instanzmethode.
-  # Sie kann nur auf der Klasse und nicht auf einer Instanz der Klasse 
-  # aufgerufen werden.  
+  # Sie kann nur auf der Klasse und nicht auf einer Instanz der Klasse
+  # aufgerufen werden.
   def self.say(msg)
     puts msg
   end
@@ -575,7 +575,7 @@ Var = "Ich bin eine Konstante"
 defined? Var #=> "constant"
 
 # Class ist in Ruby auch ein Objekt. Deshalb kann eine Klasse Instanzvariablen
-# haben. Eine Klassenvariable wird zwischen der Klasse und all ihren 
+# haben. Eine Klassenvariable wird zwischen der Klasse und all ihren
 # Ableitungen geteilt.
 
 # Basis Klasse
@@ -626,9 +626,9 @@ module ModuleExample
   end
 end
 
-# Ein Einbinden (include) eines Moduls bindet seine Methoden an die Instanzen 
+# Ein Einbinden (include) eines Moduls bindet seine Methoden an die Instanzen
 # der Klasse.
-# Ein Erweitern (extend) eines Moduls bindet seine Methoden an die Klasse 
+# Ein Erweitern (extend) eines Moduls bindet seine Methoden an die Klasse
 # selbst.
 class Person
   include ModuleExample

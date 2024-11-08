@@ -8,7 +8,7 @@ translators:
 lang: es-es
 ---
 
-HQ9+ es una parodia de los lenguajes de programación esotéricos y fue creado 
+HQ9+ es una parodia de los lenguajes de programación esotéricos y fue creado
 por Cliff Biffle.
 El lenguaje tiene solo cuatro comandos y no está completo de Turing.
 

@@ -9,8 +9,8 @@ lang: it-it
 filename: LearnComposer-it.sh
 ---
 
-[Composer](https://getcomposer.org/) è uno strumento che ti aiuta a gestire le 
-dipendenze in PHP. Ti permette di dichiarare le librerie utilizzate dal tuo 
+[Composer](https://getcomposer.org/) è uno strumento che ti aiuta a gestire le
+dipendenze in PHP. Ti permette di dichiarare le librerie utilizzate dal tuo
 progetto e di installarle/aggiornarle per te.
 
 # Installazione
@@ -50,14 +50,14 @@ composer self # alias
 # Cominciamo ad usare Composer
 
 Composer memorizza le dipendenze necessarie nel file `composer.json`.
-Puoi editare questo file manualmente, ma è meglio che lasci che Composer se ne 
+Puoi editare questo file manualmente, ma è meglio che lasci che Composer se ne
 occupi per te.
 
 ```sh
 # Crea un nuovo progetto nella cartella attuale
 composer init
-# ti verranno chieste delle domande interrative riguardanti il tuo progetto. 
-# Puoi evitare di rispondere almeno che tu non stia sviluppando altri progetti 
+# ti verranno chieste delle domande interrative riguardanti il tuo progetto.
+# Puoi evitare di rispondere almeno che tu non stia sviluppando altri progetti
 # che che possano dipendere da questo.
 
 # Se il file composer.json esiste già, scarichera' le dipendenze necessarie
@@ -108,7 +108,7 @@ dipendenza. Non editare mai questo file.
 
 Se includi il file `composer.lock` nella tua repository git, ogni sviluppatore
 andra' a installare la versione attualmente utilizzata dal tuo progetto per
-ogni dipendenza. Anche quando una nuova versione è stata rilasciata, Composer 
+ogni dipendenza. Anche quando una nuova versione è stata rilasciata, Composer
 andra' a installare la versione registrata nel file lock.
 
 ```sh
@@ -150,7 +150,7 @@ Nel file `composer.json`, aggiungi il campo "autoload":
 }
 ```
 
-Questo dira' all'autoloader di controllare ogni risorsa che corrisponde al 
+Questo dira' all'autoloader di controllare ogni risorsa che corrisponde al
 namespace `\Acme\` all'interno della cartella `src`.
 
 In alternativa puoi usare [PSR-0, una Classmap o una lista di file da includere](https://getcomposer.org/doc/04-schema.md#autoload).
@@ -174,7 +174,7 @@ composer dump-autoload --optimize --no-dev
 composer clear-cache
 ```
 
-# Problemi? 
+# Problemi?
 
 ```sh
 composer diagnose

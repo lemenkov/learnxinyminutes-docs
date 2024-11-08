@@ -48,7 +48,7 @@ Ora, sin dall'inizio, c'è una cosa fastidiosa in fish. Il messaggio di benvenut
 > set -U fish_greeting ""
 ```
 
-Se volessi eseguire un singolo comando in bash, senza passare a quella shell, puoi scrivere: 
+Se volessi eseguire un singolo comando in bash, senza passare a quella shell, puoi scrivere:
 
 ```
 > bash -c 'echo "Questo testo sarà stampato sul terminale"'
@@ -80,7 +80,7 @@ Questo puoi farlo con bash, eh? No, devi sempre cercarlo... Così è facile!
 Ma c'è di più. La maggior parte dei comandi specifici per fish iniziano, hai indovinato, con 'fish'. Basta scrivere `fish` e premere <kbd>TAB</kbd>. Ed ecco una delle tante funzioni interessanti di fish: L'autocompletamento che **funziona.**
 Ora puoi navigare con <kbd>TAB</kbd>, <kbd>Shift + TAB</kbd> e le frecce <kbd>←</kbd><kbd>↑</kbd><kbd>→</kbd><kbd>↓</kbd>.
 
-Per avere aiuto, chiama il tuo psichiatra di fiducia oppure scrivi `man`. Ti mostrerà il manuale per quel comando, per esempio:  
+Per avere aiuto, chiama il tuo psichiatra di fiducia oppure scrivi `man`. Ti mostrerà il manuale per quel comando, per esempio:
 
 ```
 > man set
@@ -168,7 +168,7 @@ Per esempio:
 
 ```
 > if not echo Testo testo, bla bla bla
-      echo Altro testo, bla bla  
+      echo Altro testo, bla bla
   end
 ```
 
@@ -183,10 +183,10 @@ Come per ogni shell, puoi non solo eseguire comandi nella shell, ma anche da fil
 
 ```fish
 # Questo è un commento in fish.
-# 
-# Se esegui un file senza specificare un interprete, 
+#
+# Se esegui un file senza specificare un interprete,
 # cioè il programma che fa girare il tuo script, è necessario per dire alla shell,
-# dove l'interprete è posizionato. 
+# dove l'interprete è posizionato.
 # In fish basta aggiungere questo commento nella prima linea del tuo script:
 
 #!/bin/fish
@@ -216,8 +216,8 @@ mkdir $directoryBella
 # puoi anche contare le istanze nella lista con:
 count $PATH
 
-# Non solo è tutto fantastico, ma in fish, tutto è anche una lista. 
-# $PWD per esempio è una lista di lunghezza 1. 
+# Non solo è tutto fantastico, ma in fish, tutto è anche una lista.
+# $PWD per esempio è una lista di lunghezza 1.
 # Per fare una lista, basta dare al comando set più argomenti:
 set list argomento1 argomento2 argomento3
 
@@ -231,7 +231,7 @@ $listavar[2]
 # ci sono anche gli intervalli
 $listavar[1..5]
 
-# puoi anche usare numeri negativi 
+# puoi anche usare numeri negativi
 $listavar[-1]
 # accesso all'ultimo elemento.
 
@@ -244,9 +244,9 @@ echo $a$1
 # Naturalmente, se li si separa, saranno visti come due argomenti separati e li stamperà uno dopo l'altro. QUESTO è il comportamento che ci si aspetta da @bash.
 
 # Ci sono anche altre cose utili, come la sostituzione di comandi. Per esempio, quando vuoi che ti sia restituito l'output di due comandi in una sola riga. In bash lo faresti in questo modo
-echo "`ls` è in $PWD" 
+echo "`ls` è in $PWD"
 # oppure
-echo "$(ls) è in $PWD" 
+echo "$(ls) è in $PWD"
 
 # secondo me, non è necessario. Scrivo sempre l'apostrofo sbagliato. Perchè non usare semplicemente le parentesi, come in fish?
 echo (ls) è in $PWD
@@ -274,8 +274,8 @@ end
 
 # Risulta un pò strano confrontare due cose con un solo segno =, ovviamente perchè non en abbiamo bisogno per settare le variabili, ma comunque... e la parola chiave "test":
 if test $var = "test"
-    echo si 
-else 
+    echo si
+else
     echo no
 end
 
@@ -310,7 +310,7 @@ end
 functions --handlers
 
 
-# Puoi usare il comando functions per approfondire, beh, le funzioni. 
+# Puoi usare il comando functions per approfondire, beh, le funzioni.
 # Per esempio puoi far stampare il codice sorgente di ogni funzione:
 functions cd
 functions print
@@ -337,6 +337,6 @@ end
 # Bello!
 
 # L'equivalente di bashrc non è fishrc, ma il già citato file config.fish in ~/.config/fish/
-# Per aggiungere una funzione a fish, però, occorre creare un semplice file .fish in quella directory. Non incollare la funzione nel file config.fish. È brutto. 
+# Per aggiungere una funzione a fish, però, occorre creare un semplice file .fish in quella directory. Non incollare la funzione nel file config.fish. È brutto.
 # Se avete altro da dire, aggiugete pure, ma queste sono le basi più importanti.
 ```

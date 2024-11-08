@@ -903,7 +903,7 @@ class Batman(Superhero, Bat):
 
     def __init__(self, *args, **kwargs):
         # Τυπικά γα να κληρονομήουμε attributes πρέπει να καλέσουμε τη super:
-        # super(Batman, self).__init__(*args, **kwargs)      
+        # super(Batman, self).__init__(*args, **kwargs)
         # Ωστόσο έχουμε να κάνουμε με πολλαπλή κληρονομικότητα εδώ, και το super()
         # δουλεύει μόνο με την αμέσως ανώτερη κλάση στην ιεραρχία.
         # Οπότε, καλούμε ρητά την __init__ για όλους τους πρόγονους

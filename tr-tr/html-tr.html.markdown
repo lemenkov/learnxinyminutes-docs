@@ -13,7 +13,7 @@ HTML, HyperText Markup Language (Hiper Metin İşaretleme Dili) anlamına gelir.
 
 Web sayfaları yazmamızı sağlayan bir dildir. Bu işaretleme dili, metin ve verilerin nasıl gösterilmesi gerektiği kodlanarak web sayfaları yazmamızı sağlar. Aslında, html dosyaları basit metin dosyalarıdır.
 
-Bu işaretleme nedir? Sayfanın verilerini, açılış etiketleri ve kapanış etiketleri ile çevreleyerek düzenleme yöntemidir. Bu işaretleme, içerdiği metne anlam vermeyi sağlar. Diğer bilgisayar dillerinde olduğu gibi, HTML’nin birçok sürümü vardır. Burada HTML5 hakkında konuşacağız. 
+Bu işaretleme nedir? Sayfanın verilerini, açılış etiketleri ve kapanış etiketleri ile çevreleyerek düzenleme yöntemidir. Bu işaretleme, içerdiği metne anlam vermeyi sağlar. Diğer bilgisayar dillerinde olduğu gibi, HTML’nin birçok sürümü vardır. Burada HTML5 hakkında konuşacağız.
 
 **NOT :** Etkilerin nasıl çalıştıklarını anlamak, çıktılarını görebilmek için [codepen](https://codepen.io/) gibi bir siteden de faydalanabilirsiniz. Bu makale temel olarak HTML sözdizimi ve bazı yararlı ipuçlarıyla ilgilidir.
 

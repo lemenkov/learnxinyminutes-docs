@@ -13,7 +13,7 @@ contributors:
 lang: de-de
 ---
 
-C++ ist eine Systemprogrammiersprache die, 
+C++ ist eine Systemprogrammiersprache die,
 
 [laut dem Begründer Bjarne Stroustrup](http://channel9.msdn.com/Events/Lang-NEXT/Lang-NEXT-2014/Keynote)
 entworfen wurde um,
@@ -254,9 +254,9 @@ fooRef += ". Hi!"; // Verändert foo durch die Referenz
 cout << fooRef; // Gibt "I am foo. Hi!" aus.
 
 
-// Weist "fooRef" nicht erneut zu. Dies ist dasselbe, wie "foo = bar" und 
+// Weist "fooRef" nicht erneut zu. Dies ist dasselbe, wie "foo = bar" und
 // foo == "I am bar"
-// nach dieser Zeile 
+// nach dieser Zeile
 cout << &fooRef << endl; // Gibt die Adresse von foo aus
 fooRef = bar;
 cout << &fooRef << endl; // Gibt ebenfalls die Adresse von foo aus
@@ -431,7 +431,7 @@ public:
     // das Objekt durch eine Referenz/Pointer der Basisklasse entfernt wird.
     virtual ~Dog();
 
-}; // Ein Semikolon schließt die Definition der Klasse ab.  
+}; // Ein Semikolon schließt die Definition der Klasse ab.
 
 // Klassen-Member-Funktionen sind üblicherweise in der .cpp Datei implementiert.
 Dog::Dog()
@@ -462,7 +462,7 @@ Dog::~Dog()
     std::cout << "Goodbye " << name << "\n";
 }
 
-int main() 
+int main()
 {
     Dog myDog; // Ausgabe: "A dog has been constructed"
     myDog.setName("Barkley");

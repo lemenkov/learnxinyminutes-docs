@@ -37,7 +37,7 @@ Na primeira seção deste documento, descrevemos como Notação Assintótica ide
  a medida que o tamanho da entrada cresce. Imaginemos um algoritmo como uma função
  *f*, *n* como o tamanho da entrada e *f(n)* sendo o tempo de execução. Então,
  para dado algoritmo *f*, com entrada de tamanho *n*, você terá tempo de execução
- *f(n)*. Isto resulta em um gráfico onde a coordenada Y é o tempo de execução, 
+ *f(n)*. Isto resulta em um gráfico onde a coordenada Y é o tempo de execução,
  a coordenada X representa o tamanho da entrada e os pontos representam o tempo
 de execução para dado tamanho de entrada.
 

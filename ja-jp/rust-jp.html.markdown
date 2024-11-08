@@ -209,7 +209,7 @@ fn main() {
     let another_foo = Foo { bar: 1 };
     println!("{:?}", another_foo.frobnicate()); // Some(1)
 
-    // 関数ポインタの種類 // 
+    // 関数ポインタの種類 //
 
     fn fibonacci(n: u32) -> u32 {
         match n {

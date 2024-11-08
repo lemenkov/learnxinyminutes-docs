@@ -82,7 +82,7 @@ some-var ; => 5
 ;; Zugriff auf eine zuvor nicht zugewiesene Variable erzeugt eine Ausnahme
 ; x ; => Unknown variable: x : nil
 
-;; Lokale Bindung: Verwende das Lambda Calculus! 'a' und 'b' 
+;; Lokale Bindung: Verwende das Lambda Calculus! 'a' und 'b'
 ;; sind nur zu '1' und '2' innerhalb von (fn ...) gebunden.
 ((fn (a b) (+ a b)) 1 2) ; => 3
 
@@ -157,7 +157,7 @@ some-var ; => 5
 
 ;;; Schleifen
 
-;; for Schleifen ist für Zahlen 
+;; for Schleifen ist für Zahlen
 ;; (for SYMBOL START ENDE SCHRITT AUSDRUCK ..)
 (for i 0 10 2 (pr i "")) ; => schreibt 0 2 4 6 8 10
 (for i 0.0 10 2.5 (pr i "")) ; => schreibt 0 2.5 5 7.5 10

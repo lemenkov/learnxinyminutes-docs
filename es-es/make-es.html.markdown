@@ -85,7 +85,7 @@ maker:
 # se ejecutara siempre:
 ex0.txt ex1.txt: maker
 
-# Los objetivos ficticios (phony target) más comunes son: 
+# Los objetivos ficticios (phony target) más comunes son:
 # all make clean install...
 
 #-----------------------------------------------------------------------

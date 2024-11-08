@@ -5,7 +5,7 @@ contributors:
 filename: easylang.el
 ---
 
-**Easylang** is a simple programming language with built-in graphical functions and an easy-to-use and offline usable browser IDE. Its simple syntax and semantics make it well suited as a teaching and learning programming language. You can also use it to write graphical applications that you can embed in a web page. 
+**Easylang** is a simple programming language with built-in graphical functions and an easy-to-use and offline usable browser IDE. Its simple syntax and semantics make it well suited as a teaching and learning programming language. You can also use it to write graphical applications that you can embed in a web page.
 
 *Easylang* is statically typed and has as data types only strings and numbers (floating point), resizeable arrays of strings and numbers and arrays of arrays.
 
@@ -23,7 +23,7 @@ print h
 #
 str$ = "monkey"
 # strings can grow
-str$ &= " circus" 
+str$ &= " circus"
 print str$
 #
 # blocks end with 'end' or a dot, a newline has no
@@ -41,7 +41,7 @@ func gcd a b . res .
   # a and b are value parameters
   # res is a reference parameter
   while b <> 0
-    # h is a local variable, because 
+    # h is a local variable, because
     # it is first used in the function
     h = b
     b = a mod b
@@ -75,7 +75,7 @@ print a[] ; print b[]
 #
 swap a[] b[]
 print a[] ; print b[]
-# 
+#
 # array of strings
 #
 fruits$[] = [ "apple" "banana" "orange" ]
@@ -113,19 +113,19 @@ print floor sys_time
 # random numbers
 print randomf
 print random 6 + 1
-# 
+#
 # hour and minutes
 print substr time_str sys_time 11 5
-# 
+#
 print str_ord "A"
 print str_chr 65
-# 
+#
 # set number format
 numfmt 0 4
 print sqrt 2
 print pi
 print logn 10
-# 
+#
 a$[] = str_split "10,15,22" ","
 print a$[]
 print 2 * number a$[0]
@@ -159,7 +159,7 @@ repeat
 .
 print "sum: " & sum
 #
-# "input" reads a string from the "input_data" section, 
+# "input" reads a string from the "input_data" section,
 # if it exists, otherwise via a prompt.
 #
 input_data
@@ -172,14 +172,14 @@ Built-in graphic primitives and event-driven programming
 
 ```
 # simple drawing with the mouse
-# 
+#
 set_linewidth 4
 set_color 900
-# the colors are coded from 0 to 999, with 
+# the colors are coded from 0 to 999, with
 # the left digit specifying the red component,
 # the middle digit the green component and
-# the right digit the blue component. 
-# 
+# the right digit the blue component.
+#
 on mouse_down
   down = 1
   move_pen mouse_x mouse_y

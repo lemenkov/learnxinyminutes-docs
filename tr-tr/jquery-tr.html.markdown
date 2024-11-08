@@ -87,7 +87,7 @@ Diğer tüm seçiciler için resmi siteyi kontrol ediniz.
 */
 
 // 2. Olaylar ve Efektler
-// - Olaylar 
+// - Olaylar
 // jQuery kullanıcı ile tarayıcı arasındaki etkileşimi olaylar ile ele alır.
 
 // En yaygın kullanımı tartışmasız ki Dökümanın Yüklenmesi olayıdır.
@@ -152,12 +152,12 @@ Diğer tüm olay tetikleyicileri için resmi siteyi kontrol ediniz.
 // Tıklama olayını tetiklemek için.
 $('.mavi').click();
 // => Mavi butona tıkladın!
-// => jQuery [<button>] (1) 
+// => jQuery [<button>] (1)
 
 // Çift Tıklama olayını tetiklemek için.
 $('.mavi').dblclick();
 // => Mavi butona çift tıkladın!
-// => jQuery [<button>] (1) 
+// => jQuery [<button>] (1)
 
 // - Efektler
 // jQuery bir çok ön-tanımlı efekt sunmakta.

@@ -11,7 +11,7 @@ lang: de-de
 
 ## ShutIt
 
-ShuIt ist eine Shellautomationsframework, welches für eine einfache 
+ShuIt ist eine Shellautomationsframework, welches für eine einfache
 Handhabung entwickelt wurde.
 
 Er ist ein Wrapper, der auf einem Python expect Klon (pexpect) basiert.
@@ -49,7 +49,7 @@ Ians-MacBook-Air.local:ORIGIN_ENV:RhuebR2T#
 Das erste Argument zu 'send' ist der Befehl, den du ausführen möchtest.
 Das 'echo' Argument gibt die Terminalinteraktion aus. ShuIt ist standardmäßig leise.
 
-'Send' kümmert sich um die nervigen Arbeiten mit den Prompts und macht 
+'Send' kümmert sich um die nervigen Arbeiten mit den Prompts und macht
 alles was du von 'expect' erwarten würdest.
 
 
@@ -111,7 +111,7 @@ Prompts für dich.
 ## Einloggen auf mehrere Server
 
 Sagen wir, dass du eine Serverfarm mit zwei Servern hast und du dich in
-beide Server einloggen möchtest. Dafür musst du nur zwei Session und 
+beide Server einloggen möchtest. Dafür musst du nur zwei Session und
 Logins erstellen und kannst dann Befehle schicken:
 
 ```python
@@ -148,7 +148,7 @@ two.example.com:Gl2lldEo:D3FavQjA#
 
 ## Beispiel: Überwachen mehrerer Server
 
-Wir können das obige Programm in ein einfaches Überwachungstool bringen, indem 
+Wir können das obige Programm in ein einfaches Überwachungstool bringen, indem
 wir Logik hinzufügen, um die Ausgabe von einem Befehl zu betrachten.
 
 ```python
@@ -170,16 +170,16 @@ session1.logout()
 session2.logout()
 ```
 
-Hier kannst du die 'send\_and\_get\_output' Methode verwenden, um die Ausgabe von dem 
+Hier kannst du die 'send\_and\_get\_output' Methode verwenden, um die Ausgabe von dem
 Kapazitätsbefehl (df) zu erhalten.
 
-Es gibt elegantere Wege als oben (z.B. kannst du ein Dictionary verwenden, um über 
+Es gibt elegantere Wege als oben (z.B. kannst du ein Dictionary verwenden, um über
 die Server zu iterieren), aber es hängt an dir wie clever das Python sein muss.
 
 
 ## kompliziertere IO - Expecting
 
-Sagen wir du hast eine Interaktion mit einer interaktiven Kommandozeilenprogramm, 
+Sagen wir du hast eine Interaktion mit einer interaktiven Kommandozeilenprogramm,
 die du automatisieren möchtest. Hier werden wir Telnet als triviales Beispiel verwenden:
 
 ```python
@@ -191,10 +191,10 @@ session.send('GET /', echo=True, check_exit=False)
 session.logout()
 ```
 
-Beachte das 'expect' Argument. Du brauchst nur ein Subset von Telnets 
+Beachte das 'expect' Argument. Du brauchst nur ein Subset von Telnets
 Eingabeaufforderung um es abzugleichen und fortzufahren.
 
-Beachte auch das neue Argument 'check\_exit'. Wir werden nachher nochmal 
+Beachte auch das neue Argument 'check\_exit'. Wir werden nachher nochmal
 darauf zurückkommen. Die Ausgabe von oben ist:
 
 ```bash
@@ -224,12 +224,12 @@ here
 Connection closed by foreign host.
 ```
 
-Nun zurück zu 'check\_exit=False'. Da das Telnet Programm einen Fehler mit 
+Nun zurück zu 'check\_exit=False'. Da das Telnet Programm einen Fehler mit
 Fehlercode (1) zurückgibt und wir nicht möchten das das Skript fehlschlägt
-kannst du 'check\_exit=False' setzen und damit ShuIt wissen lassen, dass 
+kannst du 'check\_exit=False' setzen und damit ShuIt wissen lassen, dass
 der Ausgabecode dich nicht interessiert.
 
-Wenn du das Argument nicht mitgegeben hättest, dann hätte dir ShutIt 
+Wenn du das Argument nicht mitgegeben hättest, dann hätte dir ShutIt
 ein interaktives Terminal zurückgegeben, falls es ein Terminal zum
 Kommunizieren gibt. Dies nennt sich ein 'Pause point'.
 
@@ -262,7 +262,7 @@ $ python example.py
 Schaue dich um!
 
 Ians-Air.home:ORIGIN_ENV:I00LA1Mq#  bash
-imiell@Ians-Air:/space/git/shutit  ⑂ master +    
+imiell@Ians-Air:/space/git/shutit  ⑂ master +  
 CTRL-] caught, continuing with run...
 2017-06-05 15:12:33,577 INFO: Sending:  exit
 2017-06-05 15:12:33,633 INFO: Output (squashed):  exitexitIans-Air.home:ORIGIN_ENV:I00LA1Mq#  [...]
@@ -303,13 +303,13 @@ session2.wait()
 print('Es hat:' + str(time.time() - start) + ' Sekunden zum Vollenden gebraucht')
 ```
 
-Mein Computer meint, dass er 0.5 Sekunden gebraucht hat um die Befehle zu starten 
+Mein Computer meint, dass er 0.5 Sekunden gebraucht hat um die Befehle zu starten
 und dann nur etwas über eine Minute gebraucht um sie zu beenden
 (mit Verwendung der 'wait' Methode).
 
 
 Das alles ist trivial, aber stelle dir vor das du hunderte an Servern so managen
-kannst und man kann nun das Potential sehen, die in ein paar Zeilen Code und ein Python 
+kannst und man kann nun das Potential sehen, die in ein paar Zeilen Code und ein Python
 import liegen können.
 
 

@@ -29,7 +29,7 @@ URIs provides context for resource identifiers to make them unambiguous—for
 example, to tell a book title from a job title.
 
 ```
-# The hash symbol is the comment delimiter. 
+# The hash symbol is the comment delimiter.
 
 # Turtle triple statements end with periods like natural language sentences.
 
@@ -58,15 +58,15 @@ ex:emp134 ex:hireDate "2022-11-12" ;
 # A comma means that the next triple has the same subject and predicate as
 # the previous one.
 
-ex:emp134 ex:nickname "Smithy", "Skipper", "Big J". 
+ex:emp134 ex:nickname "Smithy", "Skipper", "Big J".
 
 # Three single or double quote marks at the beginning and end of a value let
 # you define a  multi-line string value.
 
 ex:emp134 ex:description """
-Skipper joined the company in November. 
+Skipper joined the company in November.
 
-He always has a joke for everyone.""" . 
+He always has a joke for everyone.""" .
 
 # Using URIs from existing standard vocabulary namespaces eases both data
 # integration and interoperability with the large amount of RDF that already
@@ -78,24 +78,24 @@ ex:emp134 ex:hireDate "2022-11-12" ;
           vcard:family-name "Smith" .
 
 # Related RDF standards provide vocabularies that are popular for basic
-# facts. The rdfs:label predicate from the RDF Schema standard is a common 
+# facts. The rdfs:label predicate from the RDF Schema standard is a common
 # way to indicate a human-readable name.
 
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-ex:hireDate rdfs:label "hire date" . 
+ex:hireDate rdfs:label "hire date" .
 
 # String object values can include language codes, making
 # multi-lingual representation of entities easier for applications
 # reading the data (for example, when generating a user interface).
 
-ex:hireDate rdfs:label "hire date"@en, "date d'embauche"@fr  . 
+ex:hireDate rdfs:label "hire date"@en, "date d'embauche"@fr  .
 
 # Representing a triple's object with a URI (or prefixed name) is not required
 # but lets you connect up triples into a graph.
 
 ex:emp134 vcard:family-name "Smith" .
 ex:emp113 vcard:family-name "Jones" ;
-          ex:reportsTo ex:emp134 . 
+          ex:reportsTo ex:emp134 .
 
 # Objects can be datatypes from the XML Schema part 2 standard or your own
 # custom datatypes.
@@ -103,21 +103,21 @@ ex:emp113 vcard:family-name "Jones" ;
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 ex:emp134 vcard:family-name "Smith"^^xsd:string ;  # default data type
           ex:hireDate "2022-11-12"^^xsd:date ;
-          ex:rating "3.5"^^ex:someCustomType . 
+          ex:rating "3.5"^^ex:someCustomType .
 
 # The use of schemas with RDF is optional. Schemas may describe all or a
 # subset of a dataset. They use a vocabulary described by the W3C RDF Schema
 # (RDFS) standard, usually with a prefix of rdfs.
 
 # These schemas are descriptive, to ease the accommodation of new
-# datasets, not proscriptive rules about how new data should be 
-# created. The following declares a class. (Note that RDFS is itself 
+# datasets, not proscriptive rules about how new data should be
+# created. The following declares a class. (Note that RDFS is itself
 # expressed in triples.)
 
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 ex:Person rdf:type rdfs:Class .
 
-# The following triple means the same as the preceding one but 
+# The following triple means the same as the preceding one but
 # uses a Turtle shortcut for terseness and more readability.
 
 ex:Person a rdfs:Class .
@@ -125,7 +125,7 @@ ex:Person a rdfs:Class .
 # That last triple declares that ex:Person is an instance of a class, and the
 # following declares that employee 113 is an instance of the class Employee.
 
-ex:emp113 a ex:Employee . 
+ex:emp113 a ex:Employee .
 
 # The first triple below is actually unnecessary because a typical
 # RDFS processor will infer from the second one that ex:Employee is a
@@ -138,14 +138,14 @@ ex:Employee rdfs:subClassOf ex:Person .
 # RDFS will infer that ex:emp113 is an instance of ex:Person, because
 # it's an instance of ex:Employee, a subclass of ex:Person.
 
-# RDFS lets you declare properties and associate them with classes. 
-# Properties are first class resources and don't "belong" to classes 
-# in the object-oriented sense. rdfs:domain means "the following object 
-# class uses the property named by this triple's subject". rdfs:range 
-# means "the property named by this triple's subject will have a value of 
-# the following class or type". 
+# RDFS lets you declare properties and associate them with classes.
+# Properties are first class resources and don't "belong" to classes
+# in the object-oriented sense. rdfs:domain means "the following object
+# class uses the property named by this triple's subject". rdfs:range
+# means "the property named by this triple's subject will have a value of
+# the following class or type".
 
-ex:birthday rdf:type rdf:Property ; 
+ex:birthday rdf:type rdf:Property ;
             rdfs:domain ex:Person ;
             rdfs:range xsd:date .
 ```
@@ -154,6 +154,6 @@ ex:birthday rdf:type rdf:Property ;
 
 * [RDF Primer — Turtle version](https://www.w3.org/2007/02/turtle/primer/) from the W3C
 * [What is RDF?](https://www.bobdc.com/blog/whatisrdf/) on bobdc.com
-* [What is RDFS?](https://www.bobdc.com/blog/whatisrdfs/) on bobdc.com 
+* [What is RDFS?](https://www.bobdc.com/blog/whatisrdfs/) on bobdc.com
 * [Introduction to RDF and SPARQL](https://data.europa.eu/sites/default/files/d2.1.2_training_module_1.3_introduction_to_rdf_sparql_en_edp.pdf) at data.europa.eu
 

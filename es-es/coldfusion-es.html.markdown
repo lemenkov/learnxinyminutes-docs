@@ -13,7 +13,7 @@ ColdFusion es un lenguaje de scripting para desarrollo web.
 [Lea más aquí](http://www.adobe.com/products/coldfusion-family.html)
 
 ### CFML
-_**C**old**F**usion **M**arkup **L**anguage_  
+_**C**old**F**usion **M**arkup **L**anguage_
 ColdFusion comenzó como un lenguaje basado en etiquetas. Casi toda la funcionalidad está disponible usando etiquetas.
 
 ```cfm
@@ -148,8 +148,8 @@ ColdFusion comenzó como un lenguaje basado en etiquetas. Casi toda la funcional
 		</cfcase>
 		<cfdefaultcase>
 			<p><cfoutput>#i#</cfoutput> no es 5, 15, 45, or 99.</p>
-		</cfdefaultcase> 
-	</cfswitch> 
+		</cfdefaultcase>
+	</cfswitch>
 </cfloop>
 
 <hr />
@@ -161,7 +161,7 @@ ColdFusion comenzó como un lenguaje basado en etiquetas. Casi toda la funcional
 		border: 1px solid #000000;
 		padding: 2px;
 	}
-	
+
 	table.table th {
 		background-color: #CCCCCC;
 	}
@@ -243,27 +243,27 @@ ColdFusion comenzó como un lenguaje basado en etiquetas. Casi toda la funcional
 	<cffunction name="sayHhola">
 		<cfreturn this.hola & ", " & this.mundo & "!" />
 	</cffunction>
-	
+
 	<cffunction name="setHhola">
 		<cfargument name="newHola" type="string" required="true" />
-		
+
 		<cfset this.hola = arguments.newHola />
-		 
+
 		<cfreturn true />
 	</cffunction>
-	
+
 	<cffunction name="setMundo">
 		<cfargument name="newMundo" type="string" required="true" />
-		
+
 		<cfset this.mundo = arguments.newMundo />
-		 
+
 		<cfreturn true />
 	</cffunction>
-	
+
 	<cffunction name="getHola">
 		<cfreturn this.hola />
 	</cffunction>
-	
+
 	<cffunction name="getMundo">
 		<cfreturn this.mundo />
 	</cffunction>
@@ -278,17 +278,17 @@ ColdFusion comenzó como un lenguaje basado en etiquetas. Casi toda la funcional
 
 <cffunction name="setHola">
 	<cfargument name="newHola" type="string" required="true" />
-	
+
 	<cfset this.hola = arguments.newHola />
-	 
+
 	<cfreturn true />
 </cffunction>
 
 <cffunction name="setMundo">
 	<cfargument name="newMundo" type="string" required="true" />
-	
+
 	<cfset this.mundo = arguments.newMundo />
-	 
+
 	<cfreturn true />
 </cffunction>
 
@@ -320,7 +320,7 @@ ColdFusion comenzó como un lenguaje basado en etiquetas. Casi toda la funcional
 ```
 
 ### CFScript
-_**C**old**F**usion **S**cript_  
+_**C**old**F**usion **S**cript_
 En los últimos años, el lenguaje ColdFusion ha agregado sintaxis de script para simular la funcionalidad de etiquetas. Cuando se utiliza un servidor CF actualizado, casi todas las funciones están disponibles mediante la sintaxis de script.
 
 ## Otras lecturas

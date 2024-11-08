@@ -10,7 +10,7 @@ lang: it-it
 
 CMake è un build tool multi-piattaforma e open-source. Questo tool ti permette di testare, compilare e creare pacchetti del tuo codice sorgente.
 
-I problemi che CMake provara a risolvere sono quelli dei Makefile, 
+I problemi che CMake provara a risolvere sono quelli dei Makefile,
 dell'Autoconfigurazione multi-piattaforma (diversi interpreti di Make hanno comandi diversi) e la facilità d'uso nel collegamento di librerie di terze parti.
 
 CMake è un sistema estensibile e open-source che gestisce il processo di compilazione in maniera simile a come farebbero i sistemi operativi, indipendentemente dal formato usato. A differenza di altri sistemi multi-piattaforma, CMake è progettato per essere usato insieme all'ambiente di compilazione nativo. Semplici file di configurazione collocati in ogni cartella dei sorgenti (chiamati CMakeLists.txt) sono usati per generare i file di compilazione standard (ad esempio, makefile su Unix e project/workspace in Windows MSVC) che sono utilizzati nel classico modo.
@@ -22,7 +22,7 @@ CMake è un sistema estensibile e open-source che gestisce il processo di compil
 #  - mkdir build && cd build
 #  - cmake ..
 #  - make
-# 
+#
 # Con questi passaggi, seguiremo la pratica migliore per compilare in una sotto-cartella.
 # La seconda riga chiderà a CMake di generare un nuovo Makefile dipendente dal sistema operativo.
 # Infine, eseguiremo il comando nativo Make.
@@ -39,8 +39,8 @@ cmake_minimum_required (VERSION 2.8)
 # Lancerà un errore FATAL_ERROR se la versione < 2.8
 cmake_minimum_required (VERSION 2.8 FATAL_ERROR)
 
-# Definiamo il nome del nostro progetto, questo modificherà 
-# le convenzioni di denominazione generate da CMake per alcune cartelle. 
+# Definiamo il nome del nostro progetto, questo modificherà
+# le convenzioni di denominazione generate da CMake per alcune cartelle.
 # Possiamo passare il LANG del codice come secondo parametro
 project (learncmake C)
 
@@ -61,7 +61,7 @@ configure_file (
 )
 
 # Includiamo le Librerie
-# In GCC, questo invocherà il comando "-I" 
+# In GCC, questo invocherà il comando "-I"
 include_directories( include )
 
 # Dove sono installate le librerie aggiuntive? Nota: includi i percorsi
@@ -127,13 +127,13 @@ endif()
 # `set(<variable> <value>... [PARENT_SCOPE])`
 
 # Come fare riferimento a variabili all'interno di argomenti tra virgolette e non?
-# Un riferimento a una variabile è sostituito sia dal valore della variabile, sia da 
+# Un riferimento a una variabile è sostituito sia dal valore della variabile, sia da
 # una stringa vuota se la variabile non è settata.
 ${variable_name}
 
 # Liste
 # Prepariamo la lista dei file sorgente
-set( LEARN_CMAKE_SOURCES 
+set( LEARN_CMAKE_SOURCES
   src/main.c
   src/imagem.c
   src/pather.c
@@ -141,7 +141,7 @@ set( LEARN_CMAKE_SOURCES
 
 # Chiamate al compilatore
 #
-# ${PROJECT_NAME} fa riferimento a Learn_CMake 
+# ${PROJECT_NAME} fa riferimento a Learn_CMake
 add_executable( ${PROJECT_NAME} ${LEARN_CMAKE_SOURCES} )
 
 # Link alle librerie

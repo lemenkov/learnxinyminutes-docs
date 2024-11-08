@@ -14,7 +14,7 @@ lang: ar-ar
 filename: learnpython-ar.py
 ---
 
-لقد أُنشئت لغة البايثون بواسطة جايدو ڤان روسم في بداية التسعينات. هي الأن أحد أشهر اللغات الموجودة. 
+لقد أُنشئت لغة البايثون بواسطة جايدو ڤان روسم في بداية التسعينات. هي الأن أحد أشهر اللغات الموجودة.
 لقد أحببت لغة البايثون بسبب وضوحها. هي في الأساس عبارة عن سودوكود قابل للتنفيذ.
 
 ملحوظة: هذا المقال يُطبق على بايثون 3 فقط. راجع المقال [هنا](http://learnxinyminutes.com/docs/pythonlegacy/) إذا أردت تعلم لغة البايثون نسخة 2.7 الأقدم
@@ -104,7 +104,7 @@ bool(-6)    # => True
 2 <= 2  # => True
 2 >= 2  # => True
 
-# لمعرفة هل القيمة في نطاق معين 
+# لمعرفة هل القيمة في نطاق معين
 1 < 2 and 2 < 3  # => True
 2 < 3 and 3 < 2  # => False
 
@@ -377,7 +377,7 @@ filled_set.add(5)  # it remains as before {1, 2, 3, 4, 5}
 other_set = {3, 4, 5, 6}
 filled_set & other_set  # => {3, 4, 5}
 
-# اتحاد مجموعتين باستخدام | 
+# اتحاد مجموعتين باستخدام |
 filled_set | other_set  # => {1, 2, 3, 4, 5, 6}
 
 # الفرق بين مجموعتين باستخدام -
@@ -392,7 +392,7 @@ filled_set | other_set  # => {1, 2, 3, 4, 5, 6}
 # لفحص هل المجموعة على اليسار مجموعة فرعية من المجموعة على اليمين
 {1, 2} <= {1, 2, 3} # => True
 
-# للتأكد من وجود عن في مجموعة استخدم in 
+# للتأكد من وجود عن في مجموعة استخدم in
 2 in filled_set   # => True
 10 in filled_set  # => False
 
@@ -417,7 +417,7 @@ else:                  # This is optional too.
 
 
 """
-For عبارة عن حلقات تدور حول عناصر قوائم 
+For عبارة عن حلقات تدور حول عناصر قوائم
 :ثم تطبع
     dog is a mammal
     cat is a mammal
@@ -429,8 +429,8 @@ for animal in ["dog", "cat", "mouse"]:
 
 """
 "range(number)" يقوم بإعادة مجموعة من الأرقام يمكن الدوران حولها
-من الصفر إلي رقم معين 
-ثم يطبع: 
+من الصفر إلي رقم معين
+ثم يطبع:
     0
     1
     2
@@ -465,7 +465,7 @@ for i in range(4, 8, 2):
 
 """
 While هي عبارة عن حلقات تدور حتى عدم تحقق شرط معين.
-وتطبع: 
+وتطبع:
     0
     1
     2
@@ -476,7 +476,7 @@ while x < 4:
     print(x)
     x += 1  # اختصار ل x = x + 1
 
-# يمكنك التحكم في الأخطاء والاستثناءات باستخدام مجموعة try/except 
+# يمكنك التحكم في الأخطاء والاستثناءات باستخدام مجموعة try/except
 try:
     # استخدم "raise" لرفع خطأ.
     raise IndexError("This is an index error")
@@ -489,7 +489,7 @@ else:                    # فقرة اختيارية في مجموعة try/excep
 finally:                 #  تُنفذ في كل الحالات
     print("We can clean up resources here")
 
-# بدلا من مجموعة try/finally لتنظيف الموارد يمكنك استخدام سطر with 
+# بدلا من مجموعة try/finally لتنظيف الموارد يمكنك استخدام سطر with
 with open("myfile.txt") as f:
     for line in f:
         print(line)
@@ -554,7 +554,7 @@ varargs(1, 2, 3)  # => (1, 2, 3)
 def keyword_args(**kwargs):
     return kwargs
 
-# هيا ننادي على الدالة لنرى ماذا سيحدث 
+# هيا ننادي على الدالة لنرى ماذا سيحدث
 keyword_args(big="foot", loch="ness")  # => {"big": "foot", "loch": "ness"}
 
 
@@ -687,7 +687,7 @@ class Human:
     def __init__(self, name):
         # ساوِ المُعطى بالصفة name الخاصة بهذه النسخة من القالب.
         self.name = name
-        
+
         # هيئ الصفة
         self._age = 0
 
@@ -719,7 +719,7 @@ class Human:
     def age(self):
         return self._age
 
-    # هذا يتيح تهيئة الخاصية 
+    # هذا يتيح تهيئة الخاصية
     @age.setter
     def age(self, age):
         self._age = age
@@ -731,7 +731,7 @@ class Human:
 
 
 # عندما يقرأ مُترجم البايثون ملف مصدري يقوم بتنفيذ كل الكود.
-# فحص ال __name__ يجعل هذا الجزء من الكود يُنَفَذ فقط 
+# فحص ال __name__ يجعل هذا الجزء من الكود يُنَفَذ فقط
 # في حالة أن هذا الموديول هو البرنامج الرئيسي
 if __name__ == '__main__':
     # Instantiate a class
@@ -750,11 +750,11 @@ if __name__ == '__main__':
 
     # نادي على العملية الثابتة
     print(Human.grunt())            # => "*grunt*"
-    
+
     # لا يمكن مناداة العملية الثابتة من نسخة الكائن
     # لأن i.grunt() سيقوم تلقائيا بوضع "self" (الكائن i) كمُعطى للعملية
     print(i.grunt())                # => TypeError: grunt() takes 0 positional arguments but 1 was given
-                                    
+
     # حدًث الخاصية لهذه النسخة
     i.age = 42
     # أحصل على الخاصية
@@ -772,7 +772,7 @@ if __name__ == '__main__':
 # الإرث يتيح لقالب ابن أن يُعَرف ويرث بعض عمليات/دوال ومتغيرات القالب الأب.
 
 # باستخدام القالب Human المُعَرف بالأعلى كأساس أو كقالب أب،
-# يمكننا تعريف قالب ابن،Superhero ، يرث متغيرات القالب مثل "species", "name", و "age"، 
+# يمكننا تعريف قالب ابن،Superhero ، يرث متغيرات القالب مثل "species", "name", و "age"،
 # وأيضا العمليات، مثل "sing", "grunt"
 # من القالب Human، لكنه أيضا لديه خواصه الفريدة
 
@@ -798,7 +798,7 @@ class Superhero(Human):
     # القوالب الابن ترث تلقائيا عمليات الإنشاء الخاصة بالقالب الأب بالإضافة إلي مُعطياتهم
     # لكن يمكن أيضا تعريف مُعطيات إضافية أو تعريفات
     # وتعديل العمليات مثل منشيء القالب.
-    # هذا المُنشيء يرث المُعطى "name" من القالب "Human" 
+    # هذا المُنشيء يرث المُعطى "name" من القالب "Human"
     # ويضيف المعطيات"superpower" و "movies":
     def __init__(self, name, movie=False,
                  superpowers=["super strength", "bulletproofing"]):
@@ -895,13 +895,13 @@ class Batman(Superhero, Bat):
 
     def __init__(self, *args, **kwargs):
         # عادة لكي ترث صفة يجد أن تنادي على super:
-        # super(Batman, self).__init__(*args, **kwargs)      
+        # super(Batman, self).__init__(*args, **kwargs)
         # لكننا في هذه الحالة نتعامل مع إرث متعدد هنا، و super()
         # تعمل فقط مع القالب التالي في قائمة ال MRO.
         # لذا بدلا من ذلك ننادي على __init__ صراحة لكل الأباء.
         # استخدام *args و **kwargs يتيح طريقة نظيفة لتمرير المعطيات.
         # لكل أب "تقشير طبقة من البصل".
-        Superhero.__init__(self, 'anonymous', movie=True, 
+        Superhero.__init__(self, 'anonymous', movie=True,
                            superpowers=['Wealthy'], *args, **kwargs)
         Bat.__init__(self, *args, can_fly=False, **kwargs)
         # تعديل قيمة الصفة name
@@ -916,9 +916,9 @@ if __name__ == '__main__':
 
     # إحصل على ترتيب قرار البحث للعملية (Method Resolution search Order) المُستخدمة بواسطة العمليات getattr() و super()
     # هذه الصفة ديناميكية ويمكن أن تُحَدًث.
-    print(Batman.__mro__)       # => (<class '__main__.Batman'>, 
-                                # => <class 'superhero.Superhero'>, 
-                                # => <class 'human.Human'>, 
+    print(Batman.__mro__)       # => (<class '__main__.Batman'>,
+                                # => <class 'superhero.Superhero'>,
+                                # => <class 'human.Human'>,
                                 # => <class 'bat.Bat'>, <class 'object'>)
 
     # نادي على العملية الخاصة بالأب لكن استخدم الصفات الخاصة بالقالب الابن
@@ -972,8 +972,8 @@ print(gen_to_list)  # => [-1, -2, -3, -4, -5]
 
 
 # المُحسنات
-# في هذا المثال الدالة`beg` تُغلف الدالة `say`. 
-# إذا كانت say_please تساوي True 
+# في هذا المثال الدالة`beg` تُغلف الدالة `say`.
+# إذا كانت say_please تساوي True
 # إذا ستُغير الرسالة الراجعة من الدالة
 from functools import wraps
 

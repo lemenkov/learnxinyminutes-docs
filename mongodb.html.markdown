@@ -1,6 +1,6 @@
 ---
-language: MongoDB 
-filename: mongo.js 
+language: MongoDB
+filename: mongo.js
 contributors:
   - ["Raj Piskala", "https://www.rajpiskala.ml/"]
 ---
@@ -65,7 +65,7 @@ of all types that are supported.
 /////////////////////////////////////////////////////////
 
 // Start up the mongo database server
-// NOTE - You will need to do this in a separate terminal as the process will 
+// NOTE - You will need to do this in a separate terminal as the process will
 // take over the terminal. You may want to use the --fork option
 mongod // --fork
 
@@ -80,7 +80,7 @@ mongod // --fork
 show dbs
 
 // Switch to a new database (pre-existing or about to exist)
-// NOTE: There is no "create" command for a database in MongoDB. 
+// NOTE: There is no "create" command for a database in MongoDB.
 // The database is created upon data being inserted into a collection
 use employees
 
@@ -145,7 +145,7 @@ db.engineers.insertOne({
   gender: "Female",
 })
 
-// Be careful, as _id must ALWAYS be unique for the collection otherwise 
+// Be careful, as _id must ALWAYS be unique for the collection otherwise
 // the insertion will fail
 // Fails with a WriteError indicating _id is a duplicate value
 db.engineers.insertOne({
@@ -167,7 +167,7 @@ db.doctors.insertOne({
 // Queries are in the form of db.collectionName.find(<filter>)
 // Where <filter> is an object
 
-// Show everything in our database so far, limited to a 
+// Show everything in our database so far, limited to a
 // maximum of 20 documents at a time
 // Press i to iterate this cursor to the next 20 documents
 db.engineers.find({})
@@ -175,13 +175,13 @@ db.engineers.find({})
 // We can pretty print the result of any find() query
 db.engineers.find({}).pretty()
 
-// MongoDB queries take in a JS object and search for documents with matching 
+// MongoDB queries take in a JS object and search for documents with matching
 // key-value pairs
 // Returns the first document matching query
 // NOTE: Order of insertion is not preserved in the database, output can vary
 db.engineers.findOne({ name: 'Foo Bar' })
 
-// Returns all documents with the matching key-value properties as a cursor 
+// Returns all documents with the matching key-value properties as a cursor
 // (which can be converted to an array)
 db.engineers.find({ age: 25 })
 
@@ -236,7 +236,7 @@ db.engineers.deleteOne({ name: 'Foo Baz' })
 // Delete many documents at once
 db.engineers.deleteMany({ gender: 'Male' })
 
-// NOTE: There are two methods db.collection.removeOne(<filter>) and 
+// NOTE: There are two methods db.collection.removeOne(<filter>) and
 // db.collection.removeMany(<filter>) that also delete objects but have a
 // slightly different return value.
 // They are not included here as they have been deprecated in the NodeJS driver.
@@ -245,7 +245,7 @@ db.engineers.deleteMany({ gender: 'Male' })
 //////////////////// Operators //////////////////////////
 /////////////////////////////////////////////////////////
 
-// Operators in MongoDB have a $ prefix. For this tutorial, we are only looking 
+// Operators in MongoDB have a $ prefix. For this tutorial, we are only looking
 // at comparison and logical operators, but there are many other types of
 // operators
 
@@ -319,7 +319,7 @@ exit
 
 // Mongodump to export data as BSON for all databases
 // Exported data is found in under "MongoDB Database Tools/bin/dump"
-// NOTE: If the command is not found, navigate to "MongoDB Database Tools/bin" 
+// NOTE: If the command is not found, navigate to "MongoDB Database Tools/bin"
 // and use the executable from there mongodump
 
 // Mongorestore to restore data from BSON

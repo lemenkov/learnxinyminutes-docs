@@ -2,7 +2,7 @@
 language: C#
 filename: csharp-pt.cs
 contributors:
-    - ["Robson Alves", "http://robsonalves.net/"]    
+    - ["Robson Alves", "http://robsonalves.net/"]
 lang: pt-br
 ---
 
@@ -78,15 +78,15 @@ namespace Learning.CSharp
             short fooShort = 10000;
             ushort fooUshort = 10000;
 
-            // Integer - inteiro de 32 bits 
+            // Integer - inteiro de 32 bits
             int fooInt = 1; // (-2,147,483,648 <= int <= 2,147,483,647)
             uint fooUint = 1; // (0 <= uint <= 4,294,967,295)
             //Números por padrão são int ou uint, dependendo do tamanho.
-            
+
             // Long - 64-bit integer
             long fooLong = 100000L; // (-9,223,372,036,854,775,808 <= long <= 9,223,372,036,854,775,807)
             ulong fooUlong = 100000L; // (0 <= ulong <= 18,446,744,073,709,551,615)
-            
+
             // Números por padrão são int ou uint dependendo do tamanho.
             // L é usado para denotar que o valor da variável é do tipo long ou ulong.
 
@@ -112,7 +112,7 @@ namespace Learning.CSharp
             string fooString = "\"escape\" quotes and add \n (new lines) and \t (tabs)";
             Console.WriteLine(fooString);
 
-            //  Você pode acessar todos os caracteres de string com um indexador: 
+            //  Você pode acessar todos os caracteres de string com um indexador:
             char charFromString = fooString[1]; // => 'e'
             // Strings são imutáveis: você não pode fazer fooString[1] = 'X';
 
@@ -140,7 +140,7 @@ on a new line! ""Wow!"", the masses cried";
 
             // Matrizes - zero indexado
             // O tamanho do array pode ser decidido ainda na declaração
-            // O formato para declarar uma matriz é o seguinte: 
+            // O formato para declarar uma matriz é o seguinte:
             // <tipodado>[] <var nome> = new <tipodado>[<array tamanho>];
             int[] intArray = new int[10];
 
@@ -723,7 +723,7 @@ on a new line! ""Wow!"", the masses cried";
             _speed -= decrement;
         }
 
-        // propriedade recupera e/ou atribui valores (get/set). 
+        // propriedade recupera e/ou atribui valores (get/set).
         // quando os dados precisam apenas ser acessados, considere o uso de propriedades.
         // uma propriedade pode ter "get" ou "set", ou ambos.
         private bool _hasTassles; // private variable

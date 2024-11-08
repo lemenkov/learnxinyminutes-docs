@@ -15,7 +15,7 @@ dipanggil "macro". Macro memberi cara yang sangat menarik untuk mengubahsuai lan
 Jaga-jaga. Penggunaan macro boleh dikatakan tidak elok jika digunakan secara berlebihan jika function sahaja sudah mencukupi.
 Gunakan macro hanya apabila anda mahu lebih kawalan terhadap sesuatu form.
 
-Biasakan diri dengan Clojure terlebih dahulu. Pastikan anda memahami semuanya di 
+Biasakan diri dengan Clojure terlebih dahulu. Pastikan anda memahami semuanya di
 [Clojure in Y Minutes](/docs/ms-my/clojure-my/).
 
 ```clojure

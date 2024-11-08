@@ -53,20 +53,20 @@ Special characters can be escaped using a backslash, e.g. \\ or \*.
 
 Lists are similar to Markdown, but a little more involved.
 
-Remember to line up list symbols (like - or \*) with the left edge of the previous text block, and remember to use blank lines to separate new lists from parent lists:    
+Remember to line up list symbols (like - or \*) with the left edge of the previous text block, and remember to use blank lines to separate new lists from parent lists:
 
 - First item
 - Second item
 
   - Sub item
-    
+
 - Third item
 
 or
 
 * First item
 * Second item
-    
+
   * Sub item
 
 * Third item

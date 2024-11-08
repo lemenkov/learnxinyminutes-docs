@@ -47,7 +47,7 @@ It is a dialect of Lisp inspired by Clojure and Janet.
 # Nesting forms works as you expect
 (+ 1 (- 3 2)) # = 1 + (3 - 2) => 2
 
-# Phel inherits PHP under the hood, so it can use native PHP (functions and classes) without 
+# Phel inherits PHP under the hood, so it can use native PHP (functions and classes) without
 # any additional cost by using the `php/` prefix to all PHP native functions.
 
 # Types
@@ -57,7 +57,7 @@ It is a dialect of Lisp inspired by Clojure and Janet.
 
 nil
 true
-false 
+false
 
 # Symbols are used to name functions and variables in Phel
 # For example: symbol, snake_case_symbol, my-module/my-function
@@ -108,14 +108,14 @@ string."
 # it to stop the reader thinking it's a function.
 # Also, (list 1 2 3) is the same as '(1 2 3)
 
-# You can produce a (non-lazy) sequence between a range. 
+# You can produce a (non-lazy) sequence between a range.
 (range 1 10 2) #=> (range from to step)
 (take 4 (range 10))
 
 # Use cons to add an item to the beginning of a list
 (cons 4 '(1 2 3)) #=> (4 1 2 3)
 
-# Use push to add, and put to replace an item in a vector 
+# Use push to add, and put to replace an item in a vector
 (push [1 2 3] 4)  #=> (1 2 3 4)
 (put [1 2 3] 1 4) #=> (1 4 3)
 

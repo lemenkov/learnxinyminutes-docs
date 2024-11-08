@@ -24,7 +24,7 @@ CMake被设计为与本机的构建环境结合使用。它通过被放置于每
 #  - mkdir build && cd build
 #  - cmake ..
 #  - make
-# 
+#
 # 通过上述命令，我们将遵循最佳实践在子目录中进行编译
 # 在第二行命令中我们请求Cmake 生成新的依赖于系统的Makefile文件。
 # 最后，我们运行本地的make 命令。
@@ -130,7 +130,7 @@ ${variable_name}
 
 # 清单
 # 设置源文件列表
-set( LEARN_CMAKE_SOURCES 
+set( LEARN_CMAKE_SOURCES
   src/main.c
   src/imagem.c
   src/pather.c
@@ -138,7 +138,7 @@ set( LEARN_CMAKE_SOURCES
 
 # 调用编译器
 #
-# ${PROJECT_NAME} 即 Learn_CMake 
+# ${PROJECT_NAME} 即 Learn_CMake
 add_executable( ${PROJECT_NAME} ${LEARN_CMAKE_SOURCES} )
 
 # 链接库

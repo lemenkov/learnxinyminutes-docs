@@ -84,7 +84,7 @@ ver cuadrado     \ DUP2 MUL2 JMP2r ok
 \ `sino`:
 : ?>64 ( n -- n ) dup 64 > si ." Mas que 64!" sino ." Menos que 64!" entonces ;
 100 ?>64    \ Mas que 64! ok
-20 ?>64     \ Menos que 64! ok 
+20 ?>64     \ Menos que 64! ok
 
 \ ------------------------------------ Bucles -----------------------------------
 

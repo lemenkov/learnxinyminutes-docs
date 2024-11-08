@@ -37,13 +37,13 @@ filename: learn-latex-sk.tex
 \title{Nauč sa LaTeX za Y Minút!}
 % Teraz môžme začať pracovať na samotnom dokumente.
 % Všetko do tohto riadku sa nazýva "Preambula" ("The Preamble")
-\begin{document} 
+\begin{document}
 % ak zadáme položky author, date a title, LaTeX vytvorí titulnú stranu.
 \maketitle
 
 % Väčšina odborných článkov má abstrakt, na jeho vytvorenie môžeš použiť preddefinované príkazy.
 % Ten by sa mal zobraziť v logickom poradí, teda po hlavičke,
-% no pred hlavnými sekciami tela.. 
+% no pred hlavnými sekciami tela..
 % Tento príkaz je tiež dostupný v triedach article a report.
 % Tzv. makro "abstract" je fixnou súčasťou LaTeXu, ak chceme použiť abstract
 % a napísať ho po slovensky, musíme ho redefinovať nasledujúcim príkazom
@@ -69,19 +69,19 @@ To je ono!
 \label{subsec:pytagoras}
 
 % Použitím '*' môžeme potlačiť zabudované číslovanie LaTeXu.
-% Toto funguje aj na iné príkazy. 
-\section*{Toto je nečíslovaná sekcia} 
+% Toto funguje aj na iné príkazy.
+\section*{Toto je nečíslovaná sekcia}
 Všetky číslované byť nemusia!
 
 \section{Nejaké poznámočky}
-Zarovnávať veci tam, kde ich chceš mať, je všeobecne ľahké. Ak 
-potrebuješ \\ nový \\ riadok \\ pridaj \textbackslash\textbackslash do 
-zdrojového kódu. \\ 
+Zarovnávať veci tam, kde ich chceš mať, je všeobecne ľahké. Ak
+potrebuješ \\ nový \\ riadok \\ pridaj \textbackslash\textbackslash do
+zdrojového kódu. \\
 
 \section{Zoznamy}
 Zoznamy sú jednou z najjednoduchších vecí vôbec! Treba mi zajtra nakúpiť, urobím si zoznam.
 \begin{enumerate} % "enumerate" spustí číslovanie prvkov.
-  % \item povie LaTeXu, ako že treba pripočítať 1 
+  % \item povie LaTeXu, ako že treba pripočítať 1
   \item Vlašský šalát.
   \item 5 rožkov.
   \item 3 Horalky.
@@ -101,9 +101,9 @@ Množinové a relačné symboly, šípky, operátory a Grécke písmená sú len
 
 Množiny a relácie hrajú hlavnú rolu v mnohých matematických článkoch.
 Takto napíšeš, že niečo platí pre všetky x patriace do X, $\forall$ x $\in$ X. \\
-% Všimni si, že som pridal $ pred a po symboloch. Je to 
-% preto, lebo pri písaní sme v textovom móde, 
-% no matematické symboly existujú len v matematickom. 
+% Všimni si, že som pridal $ pred a po symboloch. Je to
+% preto, lebo pri písaní sme v textovom móde,
+% no matematické symboly existujú len v matematickom.
 % Vstúpime doňho z textového práve '$' znamienkami.
 % Platí to aj opačne. Premenná môže byť zobrazená v matematickom móde takisto.
 % Do matematického módu sa dá dostať aj s \[\]
@@ -113,11 +113,11 @@ Takto napíšeš, že niečo platí pre všetky x patriace do X, $\forall$ x $\i
 Moje obľúbené Grécke písmeno je $\xi$. Tiež sa mi pozdávajú $\beta$, $\gamma$ a $\sigma$.
 Ešte som neprišiel na Grécke písmeno, ktoré by LaTeX nepoznal!
 
-Operátory sú dôležitou súčasťou matematických dokumentov: 
-goniometrické funkcie ($\sin$, $\cos$, $\tan$), 
-logaritmy and exponenciálne výrazy ($\log$, $\exp$), 
-limity ($\lim$), atď. 
-majú pred-definované LaTeXové príkazy. 
+Operátory sú dôležitou súčasťou matematických dokumentov:
+goniometrické funkcie ($\sin$, $\cos$, $\tan$),
+logaritmy and exponenciálne výrazy ($\log$, $\exp$),
+limity ($\lim$), atď.
+majú pred-definované LaTeXové príkazy.
 Napíšme si rovnicu, nech vidíme, ako to funguje: \\
 
 $\cos(2\theta) = \cos^{2}(\theta) - \sin^{2}(\theta)$
@@ -125,13 +125,13 @@ $\cos(2\theta) = \cos^{2}(\theta) - \sin^{2}(\theta)$
 Zlomky(Čitateľ-menovateľ) sa píšu v týchto formách:
 
 % 10 / 7
-$^{10}/_{7}$ 
+$^{10}/_{7}$
 
 % Relatívne komplexné zlomky sa píšu ako
 % \frac{čitateľ}{menovateľ}
 $\frac{n!}{k!(n - k)!}$ \\
 
-Rovnice tiež môžeme zadať v "rovnicovom prostredí". 
+Rovnice tiež môžeme zadať v "rovnicovom prostredí".
 
 % Takto funguje rovnicové prostredie
 \begin{equation} % vstúpi do matematického módu
@@ -139,28 +139,28 @@ Rovnice tiež môžeme zadať v "rovnicovom prostredí".
     \label{eq:pythagoras} % na odkazovanie
 \end{equation} % všetky \begin príkazy musia mať konečný príkaz.
 
-Teraz môžeme odkázať na novovytvorenú rovnicu! 
+Teraz môžeme odkázať na novovytvorenú rovnicu!
 Rovn.~\ref{eq:pythagoras} je tiež známa ako Pytagorova Veta, ktorá je tiež predmetom Sekc.~\ref{subsec:pytagoras}. Odkazovať môžme na veľa vecí, napr na: čísla, rovnice, či sekcie.
 
 Sumácie a Integrály sa píšu príkazmi sum a int:
 
 % Niektoré prekladače LaTeXu sa môžu sťažovať na prázdne riadky (ak tam sú)
 % v rovnicovom prostredí.
-\begin{equation} 
+\begin{equation}
   \sum_{i=0}^{5} f_{i}
-\end{equation} 
-\begin{equation} 
+\end{equation}
+\begin{equation}
   \int_{0}^{\infty} \mathrm{e}^{-x} \mathrm{d}x
-\end{equation} 
+\end{equation}
 
 \section{Obrázky}
 
 Vloženie obrázku môže byť zložitejšie. Ja si vždy možnosti vloženia pozerám pre každý obrázok.
 \renewcommand\figurename{Obrázok}
-\begin{figure}[H] % H značí možnosť zarovnania. 
+\begin{figure}[H] % H značí možnosť zarovnania.
     \centering % nacentruje obrázok na stránku
     % Vloží obrázok na 80% šírky stránky.
-    %\includegraphics[width=0.8\linewidth]{right-triangle.png} 
+    %\includegraphics[width=0.8\linewidth]{right-triangle.png}
     % Zakomentované kvôli kompilácií, použi svoju predstavivosť :).
     \caption{Pravouhlý trojuholník so stranami $a$, $b$, $c$}
     \label{fig:right-triangle}
@@ -175,7 +175,7 @@ Tabuľky sa vkládajú podobne ako obrázky.
   \caption{Nadpis tabuľky.}
   % zátvorky: {} hovoria ako sa vykreslí každý riadok.
   % Toto si nikdy nepamätám a vždy to musím hľadať. Všetko. Každý. Jeden. Raz!
-  \begin{tabular}{c|cc} 
+  \begin{tabular}{c|cc}
     Číslo & Priezvisko & Krstné meno \\ % Stĺpce sú rozdelené $
     \hline % horizontálna čiara
     1 & Ladislav & Meliško \\
@@ -187,27 +187,27 @@ Tabuľky sa vkládajú podobne ako obrázky.
 
 \section{Prikáž LaTeXu nekompilovať (napr. Zdrojový Kód)}
 Povedzme, že chceme do dokumentu vložiť zdrojový kód, budeme musieť LaTeXu povedať, nech sa ho nesnaží skompilovať, ale nech s ním pracuje ako s textom.
-Toto sa robí vo verbatim prostredí. 
+Toto sa robí vo verbatim prostredí.
 
 % Tiež sú na to špeciálne balíčky, (napr. minty, lstlisting, atď.)
 % ale verbatim je to najzákladnejšie, čo môžeš použiť.
-\begin{verbatim} 
+\begin{verbatim}
   print("Hello World!")
-  a%b; pozri! Vo verbatime môžme použiť % znamienka. 
+  a%b; pozri! Vo verbatime môžme použiť % znamienka.
   random = 4; #priradené randomným hodom kockou
 \end{verbatim}
 
-\section{Kompilácia} 
+\section{Kompilácia}
 
 Už by bolo načase túto nádheru skompilovať a zhliadnuť jej úžasnú úžasnosť v podobe LaTeX pdfka, čo povieš?
 (áno, tento dokument sa musí kompilovať). \\
 Cesta k finálnemu dokumentu pomocou LaTeXu pozostáva z nasledujúcich krokov:
   \begin{enumerate}
     \item Napíš dokument v čistom texte (v "zdrojáku").
-    \item Skompiluj zdroják na získanie pdfka. 
+    \item Skompiluj zdroják na získanie pdfka.
      Kompilácia by mala vyzerať nasledovne (v Linuxe): \\
-     \begin{verbatim} 
-        $pdflatex learn-latex.tex learn-latex.pdf 
+     \begin{verbatim}
+        $pdflatex learn-latex.tex learn-latex.pdf
      \end{verbatim}
   \end{enumerate}
 

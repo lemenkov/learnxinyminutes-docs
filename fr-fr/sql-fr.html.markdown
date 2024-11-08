@@ -125,7 +125,7 @@ SELECT * FROM departments WHERE dept_no = 'd002';
 -- L'ordre de la syntaxe SQL, avec plusieurs mots-clés appris jusqu'à présent, est :
 -- SELECT _ FROM _ JOIN _ ON _ WHERE _ GROUP BY _ HAVING _ ORDER BY _ UNION
 
--- Liste toutes les tables, de toutes les bases de données. 
+-- Liste toutes les tables, de toutes les bases de données.
 -- Les implémentations SQL fournissent généralement leur propre commande de raccourci
 -- pour effectuer cette opération avec la base de données actuellement utilisée.
 SELECT * FROM INFORMATION_SCHEMA.TABLES
@@ -143,7 +143,7 @@ INSERT INTO tablename1 VALUES('Richard','Mutt');
 -- pour toutes les lignes dont la valeur lname est "Mutt".
 UPDATE tablename1 SET fname='John' WHERE lname='Mutt';
 
--- Supprime les lignes de la table tablename1 
+-- Supprime les lignes de la table tablename1
 -- dont la valeur lname commence par 'M'.
 DELETE FROM tablename1 WHERE lname LIKE 'M%';
 

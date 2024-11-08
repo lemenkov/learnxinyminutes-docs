@@ -10,9 +10,9 @@ lang: zh-cn
 COBOL是一门面向商业的语言，它从1960年最初设计以来被修订过数次。它被宣称仍然有超过80%的机构在使用它。
 
 ```cobol
-      *COBOL. 最好是按照它1985年的标准来编程。 
+      *COBOL. 最好是按照它1985年的标准来编程。
       *用附带GnuCOBOL编译器的OpenCobolIDE 4.7.6来编译。
-       
+
       *COBOL在老版（COBOL-85）和新版（COBOL-2002以及COBOL-2014）之间有明显的差别。
       *老版COBOL要求编码的前一到六列是空着的（它们被用来存储穿孔卡片的序列号...
       *第七列的一个“*”符号表示注释的开始。
@@ -25,7 +25,7 @@ COBOL是一门面向商业的语言，它从1960年最初设计以来被修订�
       *但是在大多数情况下编写COBOL代码时全用大写字符
       *大多数专业的COBOL开发者都是这么做的。
       *COBOL语句以句点结尾。
-      
+
       *COBOL代码被拆成了四个部。
       *各部按顺序，它们是:
       *IDENTIFICATION DIVSION.（标识部）
@@ -48,19 +48,19 @@ COBOL是一门面向商业的语言，它从1960年最初设计以来被修订�
       *来描述这个变量将要包含的数据的类型。
       *几乎所有的COBOL开发者都会把PICTURE简写为PIC。
       *A代表字母，X代表字母和数字，9代表数字。
-       
+
       *举例：
       01  MYNAME PIC xxxxxxxxxx.    *> 十个字符的字符串。
-       
+
       *但是逐个数那些x会导致错误，
       *所以以上代码可以，并且应该
       *这样重写：
       01 MYNAME PIC X(10).
-       
+
       *这是几个更多的例子：
       01  AGE             PIC      9(3).   *> 数字最多三位
       01  LAST_NAME       PIC      X(10).  *> 字符串最多十个字符
-       
+
       *在COBOL里，一行中多个空格和一个空格的效果是一样的， 所以通常
       *情况下都用多个空格排列代码来便于
       *其他的开发者阅读。
@@ -79,23 +79,23 @@ COBOL是一门面向商业的语言，它从1960年最初设计以来被修订�
           MOVE "HELLO WORLD" TO THE-MESSAGE.
           DISPLAY THE-MESSAGE.
           STOP RUN.
-      
+
       *以上的代码会输出：
       *STARTING PROGRAM
       *HELLO WORLD
-      
 
-      
+
+
       ********用COBOL可以做数学运算***************
       ADD 1 TO AGE GIVING NEW-AGE.
       SUBTRACT 1 FROM COUNT.
       DIVIDE VAR-1 INTO VAR-2 GIVING VAR-3.
       COMPUTE TOTAL-COUNT = COUNT1 PLUS COUNT2.
-      
-      
+
+
       *********PERFORM********************
       *PERFORM关键字允许你跳到代码中其他特殊的代码段，
-      *当这段特殊的代码被执行完后继续回来执行下面的可执行语句。 
+      *当这段特殊的代码被执行完后继续回来执行下面的可执行语句。
       *你必须把PERFORM这个词写完整，不可以缩写它。
 
       IDENTIFICATION DIVISION.
@@ -107,33 +107,33 @@ COBOL是一门面向商业的语言，它从1960年最初设计以来被修订�
          PERFORM THIRD-PARA THRU FOURTH-PARA. *>跳过second-para，执行3rd&4th
          *> 之后当third和fourth执行完，
          *> 回到这里继续往下执行直到遇到STOP RUN.
-   
+
          SECOND-PARA.
              DISPLAY 'THIS IS IN SECOND-PARA'.
          STOP RUN.
-   
+
          THIRD-PARA.
              DISPLAY 'THIS IS IN THIRD-PARA'.
-   
+
          FOURTH-PARA.
              DISPLAY 'THIS IS IN FOURTH-PARA'.
-   
-   
+
+
       *当你编译执行以上程序时，它会生成以下结果：
           THIS IS IN FIRST-PARA
           THIS IS IN THIRD-PARA
           THIS IS IN FOURTH-PARA
           THIS IS IN SECOND-PARA
-          
-          
+
+
       **********用STRING关键字把变量组合到一起************
-      
+
       *现在是时候学习两个类似的COBOL动词了：string和unstring。.
 
       *string动词经常被用来连接两个或多个字符串（把它们拼在一起）。
-      *没什么特别的，Unstring被用来把一个字符串拆分成两个或多个更小的字符串。       
+      *没什么特别的，Unstring被用来把一个字符串拆分成两个或多个更小的字符串。
       *当你在程序中使用string或unstring时不要忘记使用”delimited by“，这个很重要。
-      
+
       IDENTIFICATION DIVISION.
       PROGRAM-ID. LEARNING.
       ENVIRONMENT DIVISION.
@@ -162,7 +162,7 @@ COBOL是一门面向商业的语言，它从1960年最初设计以来被修订�
       *包括我们想存储string命令生成的新字符串用到的的变量。
 
       *这个操作过程在PROCEDURE DIVISION完成。
-      *我们从STRING 关键字开始，到END-STRING结束。         
+      *我们从STRING 关键字开始，到END-STRING结束。
       *在它们之间我们列出我们想要组合变量形成更大的主变量的过程。
       *这里，我们组合了FIRST-NAME, 一个空格和LAST-NAME。
 

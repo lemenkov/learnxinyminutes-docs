@@ -5,7 +5,7 @@ contributors:
   - ["Jack Smith", "https://github.com/JSmithTech2019"]
 ---
 
-HDL (hardware description language) is a specialized language used to describe the structure/behavior of real world circuits. 
+HDL (hardware description language) is a specialized language used to describe the structure/behavior of real world circuits.
 
 It is used by circuit designers to simulate circuits and logic prior to wiring and fabricating a hardware circuit.
 
@@ -27,7 +27,7 @@ This programming language is built by simulating hardware chips and wiring. Norm
 ////////////////////////////////////////////////////
 // 1. Chips & Components
 ////////////////////////////////////////////////////
-/* 
+/*
  * Unlike other languages HDL creates an individual chip (function) per file
  * These are defined with a name, input arguments, output arguments
  * and finally the parts/logic of that specific chip.
@@ -73,7 +73,7 @@ OUT c[16]; // Creates a 16 bit output array.
 // Bussed values can be accessed using brackets
 a[0] // The first indexed value in the bus a.
 a[0..3] // The first 4 values in the a bus.
-// Values can also be passed in entirety. For example if the function 
+// Values can also be passed in entirety. For example if the function
 // foo() takes an 8 bit input bus and outputs a 2 bit bus:
 foo(in=a[0..7], out=c); // C is now a 2 bit internal bus
 

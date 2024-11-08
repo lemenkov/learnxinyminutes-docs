@@ -2,7 +2,7 @@
 category: Algorithms & Data Structures
 name: Set theory
 lang: fr-fr
-contributors: 
+contributors:
   - ["kieutrang", "https://github.com/kieutrang1729"]
 ---
 

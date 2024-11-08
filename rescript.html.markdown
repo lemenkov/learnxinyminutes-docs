@@ -303,7 +303,7 @@ let showDialog = (~message: string): unit => {
    the `unit` type can also be represented as `()` */
 
 /* > Currying
-   Functions can be curried and are partially called, allowing for easy reuse 
+   Functions can be curried and are partially called, allowing for easy reuse
    The remaining arguments are represented with ... */
 
 let div = (denom, numr) => numr / denom

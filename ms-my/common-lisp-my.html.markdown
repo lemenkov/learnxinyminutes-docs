@@ -68,7 +68,7 @@ t             ; juga atom, bermaksud true (ya/betul/benar)
 ;;; Environment (benda-benda yang diperlukan untuk program menggunakan Common Lisp)
 
 ;;; Common Lisp ada banyak jenis; kebanyakannya mengikut standard. SBCL
-;;; ialah titik permulaan yang baik. Quicklisp boleh digunakan untuk install 
+;;; ialah titik permulaan yang baik. Quicklisp boleh digunakan untuk install
 ;;; library third party.
 
 ;;; CL kebiasaannya digunakan dengan text editor dan Real Eval Print

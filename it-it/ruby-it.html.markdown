@@ -18,7 +18,7 @@ contributors:
   - ["Corey Ward", "https://github.com/coreyward"]
 translators:
   - ["abonte", "https://github.com/abonte"]
-lang: it-it   
+lang: it-it
 ---
 
 ```ruby
@@ -263,7 +263,7 @@ end
 # sono simili alle lambda, funzioni anonime o closure che si trovano in altri
 # linguaggi di programmazione. Essi possono essere passati come oggetti,
 # chiamati o allegati come metodi.
-# 
+#
 # Il metodo 'each' di un intervallo (range) esegue il blocco una volta
 # per ogni elemento dell'intervallo.
 # Al blocco è passato un contatore come parametro.
@@ -443,7 +443,7 @@ def migliore(primo, secondo, terzo, *altri)
   puts "C'erano altri #{altri.count} partecipanti."
 end
 
-migliore *classifica_concorrenti 
+migliore *classifica_concorrenti
 #=> I vincitori sono John, Sally, e Dingus.
 #=> C'erano altri 2 partecipanti.
 

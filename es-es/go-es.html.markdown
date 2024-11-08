@@ -442,7 +442,7 @@ utilizar [https://go.dev/play/](https://go.dev/play/) como un
 cosas y el código en el navegador, sin tener que instalar Go.
 
 En la lista de lecturas para estudiantes de Go está el
-[código fuente de la biblioteca estándar](https://go.dev/src/). 
+[código fuente de la biblioteca estándar](https://go.dev/src/).
 Ampliamente documentado, demuestra lo mejor del legible y comprensible
 Go, con su característico estilo y modismos. ¡O puedes hacer clic en un
 nombre de función en [la documentación](https://pkg.go.dev/std) y

@@ -251,7 +251,7 @@ elsif false
   "else-if, optional"
 else
   "else, also optional"
-end 
+end
 
 puts "if as a suffix" if true
 
@@ -393,7 +393,7 @@ dinner    #=> "quesadilla"
 5.even? # false
 5.odd?  # true
 
-# Also by convention, if a method ends with an exclamation mark, it does 
+# Also by convention, if a method ends with an exclamation mark, it does
 # something destructive like mutate the receiver.
 # Some methods have a ! version to make a change, and
 # a non-! version to just return a new changed version

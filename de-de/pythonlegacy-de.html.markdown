@@ -15,7 +15,7 @@ Hinweis: Dieser Beitrag bezieht sich besonders auf Python 2.7, er sollte aber au
 
 ```python
 # Einzeilige Kommentare beginnen mit einer Raute (Doppelkreuz)
-""" Mehrzeilige Strings werden mit 
+""" Mehrzeilige Strings werden mit
     drei '-Zeichen geschrieben und werden
     oft als Kommentare genutzt.
 """
@@ -281,7 +281,7 @@ Ausgabe:
 for animal in ["hund", "katze", "maus"]:
     # Wir können Strings mit % formatieren
     print "%s  ist ein Säugetier" % animal
-    
+
 """
 `range(Zahl)` gibt eine null-basierte Liste bis zur angegebenen Zahl wieder
 Ausgabe:
@@ -407,16 +407,16 @@ import math as m
 math.sqrt(16) == m.sqrt(16) #=> True
 
 # Module sind in Python nur gewöhnliche Dateien. Wir
-# können unsere eigenen schreiben und importieren. Der Name des 
+# können unsere eigenen schreiben und importieren. Der Name des
 # Moduls ist der Dateiname.
 
-# Wir können herausfinden, welche Funktionen und Attribute in einem 
+# Wir können herausfinden, welche Funktionen und Attribute in einem
 # Modul definiert sind.
 import math
 dir(math)
 
-# Wenn Sie ein Python-Skript namens math.py im selben Ordner 
-# wie Ihr aktuelles Skript haben, wird die Datei math.py 
+# Wenn Sie ein Python-Skript namens math.py im selben Ordner
+# wie Ihr aktuelles Skript haben, wird die Datei math.py
 # anstelle des integrierten Python-Moduls geladen.
 # Dies geschieht, weil der lokale Ordner Vorrang
 # vor den in Python integrierten Bibliotheken hat.
@@ -433,10 +433,10 @@ class Human(object):
     species = "H. sapiens"
 
     # Ein simpler Konstruktor, wird aufgerufen, wenn diese Klasse instanziiert wird.
-    # Beachten Sie, dass die doppelten vorangestellten und nachgestellten 
-    # Unterstriche Objekte oder Attribute bezeichnen, die von Python verwendet werden, 
-    # aber in benutzergesteuerten Namespaces leben. 
-    # Methoden (oder Objekte oder Attribute) wie: __init__, __str__, __repr__ usw. 
+    # Beachten Sie, dass die doppelten vorangestellten und nachgestellten
+    # Unterstriche Objekte oder Attribute bezeichnen, die von Python verwendet werden,
+    # aber in benutzergesteuerten Namespaces leben.
+    # Methoden (oder Objekte oder Attribute) wie: __init__, __str__, __repr__ usw.
     # werden als Sondermethoden (oder manchmal als Dundermethoden bezeichnet) bezeichnet.
     # Sie sollten solche Namen nicht selbst erfinden.
     def __init__(self, name):
@@ -480,7 +480,7 @@ class Human(object):
         del self._age
 
 # Wenn ein Python-Interpreter eine Quelldatei liest, führt er den gesamten Code aus.
-# Diese __name__-Prüfung stellt sicher, dass dieser Codeblock nur ausgeführt wird, 
+# Diese __name__-Prüfung stellt sicher, dass dieser Codeblock nur ausgeführt wird,
 # wenn dieses Modul das Hauptprogramm ist.
 if __name__ == '__main__':
     # Eine Instanz einer Klasse erstellen
@@ -497,11 +497,11 @@ if __name__ == '__main__':
     Human.species = "H. neanderthalensis"
     i.say(i.get_species())          # => "Ian: H. neanderthalensis"
     j.say(j.get_species())          # => "Joel: H. neanderthalensis"
-    
+
     # Aufruf der statischen Methode
     print(Human.grunt())            # => "*grunt*"
 
-    # Kann keine statische Methode mit Instanz des Objekts aufrufen, 
+    # Kann keine statische Methode mit Instanz des Objekts aufrufen,
     # da i.grunt () automatisch "self" (das Objekt i) als Argument verwendet
     print(i.grunt())                # => TypeError: grunt() takes 0 positional arguments but 1 was given
 
@@ -513,23 +513,23 @@ if __name__ == '__main__':
     # die Eigenschaft löschen
     del i.age
     # i.age                         # => würde einen AttributeError werfen
-    
+
 ####################################################
 ## 6.1 Inheritance
 ####################################################
-    
-# Vererbung ermöglicht die Definition neuer untergeordneter Klassen, 
+
+# Vererbung ermöglicht die Definition neuer untergeordneter Klassen,
 # die Methoden und Variablen von ihrer übergeordneten Klasse erben.
 
-# Wenn Sie die oben definierte Human-Klasse als Basis- oder Elternklasse verwenden, 
-# können Sie eine untergeordnete Klasse, Superhero, definieren, die die Klassenvariablen 
-# wie "species", "name" und "age" sowie Methoden wie "sing" und "grunzen" aus der Klasse Human erbt. 
+# Wenn Sie die oben definierte Human-Klasse als Basis- oder Elternklasse verwenden,
+# können Sie eine untergeordnete Klasse, Superhero, definieren, die die Klassenvariablen
+# wie "species", "name" und "age" sowie Methoden wie "sing" und "grunzen" aus der Klasse Human erbt.
 # Die Untergeordnete Klasse kann aber auch eigene Eigenschaften haben.
 
-# Um von der Modularisierung per Datei zu profitieren, können Sie die Klassen 
+# Um von der Modularisierung per Datei zu profitieren, können Sie die Klassen
 # in ihren eigenen Dateien platzieren, z. B. human.py
 
-# Um Funktionen aus anderen Dateien zu importieren, verwenden Sie das folgende Format 
+# Um Funktionen aus anderen Dateien zu importieren, verwenden Sie das folgende Format
 # from "Dateiname-ohne-Erweiterung" impotr "Funktion-oder-Klasse"
 
 from human import Human
@@ -537,19 +537,19 @@ from human import Human
 # Geben Sie die übergeordnete(n) Klasse(n) als Parameter für die Klassendefinition an
 class Superhero(Human):
 
-    # Wenn die untergeordnete Klasse alle Definitionen des übergeordneten Elements 
-    # ohne Änderungen erben soll, können Sie einfach das Schlüsselwort "pass" 
-    # (und nichts anderes) verwenden. In diesem Fall wird jedoch auskommentiert, 
+    # Wenn die untergeordnete Klasse alle Definitionen des übergeordneten Elements
+    # ohne Änderungen erben soll, können Sie einfach das Schlüsselwort "pass"
+    # (und nichts anderes) verwenden. In diesem Fall wird jedoch auskommentiert,
     # um eine eindeutige untergeordnete Klasse zuzulassen:
     # pass
 
     # Kindklassen können die Attribute ihrer Eltern überschreiben
     species = 'Superhuman'
 
-    # Kinder erben automatisch den Konstruktor ihrer übergeordneten Klasse 
-    # einschließlich ihrer Argumente, können aber auch zusätzliche Argumente oder 
+    # Kinder erben automatisch den Konstruktor ihrer übergeordneten Klasse
+    # einschließlich ihrer Argumente, können aber auch zusätzliche Argumente oder
     # Definitionen definieren und ihre Methoden zB den Klassenkonstruktor überschreiben.
-    # Dieser Konstruktor erbt das Argument "name" von der Klasse "Human" und 
+    # Dieser Konstruktor erbt das Argument "name" von der Klasse "Human" und
     # fügt die Argumente "superpowers" und "movie" hinzu:
     def __init__(self, name, movie=False,
                      superpowers=["super strength", "bulletproofing"]):
@@ -559,17 +559,17 @@ class Superhero(Human):
         self.movie = movie
         # Beachten Sie die veränderlichen Standardwerte, da die Standardwerte gemeinsam genutzt werden
         self.superpowers = superpowers
-        
-        # Mit der Funktion "super" können Sie auf die Methoden der übergeordneten Klasse 
-        # zugreifen, die vom untergeordneten Objekt überschrieben werden, 
+
+        # Mit der Funktion "super" können Sie auf die Methoden der übergeordneten Klasse
+        # zugreifen, die vom untergeordneten Objekt überschrieben werden,
         # in diesem Fall die Methode __init__.
         # Dies ruft den Konstruktor der übergeordneten Klasse auf:
         super().__init__(name)
-        
+
     # überschreiben der "sing" Methode
     def sing(self):
         return 'Dun, dun, DUN!'
-        
+
     # eine zusätzliche Instanzmethode hinzufügen
     def boast(self):
         for power in self.superpowers:
@@ -577,35 +577,35 @@ class Superhero(Human):
 
 if __name__ == '__main__':
     sup = Superhero(name="Tick")
-    
+
     # Instanztypprüfungen
     if isinstance(sup, Human):
         print('I am human')
     if type(sup) is Superhero:
         print('I am a superhero')
-        
+
     # Die Reihenfolge der Methodenauflösung (MRO = Method Resolution Order) anzeigen, die sowohl von getattr() als auch von super() verwendet wird.
     # Dieses Attribut ist dynamisch und kann aktualisiert werden.
     print(Superhero.__mro__)    # => (<class '__main__.Superhero'>,
                                 # => <class 'human.Human'>, <class 'object'>)
-                                
+
     # Ruft die übergeordnete Methode auf, verwendet jedoch das eigene Klassenattribut
     print(sup.get_species())    # => Superhuman
-    
+
     # Ruft die überschriebene Methode auf
     print(sup.sing())           # => Dun, dun, DUN!
-    
+
     # Ruft die Methode von Human auf
     sup.say('Spoon')            # => Tick: Spoon
-    
+
     # Aufruf einer Methode, die nur in Superhero existiert
     sup.boast()                 # => I wield the power of super strength!
                                 # => I wield the power of bulletproofing!
-                                    
+
     # Vererbtes Klassenattribut
     sup.age = 31
     print(sup.age)              # => 31
-    
+
     # Attribut, das nur in Superhero existiert
     print('Am I Oscar eligible? ' + str(sup.movie))
 
@@ -636,9 +636,9 @@ if __name__ == '__main__':
     b = Bat()
     print(b.say('hello'))
     print(b.fly)
-    
+
 # Und noch eine andere Klassendefinition, die von Superhero und Bat erbt
-# superhero.py    
+# superhero.py
 from superhero import Superhero
 from bat import Bat
 
@@ -648,12 +648,12 @@ class Batman(Superhero, Bat):
     def __init__(self, *args, **kwargs):
         # In der Regel müssen Sie super aufrufen, um Attribute zu erben:
         # super (Batman, selbst) .__ init__ (* args, ** kwargs)
-        # Allerdings handelt es sich hier um Mehrfachvererbung, und super() 
+        # Allerdings handelt es sich hier um Mehrfachvererbung, und super()
         # funktioniert nur mit der nächsten Basisklasse in der MRO-Liste.
         # Stattdessen rufen wir explizit __init__ für alle Vorfahren auf.
-        # Die Verwendung von *args und **kwargs ermöglicht die saubere Übergabe von 
+        # Die Verwendung von *args und **kwargs ermöglicht die saubere Übergabe von
         # Argumenten, wobei jedes übergeordnete Element eine Schicht der Zwiebel "abschält".
-        Superhero.__init__(self, 'anonymous', movie=True, 
+        Superhero.__init__(self, 'anonymous', movie=True,
                            superpowers=['Wealthy'], *args, **kwargs)
         Bat.__init__(self, *args, can_fly=False, **kwargs)
         # überschreibt den Wert für das Namensattribut
@@ -661,51 +661,51 @@ class Batman(Superhero, Bat):
 
     def sing(self):
         return 'nan nan nan nan nan batman!'
-        
+
 if __name__ == '__main__':
     sup = Batman()
-    
-    # Die Reihenfolge der Methodenauflösung (MRO = Method Resolution Order) anzeigen, 
+
+    # Die Reihenfolge der Methodenauflösung (MRO = Method Resolution Order) anzeigen,
     # die sowohl von getattr() als auch von super() verwendet wird.
     # Dieses Attribut ist dynamisch und kann aktualisiert werden.
-    print(Batman.__mro__)       # => (<class '__main__.Batman'>, 
-                                # => <class 'superhero.Superhero'>, 
-                                # => <class 'human.Human'>, 
+    print(Batman.__mro__)       # => (<class '__main__.Batman'>,
+                                # => <class 'superhero.Superhero'>,
+                                # => <class 'human.Human'>,
                                 # => <class 'bat.Bat'>, <class 'object'>)
-                                
-    # Ruft die übergeordnete Methode auf, verwendet jedoch das eigene Klassenattribut                                
-    print(sup.get_species())    # => Superhuman                                
-    
+
+    # Ruft die übergeordnete Methode auf, verwendet jedoch das eigene Klassenattribut
+    print(sup.get_species())    # => Superhuman
+
     # Ruft die überschriebene Methode auf
     print(sup.sing())           # => nan nan nan nan nan batman!
-    
+
     # Ruft die Methode von Human auf, weil die Reihenfolge der Vererbung wichtig ist
     sup.say('I agree')          # => Sad Affleck: I agree
-    
+
     # Aufrufmethode, die nur im 2. Vorfahren existiert
     print(sup.sonar())          # => ))) ... (((
-    
+
     # Vererbtes Klassenattribut
     sup.age = 100
     print(sup.age)              # => 100
-    
+
     # Vererbtes Attribut vom 2. Vorfahren, dessen Standardwert überschrieben wurde.
     print('Can I fly? ' + str(sup.fly)) # => Can I fly? False
-    
-    
+
+
 ####################################################
 ## 7. Fortgeschrittenes
-####################################################    
-    
+####################################################
+
 # Generatoren helfen Ihnen, lazy Code zu erstellen.
 def double_numbers(iterable):
     for i in iterable:
         yield i + i
-        
-# Generatoren sind speichereffizient, da sie nur die Daten laden, 
-# die zur Verarbeitung des nächsten Werts in der iterierbaren Komponente 
+
+# Generatoren sind speichereffizient, da sie nur die Daten laden,
+# die zur Verarbeitung des nächsten Werts in der iterierbaren Komponente
 # erforderlich sind. Dadurch können sie ansonsten unzulässig große Wertebereiche ausführen.
-# HINWEIS: `range` ersetzt` xrange` in Python 3.        
+# HINWEIS: `range` ersetzt` xrange` in Python 3.
 for i in double_numbers(range(1, 900000000)):  # `range` ist ein Generator.
     print(i)
     if i >= 30:
@@ -715,7 +715,7 @@ for i in double_numbers(range(1, 900000000)):  # `range` ist ein Generator.
 values = (-x for x in [1,2,3,4,5])
 for x in values:
     print(x)  # prints -1 -2 -3 -4 -5 to console/terminal
-    
+
 # Sie können eine Generator Abstraktion auch direkt in eine Liste umwandeln (casten).
 values = (-x for x in [1,2,3,4,5])
 gen_to_list = list(values)

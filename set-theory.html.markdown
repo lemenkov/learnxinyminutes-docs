@@ -18,7 +18,7 @@ Set theory is a branch of mathematics that studies sets, their operations, and t
 * the complement operator, `'`, means "the inverse of";
 * the cross operator, `×`, means "the Cartesian product of".
 
-### Qualifiers 
+### Qualifiers
 * the colon, `:`, or the vertical bar `|` qualifiers are interchangeable and mean "such that";
 * the membership qualifier, `∈`, means "belongs to";
 * the subset qualifier, `⊆`, means "is a subset of";

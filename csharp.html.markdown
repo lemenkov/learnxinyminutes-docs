@@ -1347,4 +1347,4 @@ namespace Csharp7
  * [LINQ Pocket Reference](http://shop.oreilly.com/product/9780596519254.do)
  * [Windows Forms Programming in C#](http://www.amazon.com/Windows-Forms-Programming-Chris-Sells/dp/0321116208)
  * [freeCodeCamp - C# Tutorial for Beginners](https://www.youtube.com/watch?v=GhQdlIFylQ8)
- 
+

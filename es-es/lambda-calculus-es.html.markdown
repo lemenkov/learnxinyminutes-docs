@@ -11,11 +11,11 @@ lang: es-es
 
 # Cálculo Lambda
 
-Cálculo Lambda (Cálculo-λ), originalmente creado por 
+Cálculo Lambda (Cálculo-λ), originalmente creado por
 [Alonzo Church](https://es.wikipedia.org/wiki/Alonzo_Church),
 es el lenguaje de programación más pequeño del mundo.
-A pesar de no tener números, cadenas, valores booleanos o cualquier 
-tipo de datos no funcional, el cálculo lambda se puede utilizar para 
+A pesar de no tener números, cadenas, valores booleanos o cualquier
+tipo de datos no funcional, el cálculo lambda se puede utilizar para
 representar cualquier máquina de Turing.
 
 El cálculo lambda se compone de 3 elementos: **variables**, **funciones** y
@@ -28,7 +28,7 @@ El cálculo lambda se compone de 3 elementos: **variables**, **funciones** y
 | Aplicación | `<función><variable o función>` | `(λx.x)a` | llamando a la función "λx.x" con el argumento "a" |
 
 La función más básica es la función de identidad: `λx.x` que es equivalente a
-`f(x) = x`. La primera "x" es el argumento de la función y la segunda es el 
+`f(x) = x`. La primera "x" es el argumento de la función y la segunda es el
 cuerpo de la función.
 
 ## Variables Libres vs. Enlazadas:
@@ -43,7 +43,7 @@ Evaluación se realiza a través de
 [β-Reduction](https://es.wikipedia.org/wiki/C%C3%A1lculo_lambda#%CE%B2-reducci%C3%B3n),
 que es, esencialmente, sustitución de ámbito léxico.
 
-Al evaluar la expresión `(λx.x)a`, reemplazamos todas las ocurrencias de "x" 
+Al evaluar la expresión `(λx.x)a`, reemplazamos todas las ocurrencias de "x"
 en el cuerpo de la función con "a".
 
 - `(λx.x)a` evalúa a: `a`
@@ -53,8 +53,8 @@ Incluso puedes crear funciones de orden superior:
 
 - `(λx.(λy.x))a` evalúa a: `λy.a`
 
-Aunque el cálculo lambda tradicionalmente solo admite funciones 
-de un solo parámetro, podemos crear funciones multiparamétricas usando 
+Aunque el cálculo lambda tradicionalmente solo admite funciones
+de un solo parámetro, podemos crear funciones multiparamétricas usando
 una técnica llamada [Currificación](https://es.wikipedia.org/wiki/Currificación).
 
 - `(λx.λy.λz.xyz)` es equivalente a `f(x, y, z) = ((x y) z)`
@@ -63,7 +63,7 @@ Algunas veces `λxy.<cuerpo>` es usado indistintamente con: `λx.λy.<cuerpo>`
 
 ----
 
-Es importante reconocer que el cálculo lambda tradicional **no tiene números, 
+Es importante reconocer que el cálculo lambda tradicional **no tiene números,
 caracteres ni ningún tipo de datos que no sea de función.**
 
 ## Lógica Booleana:
@@ -76,7 +76,7 @@ En vez:
 
 `F` es representado por: `λx.λy.y`
 
-Primero, podemos definir una función "if" `λbtf` que devuelve 
+Primero, podemos definir una función "if" `λbtf` que devuelve
 `t` si `b` es Verdadero y `f` si `b` es Falso
 
 `IF` es equivalente a: `λb.λt.λf.b t f`
@@ -93,7 +93,7 @@ Usando `IF` podemos definir los operadores lógicos booleanos básicos:
 
 ## Números:
 
-Aunque no hay números en el cálculo lambda, podemos codificar números usando 
+Aunque no hay números en el cálculo lambda, podemos codificar números usando
 [Númeral de Church](https://en.wikipedia.org/wiki/Church_encoding).
 
 Para cualquier número n: <code>n = λf.f <sup> n </sup></code> así:
@@ -106,7 +106,7 @@ Para cualquier número n: <code>n = λf.f <sup> n </sup></code> así:
 
 `3 = λf.λx.f(f(f x))`
 
-Para incrementar un númeral de Church, usamos la función sucesora 
+Para incrementar un númeral de Church, usamos la función sucesora
 `S(n) = n + 1` que es:
 
 `S = λn.λf.λx.f((n f) x)`
@@ -129,7 +129,7 @@ Sean S, K, I las siguientes funciones:
 
 `S x y z = x z (y z)`
 
-Podemos convertir una expresión en el cálculo lambda en una expresión 
+Podemos convertir una expresión en el cálculo lambda en una expresión
 en el cálculo del combinador de SKI:
 
 1. `λx.x = I`
@@ -191,13 +191,13 @@ Al expandir esto, terminaríamos con la misma expresión para el número 2 de Ch
 
 ### Cálculo del combinador SKI
 
-El cálculo del combinador SKI puede reducirse aún más. Podemos eliminar 
-el combinador I observando que `I = SKK`. Podemos sustituir 
+El cálculo del combinador SKI puede reducirse aún más. Podemos eliminar
+el combinador I observando que `I = SKK`. Podemos sustituir
 todos los 'I' con `SKK`.
 
 ### Combinador Iota
 
-El cálculo del combinador SK todavía no se encuentra en su expresión mínima. 
+El cálculo del combinador SK todavía no se encuentra en su expresión mínima.
 Definiendo:
 
 ```

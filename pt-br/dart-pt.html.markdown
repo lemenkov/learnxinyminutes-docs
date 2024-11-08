@@ -22,7 +22,7 @@ import "dart:math" as DM;
 // Este é um tutorial executável. Você pode rodar esse tutorial com Dart ou no
 // site Try Dart!, é só copiar e colar este código lá. http://try.dartlang.org/
 
-// Declarações de funções e métodos são iguais. Declarações de funções 
+// Declarações de funções e métodos são iguais. Declarações de funções
 // podem ser aninhadas. A declaração é feita das seguintes formas
 // nome() {} ou nome() => expressaoDeUmaLinhaSo;
 // A declaração feita com a seta tem um return implícito para o resultado da
@@ -44,7 +44,7 @@ example2() {
 }
 
 // Quando uma função é declarada como parâmetro, a declaração pode incluir o número
-// de parâmetros que a função recebe, isso é feito especificando o nome de cada um dos 
+// de parâmetros que a função recebe, isso é feito especificando o nome de cada um dos
 // parâmetros que serão recebidos pela função.
 example3() {
   example3nested1(fn(informSomething)) {
@@ -66,7 +66,7 @@ example4() {
   example4nested1((s) => print(s));
 }
 
-// Declaração de classe com um método chamado sayIt, que também tem acesso 
+// Declaração de classe com um método chamado sayIt, que também tem acesso
 // à variável externa, como se fosse uma função como se viu antes.
 var example5method = "Example5 sayIt";
 class Example5Class {
@@ -401,7 +401,7 @@ example27() {
 }
 
 // para importar uma biblioteca, use import "libraryPath" ou se for uma biblioteca da linguagem,
-// import "dart:libraryName". Também tem o gerenciador de pacotes "pub"que tem 
+// import "dart:libraryName". Também tem o gerenciador de pacotes "pub"que tem
 // sua própria convenção de import "package:packageName".
 // Veja o import "dart:collection"; no início do arquivo. Imports devem vir no início
 // do arquivo. IterableBase vem de dart:collection.
@@ -419,7 +419,7 @@ example28() {
 
 // Para controle de fluxo nós temos:
 // * switch com comandos break obrigatórios
-// * if-else if-else e se-ternário ..?..:.. 
+// * if-else if-else e se-ternário ..?..:..
 // * closures e funções anônimas
 // * comandos break, continue e return
 example29() {
@@ -458,7 +458,7 @@ example30() {
   var gn, tooHigh = false,
     n, n2 = (2.0).toInt(), top = int.parse("123") ~/ n2, bottom = 0;
   top = top ~/ 6;
-  gn = new DM.Random().nextInt(top + 1); // +1 porque o máximo do nextInt conta o número passado - 1 
+  gn = new DM.Random().nextInt(top + 1); // +1 porque o máximo do nextInt conta o número passado - 1
   print("Example30 Diga um número entre 0 e ${top}");
   guessNumber(i) {
     if (n == gn) {

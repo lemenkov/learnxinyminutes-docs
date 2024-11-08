@@ -71,7 +71,7 @@ Svetlana Golubeva}
  Documentação do \LaTeX{} escrita em \LaTeX! Nada original!
 \end{abstract}
 
-% Comandos para seções são intuitivos. 
+% Comandos para seções são intuitivos.
 % Todos os títulos de seção são adicionados automaticamente à tabela de conteúdo.
 \section{Introdução}
 Olá, meu nome é Colton e juntos estamos explorando o mundo do \LaTeX!
@@ -88,15 +88,15 @@ Muito melhor agora.
 
 % Ao usar o asterisco nós impedimos a numeração automática.
 % Isso funciona para outros comandos \LaTeX também.
-\section*{Essa é uma seção não numerada} 
+\section*{Essa é uma seção não numerada}
 Afinal nem todas as seções precisam ser numeradas!
 
 \section{Algumas notas sobre texto}
 %\section{Espaçamento} % É necessário mais informação sobre intervalos de espaço.
 \LaTeX{} geralmente é muito bom sobre colocar texto onde ele deve
-ser posto. Se 
+ser posto. Se
 uma linha \\ deve \\ ser \\ quebrada \\ adicione \textbackslash\textbackslash
-\hspace{1pt} ao código de seu documento. 
+\hspace{1pt} ao código de seu documento.
 
 Separe parágrafos por linhas vazias.
 
@@ -147,8 +147,8 @@ Eu ainda não encontrei uma letra grega que o \LaTeX{} não tenha!\\
 
 Operadores são parte essencial de um documento sobre matemática:
 funções trigonométricas ($\sin$, $\cos$, $\tan$),
-logaritmo e exponencial ($\log$, $\exp$), 
-limites ($\lim$), etc.~possuem comandos pré-definidos em LaTex. 
+logaritmo e exponencial ($\log$, $\exp$),
+limites ($\lim$), etc.~possuem comandos pré-definidos em LaTex.
 Vamos escrever uma equação para ver como se faz:
 $\cos(2\theta) = \cos^{2}(\theta) - \sin^{2}(\theta)$
 
@@ -178,12 +178,12 @@ Somatórios e Integrais são escritas com os comandos sum e int:
 
 % Alguns compiladores LaTeX irão reclamar se existirem linhas em branco
 % em um bloco de equação.
-\begin{equation} 
+\begin{equation}
   \sum_{i=0}^{5} f_{i}
-\end{equation} 
-\begin{equation} 
+\end{equation}
+\begin{equation}
   \int_{0}^{\infty} \mathrm{e}^{-x} \mathrm{d}x
-\end{equation} 
+\end{equation}
 
 \section{Figuras}
 
@@ -192,10 +192,10 @@ Operações básicas são [t] para o topo, [b] para base, [h] para aqui (aproxim
 Eu tenho sempre que verificar as opções toda vez.
 % Veja https://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions para mais detalhes
 
-\begin{figure}[H] % H aqui é uma opção para o local da figura. 
+\begin{figure}[H] % H aqui é uma opção para o local da figura.
     \centering % centra a figura na página
     % Inclui uma figura com escala de 0.8 do tamanho da página.
-    %\includegraphics[width=0.8\linewidth]{right-triangle.png} 
+    %\includegraphics[width=0.8\linewidth]{right-triangle.png}
     % Comentado para propósitos de compilação. Por favor, use sua imaginação.
     \caption{Triângulo retângulo com lados $a$, $b$, $c$}
     \label{fig:right-triangle}
@@ -211,7 +211,7 @@ Também podemos incluir tabelas da mesma forma que figuras.
   % Operações básicas são: c, l, r e p para centro, esquerda, direita e parágrafo
   % opcionalmente, você pode adicionar um | para linha vertical
   % Veja https://en.wikibooks.org/wiki/LaTeX/Tables para mais detalhes
-  \begin{tabular}{c|cc} 
+  \begin{tabular}{c|cc}
     Número &  Primeiro Nome & Sobrenome \\ % Colunas são separadas por &
     \hline % uma linha horizontal
     1 & Biggus & Dickus \\
@@ -232,14 +232,14 @@ isso com o bloco verbatim.
 
 % Existem outros pacotes (por exemplo, minty, lstlisting, etc.)
 % mas verbatim é o básico
-\begin{verbatim} 
+\begin{verbatim}
   print("Olá mundo!")
-  a%b; % olha só! Podemos usar os sinais % no bloco verbatim. 
+  a%b; % olha só! Podemos usar os sinais % no bloco verbatim.
   random = 4; #decidido por um lançamento honesto de dado
   Veja https://www.explainxkcd.com/wiki/index.php/221:_Random_Number
 \end{verbatim}
 
-\section{Compilando} 
+\section{Compilando}
 
 Imagino que agora você esteja pensando como compilar esse fantástico documento
 e visualizar a gloriosa glória que é um pdf gerado por \LaTeX{} pdf.
@@ -248,9 +248,9 @@ e visualizar a gloriosa glória que é um pdf gerado por \LaTeX{} pdf.
 Finalizando o documento usando \LaTeX{} consiste nos seguintes passos:
   \begin{enumerate}
     \item Escrever o documento em texto puro (o ``código fonte'').
-    \item Compilar o código fonte para gerar um pdf. 
+    \item Compilar o código fonte para gerar um pdf.
      Os passos para compilar se parecem (em Linux) com: \\
-     \begin{verbatim} 
+     \begin{verbatim}
         > pdflatex learn-latex.tex
      \end{verbatim}
   \end{enumerate}
@@ -269,7 +269,7 @@ formato que você definiu no passo 1.
 \section{Links}
 Nós podemos inserir links em nosso documento. Para isso nós necessitamos incluir
 o pacote hyperref no preâmbulo com o comando:
-\begin{verbatim} 
+\begin{verbatim}
     \usepackage{hyperref}
 \end{verbatim}
 
@@ -312,7 +312,7 @@ Por enquanto é isso!
 \begin{thebibliography}{1}
   % como em outras listas, o comando \bibitem pode ser usado para itens da lista
   % cada entrada pode ser citada diretamente no corpo do texto
-  \bibitem{latexwiki} The amazing \LaTeX{} wikibook: {\em 
+  \bibitem{latexwiki} The amazing \LaTeX{} wikibook: {\em
 https://en.wikibooks.org/wiki/LaTeX}
   \bibitem{latextutorial} An actual tutorial: {\em http://www.latex-tutorial.com}
 \end{thebibliography}

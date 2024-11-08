@@ -40,7 +40,7 @@ para essas versões.
    Este será o primeiro código haxe de verdade, e está declarando um pacote vazio.
    Não é necessário usar um pacote, mas ele será útil se você quiser criar
    um namespace para o seu código (exemplo: org.seuapp.SuaClasse).
-   
+
    Omitir a declaração de pacote é a mesma coisa que declarar um pacote vazio.
  */
 package; // pacote vazio, sem namespace.
@@ -53,7 +53,7 @@ package; // pacote vazio, sem namespace.
    também devem começar com uma letra maiúscula.
 
    Exemplo: a classe "org.seuapp.Foo" deve ter a estrutura de diretório org/module/Foo.hx,
-   sendo acessível do diretório do compilador ou caminho da classe.   
+   sendo acessível do diretório do compilador ou caminho da classe.
 
    Se você importar código de outros arquivos, isso deve ser declarado antes
    do restante do código. Haxe disponibiliza várias classes padrões para você
@@ -629,7 +629,7 @@ class SimpleEnumTest{
            Isso não parece tão diferente de uma alteração simples de valor em strings.
            Entretanto, se nós não incluirmos *todos* os estados, o compilador
            reclamará. Você pode testar isso comentando a linha mencionada acima.
-           
+
            Você também pode especificar um valor padrão (default) para enums:
          */
         switch(e){
@@ -693,7 +693,7 @@ class TypedefsAndStructuralTypes {
     public static function example(){
         /*
            Aqui nós usaremos tipos typedef, ao invés de tipos base.
-           Lá no começo, nós definimos que o tipo "FooString" é um tipo "String". 
+           Lá no começo, nós definimos que o tipo "FooString" é um tipo "String".
          */
         var t1:FooString = "alguma string";
 

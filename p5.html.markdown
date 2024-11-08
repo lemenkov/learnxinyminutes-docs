@@ -144,7 +144,7 @@ function draw() {
   rotateY(frameCount / 50);
   rotateZ(frameCount / 50);
   // frameCount is a p5.js variable that stores the amount of frames that have passed
- 
+
   box(50, 50, 50); // width, height, depth
 }
 ```

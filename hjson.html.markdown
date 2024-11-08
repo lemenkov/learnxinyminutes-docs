@@ -8,9 +8,9 @@ lang: en-us
 
 Hjson is an attempt to make [JSON](https://learnxinyminutes.com/docs/json/) more human readable.
 
-Hjson is a syntax extension to JSON. 
-It's NOT a proposal to replace JSON or to incorporate it into the JSON spec itself. 
-It's intended to be used like a user interface for humans, 
+Hjson is a syntax extension to JSON.
+It's NOT a proposal to replace JSON or to incorporate it into the JSON spec itself.
+It's intended to be used like a user interface for humans,
 to read and edit before passing the JSON data to the machine.
 
 Let's take a look at examples to see the key syntax differences!
@@ -18,18 +18,18 @@ Let's take a look at examples to see the key syntax differences!
 ```
 {
     # Comments are totally supported!
-    
+
     // With forward slashes too!
-    
+
     /*
         Even block style comments, neat!
     /*
-    
+
     # Strings do not require quotes!
     # Just keep it to a single line
     human: readable
     quotes: "are fine too"
-    
+
     # Notice that commas are also not required!
     # If using commas, strings DO require quotes!
     object: {
@@ -46,7 +46,7 @@ Let's take a look at examples to see the key syntax differences!
         ]
         details: ["this", "is", "fine", "too"]
     }
-    
+
     # Multiline quotes with proper whitespace handling are supported!
     diary:
         '''
@@ -54,7 +54,7 @@ Let's take a look at examples to see the key syntax differences!
         If only there was a JSON for my needs!
         Oh wait.. there is! It's called Hjson.
         '''
-    
+
     # Backslashes are interpreted as an escape character ONLY in quoted strings
     slash: This will not have a new line\n
     slash-quoted: "This will definitely have a new line\n"
@@ -64,7 +64,7 @@ Let's take a look at examples to see the key syntax differences!
     example2: "Also if you want to use {} or [] or any JSON relevant punctuation!"
     example3: [because, this, is, totally, BROKEN!]
     example4: this is technically OK though: {}[],:
-    
+
     # Enjoy working with Hjson!
     party-time: {
         Hjson-lovers: [
@@ -84,7 +84,7 @@ Let's take a look at examples to see the key syntax differences!
         }
         partial-support: ["C", "Kotlin", "Ruby", "Rust"]
     }
-    
+
 }
 ```
 

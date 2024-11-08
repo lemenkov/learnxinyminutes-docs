@@ -27,7 +27,7 @@ ou exécutés directement dans le terminal.
 #!/bin/bash
 # La première ligne du script s’appelle le « shebang », elle indique au système
 # comment exécuter le script : http://fr.wikipedia.org/wiki/Shebang
-# Comme vous pouvez le remarquer, les commentaires commencent par un « # ». 
+# Comme vous pouvez le remarquer, les commentaires commencent par un « # ».
 # Le shebang est donc aussi un commentaire
 
 # Un exemple simple qui affiche « Hello world! » :
@@ -47,7 +47,7 @@ VARIABLE = "Du texte" # => renvoie une erreur : "Variable: command not found"
 # Ni comme ça :
 VARIABLE= 'Some string' # => renvoie une erreur : "Du texte: command not found"
 # Bash va penser que 'Di texte' est une commande qu’il doit exécuter et va
-# afficher une erreur parce qu’elle est introuvable. (Dans ce cas, la partie 
+# afficher une erreur parce qu’elle est introuvable. (Dans ce cas, la partie
 # 'VARIABLE=' est considérée comme une affectation de variable valable uniquement
 # pour la portée de la commande 'Du texte').
 
@@ -100,7 +100,7 @@ echo ${FOO:-"ValeurParDefaut"}
 # Les tableaux (array)
 
 array0=(un deux trois quatre cinq six)
-# Déclarer un tableau de 6 éléments  
+# Déclarer un tableau de 6 éléments
 
 echo $array0 # => "un"
 # Affiche le premier élément

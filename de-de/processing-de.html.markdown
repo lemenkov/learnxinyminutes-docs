@@ -42,7 +42,7 @@ offiziellen IDE, damit die Programme kompiliert und ausgeführt werden können.
    -------------------------------------------------
 */
 
-// In Processing ist der Startpunkt eines Programms die Funktion `setup()` 
+// In Processing ist der Startpunkt eines Programms die Funktion `setup()`
 // mit dem Rückgabetyp `void`.
 // Beachte: Die Syntax ist derjenigen von C++ ziemlich ähnlich.
 void setup() {
@@ -50,11 +50,11 @@ void setup() {
     println("Hallo Welt!"); // eine weitere Sprache mit einem Semikolon am Ende.
 }
 
-// Normalerweise wird der Code für statische Elemente innerhalb der Methode 
+// Normalerweise wird der Code für statische Elemente innerhalb der Methode
 // `setup()` geschrieben, da diese lediglich einmal ausgeführt wird.
 // Dies kann zum Beispiel das Setzen der Hintergrundfarbe oder das Bestimmen
 // der Canvas-Größe sein.
-background(color); // Setze die Hintergrundfarbe 
+background(color); // Setze die Hintergrundfarbe
 size(width, height, [renderer]); // bestimme die Canvasgröße mit dem optionalen
                                  // Parameter `renderer`.
 // Du wirst innerhalb dieses Dokuments noch weitere Parameter sehen.
@@ -90,7 +90,7 @@ color colorValueOfWhiteM = color(255, 255, 255); // Farben (angegeben durch die
 color colorValueOfWhiteH = #FFFFFF; // Farbe (angegeben mit der Hexadezimal-
                                     // schreibweise.)
 int intValue = 5; // Integer (ganze Zahl)
-long longValue = 2147483648L; // "L" wird hinzugefügt, um es als `long` zu 
+long longValue = 2147483648L; // "L" wird hinzugefügt, um es als `long` zu
                               // markieren.
 float floatValue = 1.12345; // Float (32-Bit Gleitkommazahl)
 double doubleValue = 1.12345D // Double (64-Bit Gleitkommazahl)
@@ -99,7 +99,7 @@ double doubleValue = 1.12345D // Double (64-Bit Gleitkommazahl)
 // Auch wenn es die Datentypen "long" und "double" gibt und auch funktionieren,
 // verwenden Processing-Funktionen diese Datentypen nicht. Das bedeutet, dass
 // diese zu "int" resp. "float" konvertiert werden müssen.
-// Dies geschieht, indem man `(int)` oder `(float)` vor die Variable schreibt, 
+// Dies geschieht, indem man `(int)` oder `(float)` vor die Variable schreibt,
 // bevor diese einer Funktion übergeben werden.
 
 // Es gibt eine ganze Reiher zusammengesetzter Datentypen, welche in Processing
@@ -124,12 +124,12 @@ print("Hallo " + "Welt!"); // => Hallo Welt!
 // Da Arrays ähnlich wie Objekte sind, müssen diese mit dem Schlüsselwort `new`
 // erstellt werden.
 int[] intArray = new int[5];
-int[] intArrayWithValues = {1, 2, 3} // Arrays können auch mit Daten gefüllt 
+int[] intArrayWithValues = {1, 2, 3} // Arrays können auch mit Daten gefüllt
                                      // werden.
 // ArrayList
 // Die Funktionen einer ArrayList sind ähnlich wie die eines Arrays und können
 // auch jegliche Datentypen beinhalten. Der einzige Unterschied zwischen Arrays
-// und `ArrayList`s ist, dass eine `ArrayList` die Größe dynamisch anpassen kann, 
+// und `ArrayList`s ist, dass eine `ArrayList` die Größe dynamisch anpassen kann,
 // da es eine Implementierung des "List" Interface in Java ist.
 ArrayList<Integer> intArrayList = new ArrayList<Integer>();
 
@@ -142,9 +142,9 @@ ArrayList<Integer> intArrayList = new ArrayList<Integer>();
 // Format: ClassName InstanceName
 SomeRandomClass myObject // hier musst du das Objekt später instanziieren
 // Hier wird das Objekt direkt instanziiert:
-SomeRandomClass myObjectInstantiated = new SomeRandomClass(); 
+SomeRandomClass myObjectInstantiated = new SomeRandomClass();
 
-// Processing hat noch weitere Collections (wie zum Beispiel Dictionaries und 
+// Processing hat noch weitere Collections (wie zum Beispiel Dictionaries und
 // Listen). Aus Einfachheitsgründen wird dies in diesem Tutorial weggelassen.
 
 /* -------------------------------------------------
@@ -171,9 +171,9 @@ int sr = sqrt(25); // Quadratwurzel => sr = 5.0
 
 // Vektoren
 // Processing bietet eine einfache Möglichkeit an, mit Vektoren zu arbeiten mit
-// der Klasse PVector. Die Klasse kann zwei- und dreidimensionale Vektoren 
+// der Klasse PVector. Die Klasse kann zwei- und dreidimensionale Vektoren
 // darstellen und bietet Methoden an, welche nützlich sein können für Matrizen-
-// Operationen. Weitere Informationen findest du hier: 
+// Operationen. Weitere Informationen findest du hier:
 // (https://processing.org/reference/PVector.html)
 
 // Trigonometrie
@@ -206,7 +206,7 @@ String value = (i > 5) ? "Groß" : "Klein"; // => "Klein"
 
 // Die Switch-Case-Anweisung kann verwendet werden, um mehrere Bedingungen
 // zu prüfen.
-// Wichtig ist, dass nach jeder Bedingung ein `break`-Statement verwendet wird, 
+// Wichtig ist, dass nach jeder Bedingung ein `break`-Statement verwendet wird,
 // sonst werden alle folgenden ausgeführt und es wird nicht mehr überprüft, ob
 // die Bedingung wahr ist.
 int value = 2;
@@ -233,7 +233,7 @@ for(int i = 0; i < 5; i++) {
 }
 
 // While-Statements
-int j = 3; 
+int j = 3;
 while(j > 0) {
     print(j);
     j--; // Dies ist wichtig, dass der Code nicht unendlich lange läuft.
@@ -251,7 +251,7 @@ exit(); // Diese Methode stoppt das Programm. Dies kann nützlich sein, wenn die
 
 ## Mit Processing zeichnen
 
-Da du nun die Grundsätze der Programmiersprache verstanden hast, schauen wir 
+Da du nun die Grundsätze der Programmiersprache verstanden hast, schauen wir
 uns nun das Beste an Processing an - Das Zeichnen!
 
 ```
@@ -281,18 +281,18 @@ triangle(x1, y1, x2, y2, x3, y3);
 // Rechteck
 rect(a, b, c, d, [r]); // Mit dem optionalen Parameter kann der Winkel aller
                        // vier Ecken definiert werden
-rect(a, b, c, d, [tl, tr, br, bl]); // Mit weiteren optionalen Parametern kann 
+rect(a, b, c, d, [tl, tr, br, bl]); // Mit weiteren optionalen Parametern kann
                                     // jeder Winkel des Rechtecks definiert werden.
 // Dies zeichnet ein Quadrat mit der Koordinate {a, b} als linke obere Ecke
 // die Parameter c und d sind für die Breite und Höhe.
 
 // Vierecke
-quad(x, y, x2, y2, x3, y3, x4, y4);                                             
+quad(x, y, x2, y2, x3, y3, x4, y4);
 // Dies zeichnet ein Viereck, welches die einzelnen Koordinaten als Eckpunkte hat.
 
 // Ellipse
 ellipse(x, y, width, height);
-// Zeichnet eine Ellipse beim Punkt {x. y}. Die Breite und die Höhe werden durch 
+// Zeichnet eine Ellipse beim Punkt {x. y}. Die Breite und die Höhe werden durch
 // die Parameter width und height definiert.
 
 // Arc
@@ -300,13 +300,13 @@ arc(x, y, width, height, start, stop, [mode]);
 // Die ersten vier Parameter sollten selbsterklärend sein.
 // start und end definieren die Winkel, bei welchen `arc` starten resp. enden
 // (in Radians)
-// Der optionale Parameter `mode` definiert, ob der Kreisbogen gefüllt wird 
+// Der optionale Parameter `mode` definiert, ob der Kreisbogen gefüllt wird
 // oder nicht.
 // Die möglichen Optionen für `mode` sind: PIE, CHORD und OPEN.
 
 // Kurven
 // Processing bietet zwei mögliche Kurven an, welche verwendet werden können.
-// Da es hier darum geht, dass es möglichst simpel ist, werden hier keine 
+// Da es hier darum geht, dass es möglichst simpel ist, werden hier keine
 // weiteren Details genannt. Wenn du Kurven in deinem Programm verwenden möchtest,
 // sind die folgenden Links empfehlenswert:
 // https://processing.org/reference/curve_.html
@@ -328,7 +328,7 @@ box(w, h, d); // Quader definiert durch Breite, Höhe und Tiefe
 // Kugel
 sphere(radius); // Die Größe wird definiert durch den Parameter `radius`
 // Der Mechanismus hinter dem Rendern von Kugeln wurde durch mosaikartige
-// Dreiecke implementiert. 
+// Dreiecke implementiert.
 // Mit der folgenden Funktion ist es möglich, zu bestimmen wie detailliert die
 // Kugel gerendert wird.
 // spereDetail(res);
@@ -363,7 +363,7 @@ translate(x, y, z); // Pendant zu der oberen Funktion im dreidimensionalen Raum
 
 // Rotationen
 rotate(angle); // Rotiere, um den Betrag, welcher spezifiziert wurde.
-// Es gibt drei Pendants im dreidimensionalen Raum. 
+// Es gibt drei Pendants im dreidimensionalen Raum.
 // Namentlich sind dies: `rotateX(angle)`, `rotateY(angle)` und `rotateZ(angle)`
 
 // Skalierung
@@ -376,18 +376,18 @@ scale(s); // Skaliert das Koordinatensystem (entweder erweitern oder verkleinern
 
 // Farben
 // Wie ich zuvor schon erklärt habe, kann die Hintergrundfarbe mit der Funktion
-// `background()` definiert werden. Außerdem ist es möglich, dass man zuerst 
+// `background()` definiert werden. Außerdem ist es möglich, dass man zuerst
 // eine Farbe definiert und diese erst danach der Funktion übergeben wird.
 color c = color(255, 255, 255); // WEISS!
-// Standardmäßig verwendet Processing das RGB-Farbschema, aber dies kann 
+// Standardmäßig verwendet Processing das RGB-Farbschema, aber dies kann
 // zu HSB konfiguriert werden, indem die Funktion `colorMode()` verwendet wird.
 // Weitere Informationen findest du hier: (https://processing.org/reference/colorMode_.html)
 background(c); // Ab jetzt ist der Hintergrund in weiß.
 // Du kannst die Funktion `fill()` verwenden, um die Farbe auszuwählen, mit
-// welcher die Formen ausgefüllt werden. 
+// welcher die Formen ausgefüllt werden.
 // Dies muss konfiguriert werden bevor Formen und Figuren gezeichnet werden.
 fill(color(0, 0, 0));
-// Wenn du nur die Farbe der Umrandungen definieren möchtest, kannst du die 
+// Wenn du nur die Farbe der Umrandungen definieren möchtest, kannst du die
 // Funktion `stroke()` verwenden.
 stroke(255, 255, 0, 200); // Linienfarbe wird zu gelb mit einer höheren
                           // Transparenz geändert.
@@ -408,7 +408,7 @@ daher verweise ich dich, falls du interessiert bist, auf die offizielle
 Dokumentation.
 
 ```
-// Bevor wir weiterfahren, werde ich einige Aspekte zum Importieren von 
+// Bevor wir weiterfahren, werde ich einige Aspekte zum Importieren von
 // Bibliotheken und Paketen sagen, damit du Processing erweitern kannst..
 
 /* -------------------------------------------------
@@ -416,12 +416,12 @@ Dokumentation.
    -------------------------------------------------
 */
 
-// Die Macht von Processing kann besser veranschaulicht werden, wenn wir 
+// Die Macht von Processing kann besser veranschaulicht werden, wenn wir
 // Bibliotheken und Pakete importieren.
-// Die Import-Anweisung kann wie unten geschrieben zu Beginn des Quelltextes 
+// Die Import-Anweisung kann wie unten geschrieben zu Beginn des Quelltextes
 // geschrieben werden.
 import processing.something.*;
-``` 
+```
 
 ## Beispielprogramm
 
@@ -488,7 +488,7 @@ gehalten, dass man den Code durchlesen kann und man versteht den Programmablauf
 bereits.
 
 Wenn du externe Bibliotheken, Pakete oder eigene Klassen einbindest, kann ein
-Programm, welches mit Processing geschrieben wurde, durchaus auch kompliziert 
+Programm, welches mit Processing geschrieben wurde, durchaus auch kompliziert
 werden.
 
 ## Einige nützliche Links

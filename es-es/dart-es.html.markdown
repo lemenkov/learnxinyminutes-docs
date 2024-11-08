@@ -22,10 +22,10 @@ import "dart:math" as DM;
 // Este es un tutorial ejecutable. Puedes ejecutarlo con Dart o en
 // el sitio de ¡Try Dart! solo copiando y pegando en http://try.dartlang.org/
 
-// La declaración de función y de método tienen el mismo aspecto. 
-// Las funciones pueden estar anidadas. 
+// La declaración de función y de método tienen el mismo aspecto.
+// Las funciones pueden estar anidadas.
 // La declaración toma la forma name() {} o name() => expresionEnUnaLinea;
-// La declaración de la función de flecha gorda, tiene un retorno implícito 
+// La declaración de la función de flecha gorda, tiene un retorno implícito
 // para el resultado de la expresión.
 example1() {
   nested1() {
@@ -110,7 +110,7 @@ example7() {
 // Las literales son geniales, pero hay una restricción para lo que pueden ser las literales
 // fuera de los cuerpos de función/método. Literales en el ámbito exterior de clase
 // o fuera de clase tienen que ser constantes. Las cadenas de caracteres y los números
-// son constantes por defecto. Pero los arreglos y mapas no lo son. 
+// son constantes por defecto. Pero los arreglos y mapas no lo son.
 // Ellos pueden hacerse constante anteponiendo en la declaración el término "const".
 var example8Array = const ["Example8 arreglo constante"],
     example8Map = const {"algunaKey": "Example8 mapa constante"};
@@ -178,7 +178,7 @@ example13() {
   match(s2);
 }
 
-// Las expresiones booleanas admiten conversiones implícitas y tipos dinámicos. 
+// Las expresiones booleanas admiten conversiones implícitas y tipos dinámicos.
 example14() {
   var a = true;
   if (a) {
@@ -248,7 +248,7 @@ example16() {
   print("example16 union de arreglo de cadena de caracteres '${a.join()}'");
 }
 
-// Las cadenas de caracteres pueden ser concatenadas contando solo 
+// Las cadenas de caracteres pueden ser concatenadas contando solo
 // con literales una después de la otra sin algún otro operador necesario.
 example17() {
   print("example17 "
@@ -286,9 +286,9 @@ example20() {
 }
 
 // Hasta ahora no hemos declarado ningún tipo de dato y los programas
-// han funcionado bien. De hecho, los tipos no se toman en cuenta durante 
+// han funcionado bien. De hecho, los tipos no se toman en cuenta durante
 // el tiempo de ejecución.
-// Los tipos incluso pueden estar equivocados y al programa todavía se le dará 
+// Los tipos incluso pueden estar equivocados y al programa todavía se le dará
 // el beneficio de la duda y se ejecutará como si los tipos no importaran.
 // Hay un parámetro de tiempo de ejecución que comprueba los errores de tipo que es
 // el modo de verificación, el cuál es útil durante el tiempo de desarrollo,
@@ -374,7 +374,7 @@ example24() {
 }
 
 // Hay un atajo para configurar los parámetros del constructor en el caso de clases más simples.
-// Simplemente use el prefijo this.nombreParametro y establecerá el parámetro 
+// Simplemente use el prefijo this.nombreParametro y establecerá el parámetro
 // en una variable de instancia del mismo nombre.
 class Example25 {
   var value, anotherValue;
@@ -409,7 +409,7 @@ example26() {
 }
 
 // Las variables declaradas con final solo se pueden establecer una vez.
-// En el caso de las clases, las variables de instancia final se pueden establecer 
+// En el caso de las clases, las variables de instancia final se pueden establecer
 // a través de la constante del parámetro constructor.
 class Example27 {
   final color1, color2;
@@ -507,7 +507,7 @@ example30() {
 // Los programas tienen un solo punto de entrada en la función principal.
 // No se espera que se ejecute nada en el ámbito externo antes de que un programa
 // comience a funcionar con su función principal.
-// Esto ayuda con una carga más rápida e incluso con una carga lenta 
+// Esto ayuda con una carga más rápida e incluso con una carga lenta
 // de lo que necesita el programa para iniciar.
 main() {
   print("Learn Dart in 15 minutes!");

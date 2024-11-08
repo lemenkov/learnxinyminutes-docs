@@ -6,21 +6,21 @@ contributors:
     - ["Maurizio De Girolami", "https://github.com/mdegirolami"]
 ---
 
-The purpose of sing is to provide a simple, safe, fast language that 
+The purpose of sing is to provide a simple, safe, fast language that
 can be a good replacement for c++ for high performance applications.
 
 Sing is an easy choice because it compiles to human-quality readable c++.
 
 Because of that, if you work for a while with Sing and, at any time, you discover you don't like Sing anymore, you lose nothing of your work
-because you are left with nice and clean c++ code. 
+because you are left with nice and clean c++ code.
 
 In some way you can also think Sing as a tool to write c++ in a way that enforces some best practices.
 
 ```go
-/* Multi- line comment. 
-    /* It can be nested */ 
+/* Multi- line comment.
+    /* It can be nested */
     Use it to remark-out part of the code.
-    It leaves no trace in the intermediate c++ code. 
+    It leaves no trace in the intermediate c++ code.
     (sing translates into nice human readable c++)
 */
 
@@ -28,7 +28,7 @@ In some way you can also think Sing as a tool to write c++ in a way that enforce
 // ...or at the right of the first line of a statement or declaration.
 // single line comments are kept into c++.
 //
-// here we declare if we need to use public declarations from other files. 
+// here we declare if we need to use public declarations from other files.
 // (in this case from files 'sio', 'sys')
 requires "sio";
 requires "sys";
@@ -62,7 +62,7 @@ public fn singmain(in argv [*]string) i32
     return(0);
 }
 
-// You can have as many arguments as you want, comma separated. 
+// You can have as many arguments as you want, comma separated.
 // You can also omit the 'in' direction qualifyer (it is the default).
 fn sum(arg1 i32, arg2 i32) i32
 {
@@ -76,7 +76,7 @@ fn sum(arg1 i32, arg2 i32) i32
 // Arguments are passed by reference, which means that in the function body you
 // use the argument names to refer to the passed variables.
 // Example: all the functions in the recursion stack access the same 'result'
-// variable, supplied by the singmain function. 
+// variable, supplied by the singmain function.
 fn recursive_power(base i32, exponent i32, out result i32) void
 {
     if (exponent == 0) {
@@ -94,15 +94,15 @@ fn recursive_power(base i32, exponent i32, out result i32) void
 //**********************************************************
 fn learnTypes() void
 {
-    // the var keyword declares mutable variables 
+    // the var keyword declares mutable variables
     // in this case an UTF-8 encoded string
     var my_name string;
 
     // ints of 8..64 bits size
-    var int0 i8; 
-    var int1 i16; 
-    var int2 i32; 
-    var int3 i64; 
+    var int0 i8;
+    var int1 i16;
+    var int2 i32;
+    var int3 i64;
 
     // uints
     var uint0 u8;
@@ -150,10 +150,10 @@ fn learnTypes() void
     dyna_array.push_back(an_int32);
 
     // getting the size of the array. sys.validate() is like assert in c
-    sys.validate(dyna_array.size() == 1); 
+    sys.validate(dyna_array.size() == 1);
 
-    // a map that associates a number to a string. 
-    // "map(x)..." reads "map with key of type x and value of type..." 
+    // a map that associates a number to a string.
+    // "map(x)..." reads "map with key of type x and value of type..."
     var a_map map(string)i32;
 
     a_map.insert("one", 1);
@@ -161,7 +161,7 @@ fn learnTypes() void
     a_map.insert("three", 3);
     let key = "two";
 
-    // note: the second argument of get_safe is the value to be returned 
+    // note: the second argument of get_safe is the value to be returned
     // when the key is not found.
     sio.print("\nAnd the value is...: " + string(a_map.get_safe(key, -1)));
 
@@ -169,7 +169,7 @@ fn learnTypes() void
     my_name = "a" + "b";
 }
 
-// an enum type can only have a value from a discrete set. 
+// an enum type can only have a value from a discrete set.
 // can't be converted to/from int !
 enum Stages {first, second, last}
 
@@ -214,7 +214,7 @@ fn usePointers() void
     // sys.validate is an assertion (causes a signal if the argument is false)
     sys.validate((*bufferptr)[0] == 0);
 
-    /* 
+    /*
     // as all the pointers to a variable exit their scope the variable is
     // no more accessible and is deleted (freed)
     */
@@ -229,20 +229,20 @@ fn usePointers() void
 // This is a Class. The member variables can be directly initialized here
 class AClass {
 public:
-    var public_var = 100;       // same as any other variable declaration  
-    fn is_ready() bool;         // same as any other function declaration 
+    var public_var = 100;       // same as any other variable declaration
+    fn is_ready() bool;         // same as any other function declaration
     fn mut finalize() void;     // destructor (called on object deletion)
 private:
-    var private_var string; 
+    var private_var string;
 
     // Changes the member variables and must be marked as 'mut' (mutable)
-    fn mut private_fun(errmsg string) void;    
+    fn mut private_fun(errmsg string) void;
 }
 
 // How to declare a member function
 fn AClass.is_ready() bool
 {
-    // inside a member function, members can be accessed through the 
+    // inside a member function, members can be accessed through the
     // 'this' keyword and the field selector '.'
     return(this.public_var > 10);
 }
@@ -274,14 +274,14 @@ fn useAClass() void
 interface ExampleInterface {
     fn mut eraseAll() void;
     fn identify_myself() void;
-} 
+}
 
 // and then creating classes which implement the interface
 // NOTE: you don't need (and cannot) re-declare the interface functions
 class Implementer1 : ExampleInterface {
 private:
     var to_be_erased i32 = 3;
-public:    
+public:
     var only_on_impl1 = 0;
 }
 
@@ -314,14 +314,14 @@ fn interface_casting() i32
 {
     // upcasting is automatic (es: *Implementer1 to *ExampleInterface)
     var concrete Implementer1;
-    var if_ptr *ExampleInterface = &concrete; 
+    var if_ptr *ExampleInterface = &concrete;
 
     // you can access interface members with (guess what ?) '.'
     if_ptr.identify_myself();
 
-    // downcasting requires a special construct 
+    // downcasting requires a special construct
     // (see also below the conditional structures)
-    typeswitch(ref = if_ptr) {  
+    typeswitch(ref = if_ptr) {
         case *Implementer1: return(ref.only_on_impl1);
         case *Implementer2: {}
         default: return(0);
@@ -352,10 +352,10 @@ fn loops() void
     for (it in 0 : 100 step 3) {
     }
 
-    // with an auxiliary counter. 
+    // with an auxiliary counter.
     // The counter start always at 0 and increments by one at each iteration
     for (counter, it in 3450 : 100 step -22) {
-    } 
+    }
 
     // value assumes in turn all the values from array
     var array [*]i32 = {0, 10, 100, 1000};
@@ -382,14 +382,14 @@ fn conditionals(in object intface, in objptr *intface) void
     // condition1 must be a boolean.
     if (condition1) {
         ++value;    // conditioned statement
-    } 
+    }
 
     // you can chain conditions with else if
     if (condition1) {
         ++value;
     } else if (condition2) {
         --value;
-    } 
+    }
 
     // a final else runs if any other condition is false
     if (condition1) {
@@ -433,7 +433,7 @@ fn conditionals(in object intface, in objptr *intface) void
         }
         case *delegating: {}
         default: sio.print("unknown pointer type !!");
-    } 
+    }
 }
 ```
 

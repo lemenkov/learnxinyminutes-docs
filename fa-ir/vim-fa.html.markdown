@@ -35,7 +35,7 @@ vim <filename>   # Open <filename> in vim
 </p>
 
 ```
-:help <topic>    # Open up built-in help docs about <topic> if any exists 
+:help <topic>    # Open up built-in help docs about <topic> if any exists
 ```
 ```
 :q               # خروج از ویم
@@ -237,13 +237,13 @@ i                # Puts vim into insert mode, before the cursor position
 ```
 <p dir="rtl">رفتن به حالت insert, پس از جایگاه cursor</p>
 
-```   
+```
 a                # Puts vim into insert mode, after the cursor position
 ```
 
 <p dir="rtl">رفتن به حالت visual</p>
 
-```   
+```
 v                # Puts vim into visual mode
 ```
 <p dir="rtl">رفتن به حالت ex</p>
@@ -253,7 +253,7 @@ v                # Puts vim into visual mode
 ```
 <p dir="rtl">خروج از همه‌ی حالت ها و رفتن به حالت command</p>
 
-```    
+```
 <esc>            # 'Escapes' from whichever mode you're in, into Command mode
 ```
 <p dir="rtl">کپی و پیست در متن</p>
@@ -302,7 +302,7 @@ Vim را می توان به عنوان مجموعه ای از دستورات د�
 d                # حذف
 c                # تغییر
 y                # کپی
-v                # انتخاب 
+v                # انتخاب
 ```
 <p dir="rtl"><strong>تغییردهنده ها (Modifiers)</strong></p>
 
@@ -345,19 +345,19 @@ d$               # حذف تا پایان
 <                # حذف دندانه به اندازه یک بلوک
 
 :earlier 15m     # برگرداندن همه چیز به ۱۵ دقیقه قبل
-    
+
 :later 15m       # برعکس کامند قبلی
-    
+
 ddp              # تغییر مکان خطوط متوالی(dd, then p)
-    
+
 .                # تکرار دستور قبلی
-    
+
 :w !sudo tee %   # ذخیره کردن فایل فعلی به عنوان روت
-    
+
 :set syntax=c    # تنظیم سینتکس هایلایتینگ روی 'c'
-    
+
 :sort            # مرتب کردن همه‌ی خطوط
-    
+
 :sort!           # مرتب کردن همه‌ی خطوط به صورت برعکس
 
 :sort u          # مرتب کردن همه‌ی خطوط و پاک کردن تکراری ها
@@ -381,7 +381,7 @@ zf               # ایجاد فولد برای متن انتخاب شده
 zo               # باز کردن فولد فعلی
 zc               # بستن فولد فعلی
 zR               # باز کردن همه‌ی فولد ها
-zM               # بستن همه‌ی فولد ها 
+zM               # بستن همه‌ی فولد ها
 ```
 
 <h3>
@@ -391,7 +391,7 @@ zM               # بستن همه‌ی فولد ها
 </h3>
 
 <p dir="rtl">
-ماکرو ها اساسا عمل های قابل ضبط هستند. زمانی که شما شروع می‌کنید به ضبط ماکرو، هر عمل و دستوری را که استفاده می‌کنید، تا زمانی که ضبط را متوقف کنید، ضبط می‌شود. با فراخوانی ماکرو، دقیقاً همان توالی اعمال و دستورات، دوباره روی متن انتخاب شده اعمال می‌شود. 
+ماکرو ها اساسا عمل های قابل ضبط هستند. زمانی که شما شروع می‌کنید به ضبط ماکرو، هر عمل و دستوری را که استفاده می‌کنید، تا زمانی که ضبط را متوقف کنید، ضبط می‌شود. با فراخوانی ماکرو، دقیقاً همان توالی اعمال و دستورات، دوباره روی متن انتخاب شده اعمال می‌شود.
 </p>
 
 ```
@@ -467,4 +467,4 @@ set smarttab
 
 [What are the dark corners of Vim your mom never told you about? (St
 
-[Arch Linux Wiki](https://wiki.archlinux.org/index.php/Vim)    
+[Arch Linux Wiki](https://wiki.archlinux.org/index.php/Vim)

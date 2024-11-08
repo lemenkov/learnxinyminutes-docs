@@ -50,7 +50,7 @@ let multilineText {- Inline-Kommentare funktionieren ebenfalls -} =
         ohne dass sich der Inhalt des Strings ändert.
 
             Relative Einrückungen bleiben erhalten.
- 
+
         Ansonsten wird das Text-Literal verbatim erhalten, ähnlich
         zu “literal”-Multiline-Strings in YAML.
         ''
@@ -195,7 +195,7 @@ let namedArgumentType : forall (n : Natural) -> List Natural =
    arbeiten können (aka. „polymorphe“ Funktionen).
 -}
 let duplicate : forall (a : Type) -> a -> List a =
-        \(a : Type) -> \(x : a) -> [ x, x ] 
+        \(a : Type) -> \(x : a) -> [ x, x ]
 
 let duplicatedNumber : List Natural =
         duplicate Natural 2
@@ -233,22 +233,22 @@ let mitLicense : { year : Natural, copyrightHolder : Text } -> Text =
 ''
 Copyright ${Natural/show args.year} ${args.copyrightHolder}
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of 
-this software and associated documentation files (the "Software"), to deal in 
-the Software without restriction, including without limitation the rights to 
-use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies 
-of the Software, and to permit persons to whom the Software is furnished to do 
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+of the Software, and to permit persons to whom the Software is furnished to do
 so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all 
+The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE 
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE 
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ''
 
@@ -267,7 +267,7 @@ let templatedLicense : Text =
    vereiteln, auf der Remote-Seite die Expression zu manipulieren.
    Jedoch werden Änderungen, die den Inhalt der importierten
    Expression nicht verändern trotzdem akzeptiert.
-   
+
    Auf diese Weise gepinnte Expressions werden auch in einem
    Content-Adressable Store lokal gecached (standardmäßig in
    `~/.cache/dhall`).
@@ -302,7 +302,7 @@ let possiblyCustomPrelude =
 
 {- Ein ausführliches Beispiel, welches mithilfe der
    `generate`-Funktion eine Konfiguration für 10 Build-User generiert:
- 
+
        Prelude.List.generate
            : Natural -> forall (a : Type) -> (Natural -> a) -> List a
 -}

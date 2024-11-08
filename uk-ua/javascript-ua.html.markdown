@@ -232,7 +232,7 @@ if (color == "red" || color == "blue") {
 var name = otherName || "default";
 
 // Оператор switch виконує перевірку на рівність за допомогою ===
-// використовуйте break, щоб призупити виконання наступного case,  
+// використовуйте break, щоб призупити виконання наступного case,
 grade = 4;
 switch (grade) {
   case 5:

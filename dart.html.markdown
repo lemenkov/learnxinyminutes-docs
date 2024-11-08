@@ -314,7 +314,7 @@ example14() {
   }
   a = false;
   if (a) {
-    print("true, a is $a"); 
+    print("true, a is $a");
   } else {
     print("false, a is $a"); /// runs here
   }
@@ -331,11 +331,11 @@ example14() {
   } catch (e) {
     print("error, b is $b"); /// this could be run but got error
   }
-  b = null; 
+  b = null;
   if (b) { /// Failed assertion: boolean expression must not be null)
     print("true, b is $b");
   } else {
-    print("false, b is $b"); 
+    print("false, b is $b");
   }
 
   /// statically typed null can not be convert to bool
